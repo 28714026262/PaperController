@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-10-18 19:43:22
- * @LastEditTime: 2022-10-26 14:55:40
+ * @LastEditTime: 2022-10-27 18:43:01
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -63,19 +63,19 @@
     在文本分类任务中，应用于上下文窗口(即包含少量单词嵌入)的CNN过滤器可以将上下文窗口中的单词投影到上下文特征空间中的局部上下文特征向量上，其中语义相似的单词向量非常接近。  
 
 *RNN*  
-    ![图 2](images/0097230d823dbfc35731cb14c74000187a55c76ceb692ae0344c3aad42976d1b.png)  
-    ![图 3](images/be71d363d49f35030983b65f0943ec844b2bdaad5c4182bed5a71ee0383116b3.png)  
+    ![图 2](../images/0097230d823dbfc35731cb14c74000187a55c76ceb692ae0344c3aad42976d1b.png)  
+    ![图 3](../images/be71d363d49f35030983b65f0943ec844b2bdaad5c4182bed5a71ee0383116b3.png)  
     双向形式的rnn能够捕获序列的长期依赖性。许多研究利用双向LSTM (Bi-LSTM)和门通循环单元(GRU)结构来学习代码上下文依赖关系，这对于理解许多类型漏洞(例如缓冲区溢出漏洞)的语义至关重要。
 
 *Other*  
     一些网络结构不适合上述类型，如深度信念网络(DBN)和变分自编码器(VAEs)；  
 -DBN：  
     假设有一个二部图，每一层的节点之间没有链接，一层是可视层，即输入数据层（v)，一层是隐藏层(h)，如果假设所有的节点都是随机二值变量节点（只能取0或者1值），同时假设全概率分布p(v,h)满足Boltzmann 分布，我们称这个模型是Restricted BoltzmannMachine (RBM)。在已知v的情况下，所有的隐藏节点之间是条件独立的，同理所有的可视节点都是条件独立的，所有的v和h满足Boltzmann 分布；我们把隐藏层的层数增加，我们可以得到Deep Boltzmann Machine(DBM)；  
-    ![图 5](images/7f99fb00439dd94f2939f56a3bcdd8decc10a0b65896510b05cdc1ed8674430e.png)  
-    ![图 6](images/6c8bdcec7909a849c6eb53c3add6071b44b6e2d561882fc2b6a6397ab6dee18e.png)  
+    ![图 5](../images/7f99fb00439dd94f2939f56a3bcdd8decc10a0b65896510b05cdc1ed8674430e.png)  
+    ![图 6](../images/6c8bdcec7909a849c6eb53c3add6071b44b6e2d561882fc2b6a6397ab6dee18e.png)  
 
 -VAEs：
-    ![图 7](images/f37d3523afe1d4da9947ade6be47e1bf1c71e2ea372b9afeb2b04b4a001c0503.png)  
+    ![图 7](../images/f37d3523afe1d4da9947ade6be47e1bf1c71e2ea372b9afeb2b04b4a001c0503.png)  
 
 -记忆网络：  
     该网络配备了外部内存“插槽”，用于存储之前引入的信息，以供未来访问。与LSTM结构相比，该网络能够捕获更远距离的序列相关性;因此，它增强了捕获范围更广的代码序列的能力，这些代码序列是识别依赖于上下文的缓冲区溢出漏洞的关键；  
@@ -253,7 +253,7 @@ AST ->DFS-> 序列-结合-语义特征向量-》特征向量
 -代码分析和神经学习  
 网络模型正变得越来越复杂，表现力也越来越强、
 网络模型正变得越来越复杂，代码分析工作减少  
-![图 1](images/116ee1fac948ff3b94150e6d265e15f78597cea965273011c40757672cd78e67.png)  
+![图 1](../images/116ee1fac948ff3b94150e6d265e15f78597cea965273011c40757672cd78e67.png)  
 定义不明确的特征要求表达模型从头开始学习，而开发适合感兴趣任务的表达模型也是一项挑战
 
 -语义保留  

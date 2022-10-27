@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-10-26 14:54:55
- * @LastEditTime: 2022-10-27 18:31:27
+ * @LastEditTime: 2022-10-27 18:43:19
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -63,8 +63,6 @@ BLSTM Layer包含复杂的LSTM cell；参考文献：**S. Hochreiter and J. Schm
 前向调用考虑后续内容，后向调用考虑之前处理；  
 
 - 步骤二：
-  
-![图 6](../images/bffd05e8f556f4be73cd52ebb1097ced09e886817ddba3d9cf19f0b4776a5647.png)  
 
 1. slice->gadget 将一组slice对应到一个centre，此处就是一个API/库函数的调用；这里是将多对一转化为一对一；  
    1) 首先将同一函数域中的slice整合，去重（与同一func存在联系）；
