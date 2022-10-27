@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-10-26 14:54:55
- * @LastEditTime: 2022-10-27 18:43:19
+ * @LastEditTime: 2022-10-27 20:12:15
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -14,10 +14,6 @@ Vulnerability Detection***
 ## 基本信息
 
 相对VUDDY 和 VulPecker的项目：VUDDY和0%，0%，该文章追求的是只要假阳性率不太高，就可以把重点放在降低假阴性率上。  
-
-测试集选择：  
-NVD in NIST(National Institute of Standards and Technology)<https://nvd.nist.gov/>  
-SARD(Software Assurance Reference Dataset)<https://samate.nist.gov/SRD/index.php>  
 
 **Target：** 泛化性、专业知识转化率（仍然需要人工先验知识）、自动化水平
   
@@ -89,3 +85,36 @@ BLSTM Layer包含复杂的LSTM cell；参考文献：**S. Hochreiter and J. Schm
 - 步骤一：跳过学习阶段中的gadget Labeling，完成其前三步；
 
 - 步骤二：使用模型；
+
+检测指标：metrics false positive rate (F P R),
+false negative rate (F N R), true positive rate or recall (T P R),
+precision (P ), and F 1-measure (F 1)；  
+  
+测试集选择：  
+NVD in NIST(National Institute of Standards and Technology)<https://nvd.nist.gov/>  
+SARD(Software Assurance Reference Dataset)<https://samate.nist.gov/SRD/index.php>  
+
+测试目标选择：缓冲区溢出漏洞和资源管理错误漏洞；
+minibatch stochastic gradient descent together with ADAMAX；
+
+在足量样本的基础上，如SARD，该项目效果优于VukPecker、Xen4.6.0、Libav10.2,但是在NVD数据集上，260个程序的体量的训练集上，效果没有VulPecker等效果好；  
+有人类提供进一步标签的状况下，效果会更优异；
+
+## 未来方向
+
+- 仅限于源代码，目前无法适用于二进制可执行文件类等；
+- 仅限于C++；
+- 目前vul center仅限于API和库函数的调用；
+- 切片的设计仅限于数据流的管理；
+- code -> slice -> gadget -> simblization -> vector直观但有待进一步研究；
+- 仅限于BLSTM；
+- 该论文对系统的评价有限；最好可以发现0day漏洞的能力、扩大研究方向；
+
+## 相关工作
+
+1. 基于模式
+   1. 模式由人类专家手动生成：**开源工具Flawfinder、RATS和ITS4、商业工具Checkmarx、Fortify和Coverity**，存在较高的假阳性率或假阴性率；
+   2. 根据预先分类的漏洞半自动生成的，特定于一类：***缺失检查漏洞、污点式漏洞和信息泄漏漏洞**
+   3. 无预先分类的半自动生成，依赖于人类专家定义特征来表征漏洞；这类粒度粗，导致无法确定位置；
+2. 基于代码相似性（划分、抽象、相似性计算）仅能检测i，ii类漏洞（clone），以及一部分iii类（语句的删除、插入和重新排列）；
+3. 基于深度学习：标记映射向量、AST节点映射向量
