@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-10-27 20:47:46
- * @LastEditTime: 2022-11-01 15:25:18
+ * @LastEditTime: 2022-11-06 09:15:36
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -63,10 +63,17 @@ tips:
 结构与CBOW on HS相似
 ![图 13](../images/9531cc7e4c004c48c7b7c0ba748ab4a42cff5ece04e7a06a8b3873e8d6423019.png)  
 
-### Negative Sampling 负采样
+### Negative Sampling 基于负采样的CBOW、skipgram
+
+#### 负采样
 
 参考博客<https://zhuanlan.zhihu.com/p/39684349>
 
 采样的本质：每次让一个训练样本只更新部分权重，其他权重全部固定；减少计算量；（一定程度上还可以增加随机性）  
 ```随机选择一小部分的negative words（比如选5个negative words）来更新对应的权重。我们也会对我们的“positive” word进行权重更新;在论文中，作者指出指出对于小规模数据集，选择5-20个negative words会比较好，对于大规模数据集可以仅选择2-5个negative words。```  
+
+一元模型分布（unigram distribution）”来选择“negative words”。
+![图 15](../images/0e5b7911edea5ceab0e525168d5977917ff349ec78366f3c2968131f2cfb9b9b.png)  
+![图 16](../images/77c06f7e608d30df1cb673c3aa30f28f7ff6086b89e5a6a265edc7e013fdd09e.png)  
+
 ![图 14](../images/5e0a7abbaf37f08ae5beeec580ed112d8be09db22ae2b31dd72c852402ba5d12.png)  
