@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-10-18 19:43:22
- * @LastEditTime: 2022-10-27 20:47:32
+ * @LastEditTime: 2022-11-09 15:11:41
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -34,7 +34,19 @@
 
 - 代码提交
 - 开发人员活动  
-  
+
+上述特性可以用于检测代码的脆弱性
+文章Evaluating Complexity, Code Churn, and Developer Activity Metrics as Indicators of Software Vulnerabilities提出的CCD检测指标：
+
+- 复杂性
+- 代码更改
+- 开发人员协作
+
+在MOZILLA FIREFOX和RED HAT ENTERPRISE LINUX KERNEL上进行测试，firefox结果：
+![图 2](../images/3d1ebecbfb4d32c0d93d28dc43e997c3068ce65540df0e83d601272730a5a44d.png)  
+linux kernel结果如下：
+![图 3](../images/26003c1a227ad99b92a61cebc4a9f954bcd10f9210087c91981b3542bec06348.png)  
+
 **任务目标**：缩小语义鸿沟（语义鸿沟是指从业者可以理解的漏洞抽象语义与ML算法可以学习的获得语义之间缺乏一致性）  
   
 ### 传统ML
