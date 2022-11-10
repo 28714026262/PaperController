@@ -1,12 +1,14 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-10-26 14:54:55
- * @LastEditTime: 2022-11-09 16:44:16
+ * @LastEditTime: 2022-11-10 14:13:12
  * @LastEditors: Suez_kip
  * @Description: 
 -->
 
 # vulpecker
+
+[论文链接](../AI%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/TraditionalStatic/VulPecker.pdf)
 
 测试基准：表征补丁的一组特征；代码相似性算法；
 
@@ -39,6 +41,8 @@ ReDeBug[13]可以在代码库的OS分发规模上快速找到未修补的代码�
 - 函数级特性：函数的变化或函数外部的变化，如宏和全局变量定义。
 
 # VulDeePecker
+
+[论文链接](../AI漏洞挖掘/vuldeepecker.pdf)
 
 ***PAPER SOURCE:VulDeePecker: A Deep Learning-Based System for
 Vulnerability Detection***

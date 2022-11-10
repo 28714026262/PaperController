@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-10-18 19:43:22
- * @LastEditTime: 2022-11-09 15:11:41
+ * @LastEditTime: 2022-11-10 14:16:14
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -9,7 +9,8 @@
 # 漏洞检测
 
 ***PAPER SOURCE：Software Vulnerability Detection Using Deep Neural Networks: A Survey***  
-  
+[论文链接](../AI漏洞挖掘/Software_Vulnerability_Detection_Using_Deep_Neural_Networks_A_Survey.pdf)
+
 代码分析技术是漏洞检测的基础，可以分为静态、动态和混合方法。
 
 ## 静态技术
@@ -37,6 +38,7 @@
 
 上述特性可以用于检测代码的脆弱性
 文章Evaluating Complexity, Code Churn, and Developer Activity Metrics as Indicators of Software Vulnerabilities提出的CCD检测指标：
+[论文链接](../AI漏洞挖掘/Evaluating_Complexity_Code_Churn_and_Developer_Activity_Metrics_as_Indicators_of_Software_Vulnerabilities.pdf)
 
 - 复杂性
 - 代码更改

@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-06 09:18:11
- * @LastEditTime: 2022-11-06 16:33:49
+ * @LastEditTime: 2022-11-10 17:20:45
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -25,7 +25,7 @@
 
 ### CFG、CDG
 
-cfg 控制流图->cdg 控制依赖图（由FDT前向支配树产生）：
+cfg 控制流图->cdg 控制依赖图（由FDT前向支配树产生）：  
 ![图 3](../images/d0e50bfeb09e3ff1a99cb6a8574ee889845f28497135b40c98e1143fc5a36c0b.png)  
 
 ![图 7](../images/2deb881fdf0b51739e64f003625b0179a39ef034aa42cda5eddb17e1acade40e.png)  
@@ -33,6 +33,8 @@ cfg 控制流图->cdg 控制依赖图（由FDT前向支配树产生）：
 ![图 4](../images/34bdd133ec568fb6b7fc9291e0a94d593645ca442511f083cee853b9f296f517.png)  
 
 所有从函数出口到S2的路径都一定会经过S5；比如S1 -> C1 和 C1 -> S1 互相抵消。不过这还剩一个问题，就是像 C1 -> S3 这种依赖是怎么产生的？
+
+ACFG 源自于Genius项目见下文
 
 ### DFG、DDG
 
@@ -63,3 +65,50 @@ cfg 控制流图->cdg 控制依赖图（由FDT前向支配树产生）：
   PAPER SOURCE：ang J , Qu M , Wang M , et al. LINE: Large-scale information network embedding[J]. 24th International Conference on World Wide Web, WWW 2015, 2015.
 
 ## 图神经网络
+
+***Scalable Graph-based Bug Search for Firmware Images***  
+[论文链接](../AI漏洞挖掘/Graph/Scalable%20Graph-based%20Bug%20Search%20for%20Firmware%20Images.pdf)  
+
+固件漏洞挖掘
+
+参考计算机视觉中的技术，基于CFG的高阶向量的表示方法 Genius
+  
+计算机视觉图形检索的主要步骤：  
+
+1. 原始特征提取
+2. 码本生成
+3. 特征编码
+4. 在线搜索
+离线索引（包括前三步）和在线搜索
+
+### 文章提出的ACFG
+  
+![图 1](../images/cdebf2f7de4f85f6b87f956bf48ff41154e83a1a42b966c8982896d20f96f139.png)  
+![图 4](../images/968ed2073433c3a3a94664f60c99289b955b3312263923cc8face66b466b9155.png)  
+![图 2](../images/d73fe08ae22f4b3d70cb991e7fdf4f9b8892e771db860534866cbe71668763ba.png)  
+
+其他方法MCS最大公共子图，效率有限
+
+### 码本生成
+
+从原始特征中学习一组分类：C={c1，c2，…，ck}，其中ci是第i个码字或“质心”，共分为两步：
+
+- 相似性度量计算：
+  二部图法量化相似性，并用结构特征添加来防止二部图无图结构特征造成的误差积累导致不精确  
+  将两张ACFG图组合为一张二部图，每个匹配都与成本相关联。两个图的最小代价是映射上所有边代价的总和。二部图匹配可以有效地遍历所有映射，并以最小的代价选择从G1到G2的节点上的一对一映射。边缘成本由该边缘上两个基本块之间的距离计算。  
+  ![图 6](../images/8e1d5d4507ea48ab477a94fb3eb35abb4b2fc3d0bd324bb44f64208e8f1c7d88.png)  
+  如果特征是集合，我们使用Jaccard来计算集合差。  
+2
+  - 利用空图计算的归一化；  
+    两个图的匹配成本大于一，并且与比较的ACFG的大小正相关。因此，我们将成本归一化以计算相似性得分。对于成本归一化，我们为每个比较的ACFG创建一个空ACFGΦ。空图中的每个节点都有一个空特征向量，并且空图的大小被设置为对应的比较图的大小。通过与这个空的ACFG进行比较，我们可以获得被比较图可以得到的最大匹配成本;  
+    $\kappa(g_1,g_2)=1-\frac{cost(g_1,g_2)}{max(cost(g_1,\phi),cost(\phi,g_2))}$  
+
+  学习目标是找到能够最大化不同ACFG的距离同时最小化等效ACFG距离的权重参数(人话：不同类差距最大化，近似类差距最小化)  
+
+  雅卡尔指数（英语：Jaccard index），又称为交并比、雅卡尔相似系数，比较样本集的相似性与多样性的统计量，定义为交集与并集的比值；  
+  雅卡尔距离（Jaccard distance）用于量度样本集之间的不相似度，其定义为1减去雅卡尔系数；
+  有人将雅卡尔距离定义两集合对称差$A\Delta B=|A\cup B|-|A\cap B|$的大小与并集大小之间的比例
+
+- 聚类
+
+使用聚类算法：频谱聚类算法
