@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-06 09:18:11
- * @LastEditTime: 2022-11-16 17:15:01
+ * @LastEditTime: 2022-11-16 21:10:10
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -70,6 +70,26 @@ ACFG 源自于Genius项目见下文
 - 基于深度学习的方法
 - LINE
   PAPER SOURCE：ang J , Qu M , Wang M , et al. LINE: Large-scale information network embedding[J]. 24th International Conference on World Wide Web, WWW 2015, 2015.
+
+## 激活函数
+
+1，相比Sigmoid/tanh函数，使用梯度下降（GD）法时，收敛速度更快
+
+2，相比Sigmoid/tanh函数，Relu只需要一个门限值，即可以得到激活值，计算速度更快
+
+缺点是：
+
+Relu的输入值为负的时候，输出始终为0，其一阶导数也始终为0，这样会导致神经元不能更新参数，称为“Dead Neuron”。
+
+为了解决Relu函数这个缺点，在Relu函数的负半区间引入一个泄露（Leaky）值，所以称为Leaky Relu函数；
+
+$$
+LeaekyReLU(x) = 
+\begin{cases}
+x, & x\gt 0 \\
+ax, & x\le 0
+\end{cases}
+$$
 
 ## 聚类
 
@@ -270,6 +290,7 @@ $lsh(g)=[h_1(q(g)),...,h_w(q(g))]$
 等式2是通过输入和输出边在图的不同节点之间传递信息的步骤，其参数取决于边类型和方向。$a^{(t)}_v\in R^{2D}$包含来自两个方向的边的激活。  
 其余的是类似GRU的更新，它包含了来自其他节点和前一个时间步的信息，以更新每个节点的隐藏状态。  
 z和r是更新门和重置门;
+使用BPTT算法（Back Propagation Through Time）以计算梯度。
 
 输出：
 
@@ -279,10 +300,43 @@ $h_G=tanh(\sum_{v\in V}{\sigma(i(h_v^{(T)},x_v))\odot tanh(j(h_v^{(T)},x_v))})$
 i和j是神经网络,以$h_v^{(T)}$和$x_v$的级联作为输入,输出实值向量的。$\sigma(i(h_v^{(T)},x_v))$可以作为一种注意力机制；
 - 节点输出
 
+->GGS-NNs(Gated Graph Sequence Neural Networks)使用多个GGNN网络生成输出序列；
+
 ### GCN
 
 RNN针对一维结构，针对序列前后信息的互相影响，图不存在这样的线性关系；
 CNN针对二维结构，依靠的是平移时的结构不变性，使得参数能够在各个核中共享，但图不存在这样的优势；
 图并不能用上述欧式空间描述；-> GNN;DeepWalk;Node2vec
+![图 4](../images/ba8cc8f067bf58fbc6831c74fec422d951584b30a754553f3539721faee03ad6.png)  
+邻接矩阵A对角为0，因此与H相乘时，会放弃自己node的特征，因此$\hat{A}=A+I$,让H相乘时获取自身特征；
+$\hat{D}^{-\frac{1}{2}}\hat{A}\hat{D}^{-\frac{1}{2}}$进行归一化
+![图 3](../images/16fba8ee3d3a2733c50f8ede3ee324e03b19023a42b62708ff35f044d6df9ab3.png)  
+
+[作者博客链接](http://tkipf.github.io/graph-convolutional-networks/)
 
 ### GAT
+
+[博客链接](https://zhuanlan.zhihu.com/p/134148937)  
+图方法分为谱方法和空间方法：
+
+- 谱方法是将图映射到谱域上，例如拉普拉斯矩阵经过特征分解得到的空间，代表方法之一是GCN；
+- 空间方法是直接在图上进行操作，代表方法之一GAT；
+
+学习流程：
+
+- 输入:N个节点的特征$h=\{h_1,...,h_N\}$，$h_i\in \Kappa^F$  
+- 乘W变换，将h映射到维度$\hat{F}$
+- 注意力权重$e_{ij}=a(Wh_i,Wh_j)$
+- softmax函数归一化
+- 注意力机制是一个单层的前馈神经网络，激活函数采用LeakyReLU
+- 注意力参数$a_{ij}=softmax_j(e_{ij})=\frac{exp(e_{ij})}{\sum_{k\in N_i}exp(e_{ik})}$
+- $\hat{h_i}=\sigma(\sum_{j\in N_i} a_{ij}W\hat{h}_j)$
+- 输出:$\hat{h}=\{\hat{h}_1,...,\hat{h}_i\}$，$\hat h_i\in \Kappa^F$
+
+采用多头注意力（Multi-head Attention）扩展注意力对模型是有提升的。  
+采用K头注意力机制的两种计算公式如下：
+
+1. 拼接方式：  
+![图 6](../images/970a4a3b91082701f3a1a00fdd97b9a256c717300e1294261ed1bed9239d7d72.png)  
+2. 均值方法：  
+![图 7](../images/d50803a7e7da43a06a812824d82efcd2d5a3e0a6f1640bc42d403a79c29c4f3d.png)  
