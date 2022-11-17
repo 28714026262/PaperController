@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-06 09:18:11
- * @LastEditTime: 2022-11-17 14:57:28
+ * @LastEditTime: 2022-11-17 15:20:25
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -84,7 +84,7 @@ Relu的输入值为负的时候，输出始终为0，其一阶导数也始终为
 为了解决Relu函数这个缺点，在Relu函数的负半区间引入一个泄露（Leaky）值，所以称为Leaky Relu函数；
 
 $$
-LeaekyReLU(x) = 
+LeaekyReLU(x) =
 \begin{cases}
 x, & x\gt 0 \\
 ax, & x\le 0
