@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-06 09:18:11
- * @LastEditTime: 2022-11-16 21:10:10
+ * @LastEditTime: 2022-11-17 14:57:28
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -340,3 +340,22 @@ $\hat{D}^{-\frac{1}{2}}\hat{A}\hat{D}^{-\frac{1}{2}}$进行归一化
 ![图 6](../images/970a4a3b91082701f3a1a00fdd97b9a256c717300e1294261ed1bed9239d7d72.png)  
 2. 均值方法：  
 ![图 7](../images/d50803a7e7da43a06a812824d82efcd2d5a3e0a6f1640bc42d403a79c29c4f3d.png)  
+
+### Highway GCN
+
+缩写为H-GCN，来自于Highway Network；
+
+- Highway Networks
+  - 在门机制引入了transform gate T,carry gate C;
+  - 残差连接：$y=H(x,W_H)\cdot T(x,W_T)+x\cdot (1-T(x,W_C))$
+  ![图 1](../images/77fe0a480564856489e8bbbb7e72773e1a58f04c2604331eec3796a327b7daf0.png)  
+  ![图 2](../images/7112e2d883bfbedca878b0b268e9b737635d018e906550a6c5ca6241cc671b06.png)  
+  由上图可知，该网络部分忽视输入，部分处理；
+
+### DEEPGCNs
+
+TODO
+
+### JUMP KNOWLEDGE NETWORK
+
+TODO
