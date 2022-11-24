@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-10-18 19:43:22
- * @LastEditTime: 2022-11-15 12:01:53
+ * @LastEditTime: 2022-11-23 20:25:18
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -82,18 +82,46 @@ linux kernel结果如下：
     双向形式的rnn能够捕获序列的长期依赖性。许多研究利用双向LSTM (Bi-LSTM)和门通循环单元(GRU)结构来学习代码上下文依赖关系，这对于理解许多类型漏洞(例如缓冲区溢出漏洞)的语义至关重要。
 
 *Other*  
-    一些网络结构不适合上述类型，如深度信念网络(DBN)和变分自编码器(VAEs)；  
--DBN：  
+    一些网络结构不适合上述类型，如深度信念网络(DBN)和变分自编码器(VAEs)；
+
+- DBN
     假设有一个二部图，每一层的节点之间没有链接，一层是可视层，即输入数据层（v)，一层是隐藏层(h)，如果假设所有的节点都是随机二值变量节点（只能取0或者1值），同时假设全概率分布p(v,h)满足Boltzmann 分布，我们称这个模型是Restricted BoltzmannMachine (RBM)。在已知v的情况下，所有的隐藏节点之间是条件独立的，同理所有的可视节点都是条件独立的，所有的v和h满足Boltzmann 分布；我们把隐藏层的层数增加，我们可以得到Deep Boltzmann Machine(DBM)；  
     ![图 5](../images/7f99fb00439dd94f2939f56a3bcdd8decc10a0b65896510b05cdc1ed8674430e.png)  
     ![图 6](../images/6c8bdcec7909a849c6eb53c3add6071b44b6e2d561882fc2b6a6397ab6dee18e.png)  
 
--VAEs：
+- VAEs
     ![图 7](../images/f37d3523afe1d4da9947ade6be47e1bf1c71e2ea372b9afeb2b04b4a001c0503.png)  
 
--记忆网络：  
+- 记忆网络  
     该网络配备了外部内存“插槽”，用于存储之前引入的信息，以供未来访问。与LSTM结构相比，该网络能够捕获更远距离的序列相关性;因此，它增强了捕获范围更广的代码序列的能力，这些代码序列是识别依赖于上下文的缓冲区溢出漏洞的关键；  
 
+End-to-End Prediction of Buffer Overruns from Raw Source Code via Neural Memory Networks
+[基于记忆网络的缓冲区溢出漏洞](./../AI漏洞挖掘/memeryNet/E2E_MemoryNet_BufferOverruns.pdf)
+
+- 具有外部记忆槽的神经网络，通过注意力机制来访问；
+- 根据google应用于问答问题的记忆网络研究来实现最基础的缓冲区溢出漏洞检测；
+- 使用深度学习直接处理运行时错误预测任务；
+- bAbl任务于缓冲区溢出任务的比较：
+![图 2](../images/15919d9bfb99ac83109ee06f4c44ccc232923802f8c6fee55fce938ed09546a0.png)  
+  - 将vul sink转化为一个bAbl中的问题来处理，通过上文进行联合查询学习；
+- 测试用例相关：
+  - 使用了juliet测试套件，但是还使用了大量随机数据的（初始-分配-访问）对，10-30行C语言；
+  - 没做变量抽象的初始化，而是直接动刀数据集，就差这点点儿功夫么？
+  - 增加复杂性：
+    - 多参数的访问函数；
+    - 控制于优化变量数值的选择？
+    - 间接参数；
+    - 分配后重新变化参数值；
+![图 3](../images/696149ff73b295d206ea037b79bb0818dffad4eb8e9ab0cad86a0fb94889f0ca.png)  
+- 该系统不会预分类各行中的每个值，数字都需要系统自行学习？满足了数据驱动，但真的有必要么？
+- 位置编码，区分同一句子中的同一单词多次使用时的角色？
+![图 2](../images/5bdec3ae262b78cb1602e28afb06cb8889ee5344f84b91bc8ebac4d3ac340d1f.png)  
+其中，这里的d时哪里来的我真没看懂
+![图 3](../images/8fd84333546d07c4a2976f56692e50d5dcbd51932f9af0b8e1f299b48d6d0c7d.png)  
+- 存储：语义存储模块和地址信息存储模块
+- 编码，query结合该句的addr矩阵信息生成注意力向量，寻找其相关性
+- t-SNE是一种集降维与可视化于一体的技术
+  
 #### 研究现状
 
 - 基于图的特征表示:大量研究应用dnn从不同类型的基于图的程序表示中学习特征表示，包括AST、DFG、CFG、PDG和它们的组合。  

@@ -1,13 +1,13 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-17 20:11:02
- * @LastEditTime: 2022-11-22 10:08:06
+ * @LastEditTime: 2022-11-23 20:29:43
  * @LastEditors: Suez_kip
  * @Description: 
 -->
 # VUDDY
 
-[论文链接](../AI漏洞挖掘/VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf)
+[论文链接](../AI漏洞挖掘/fingerPrint/VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf)
 
 函数级粒度和长度过滤技术（减少了签名比较的次数/搜索空间），实现了其极高的可扩展性。
 
