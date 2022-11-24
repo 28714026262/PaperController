@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-06 09:18:11
- * @LastEditTime: 2022-11-23 20:49:05
+ * @LastEditTime: 2022-11-24 20:51:40
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -25,6 +25,14 @@
 丰富AST，增加分支8个，特定适配不同的特殊漏洞类型，来解决一些传统方案无法挖掘的漏洞；
 序列化模型的问题：误识别部分漏洞类型，代码拼接会出现问题，有可能逻辑上不一定有连续执行的可能性；
 MRAKING待看
+
+案例论文Cross-Project T ransfer Representation Learning for Vulnerable Function Discovery
+[论文链接](./../AI漏洞挖掘/Graph/Cross-Project_Transfer_Representation_Learning_for_Vulnerable_Function_Discovery.pdf)
+功能级漏洞发现框架，论文设计架构：
+
+- 使用解析器通过使用深度优先遍历，以串行形式获得AST；
+- Word2vec[13]嵌入的长短期记忆（LSTM）[7]递归神经网络；
+- 对小样本参数，将数据馈送到预训练的网络以学习表示的子集；
 
 ## 控制流与数据流
 

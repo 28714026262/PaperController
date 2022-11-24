@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-23 16:15:03
- * @LastEditTime: 2022-11-23 19:31:01
+ * @LastEditTime: 2022-11-24 20:33:12
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -52,10 +52,6 @@
 
 1. (NA-2018) Automated Vulnerability Detection in Source Code Using Deep Representation Learning  ***Dataset available*** <https://osf.io/d45bw/>
 1. (SCI-I-2018) Cross-project transfer representation learning for vulnerable function discovery <https://github.com/DanielLin1986/TransferRepresentationLearning>
-
-### 2017
-
-1. (CCF-A-2017) Neural Network-based Graph Embedding for Cross-Platform Binary Code Similarity Detection
 
 ### 其他相关方向文章
 
