@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-06 09:18:11
- * @LastEditTime: 2022-11-24 20:51:40
+ * @LastEditTime: 2022-11-26 15:49:37
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -26,13 +26,22 @@
 序列化模型的问题：误识别部分漏洞类型，代码拼接会出现问题，有可能逻辑上不一定有连续执行的可能性；
 MRAKING待看
 
-案例论文Cross-Project T ransfer Representation Learning for Vulnerable Function Discovery
+案例论文Cross-Project T ransfer Representation Learning for Vulnerable Function Discovery  
 [论文链接](./../AI漏洞挖掘/Graph/Cross-Project_Transfer_Representation_Learning_for_Vulnerable_Function_Discovery.pdf)
 功能级漏洞发现框架，论文设计架构：
 
-- 使用解析器通过使用深度优先遍历，以串行形式获得AST；
-- Word2vec[13]嵌入的长短期记忆（LSTM）[7]递归神经网络；
+- 使用解析器CodeSensor（岛语法）,获取无需库的AST；  
+[岛语法](../AI漏洞挖掘/other/Generating_robust_parsers_using_island_grammars.pdf)：包含自由部分（剩余部分）和详细部分（结构），对原有上下文无关语法G，是G的扩展，能识别G无法识别的句子；G复杂度更高；由广义LR解析支持；
+- 通过使用深度有限遍历，以串行形式获得AST；关键词的数字映射；填充与截断保证定长向量（实验中为1000个元素）；对向量的元素使用词袋和word2vec，并使用主成分分析（PCA）将嵌入投影到二维；
+- Word2vec[13]嵌入的双向长短期记忆（Bi-LSTM）[7]递归神经网络；  
+![图 1](../images/09333d7b4476d8f50d40249980e86356bca8069bef733e7a8456e838c55d5955.png)  
 - 对小样本参数，将数据馈送到预训练的网络以学习表示的子集；
+- ![图 2](../images/f38bb14dcd3621852567d59c64e304392bf731b25d860352c36189a0357b5a1f.png)  
+
+### FIRR功率减少率
+
+检查所需功能数量减少与随机功能数量之比；
+$FIRR_{AST2CM}=1-\frac{N_{total}*recall_{CM}}{N_{total}*recall_{AST}}$
 
 ## 控制流与数据流
 

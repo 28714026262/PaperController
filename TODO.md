@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-23 16:15:03
- * @LastEditTime: 2022-11-24 20:33:12
+ * @LastEditTime: 2022-11-26 18:26:14
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -47,11 +47,6 @@
 4. (CCF-A-2019) Machine-learning Supported Vulnerability Detection in Source Code
 5. (CCF-C-2019) Deep Learning-Based Vulnerable Function Detection: A Benchmark <https://github.com/Seahymn2019/Function-level-Vulnerability-Dataset>
 6. (NDSS-2019) Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs<https://nmt4binaries.github.io/>
-
-### 2018
-
-1. (NA-2018) Automated Vulnerability Detection in Source Code Using Deep Representation Learning  ***Dataset available*** <https://osf.io/d45bw/>
-1. (SCI-I-2018) Cross-project transfer representation learning for vulnerable function discovery <https://github.com/DanielLin1986/TransferRepresentationLearning>
 
 ### 其他相关方向文章
 
