@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-23 16:15:03
- * @LastEditTime: 2022-11-28 09:46:19
+ * @LastEditTime: 2022-11-28 13:35:05
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -13,7 +13,7 @@
 1. 完成对图神经网络的相关技术了解；
    1. 基于DGL网站的图神经网络的研究；
    2. 待定；
-2. 完成郑博的论文清单阅读；
+2. 完成论文清单阅读；
 3. 完成web前端原理进一步调研；
 4. 进行逻辑漏洞的前沿论文；
 5. 完成基于CVE或者SARD的逻辑漏洞调研；
@@ -45,8 +45,6 @@
 2. (CCF-A-2019) Devign-Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks  ***Dataset available***  <https://sites.google.com/view/devign>
 3. (CCF-A-2019) µVulDeePecker- A Deep Learning-Based System for Multiclass Vulnerability Detection ***Dataset available*** <https://github.com/muVulDeePecker/muVulDeePecker>
 4. (CCF-A-2019) Machine-learning Supported Vulnerability Detection in Source Code
-5. (CCF-C-2019) Deep Learning-Based Vulnerable Function Detection: A Benchmark <https://github.com/Seahymn2019/Function-level-Vulnerability-Dataset>
-6. (NDSS-2019) Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs<https://nmt4binaries.github.io/>
 
 ### 其他相关方向文章
 
