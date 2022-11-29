@@ -1,13 +1,18 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-24 18:29:38
- * @LastEditTime: 2022-11-28 14:51:03
+ * @LastEditTime: 2022-11-29 16:23:31
  * @LastEditors: Suez_kip
  * @Description: 
 -->
 # 工作记录
 
 ## Log according to the date
+
+### 11.29 Tuesday
+
+- 完成$\mu$VulDeePecker: A Deep Learning-Based System for Multiclass Vulnerability Detection 论文阅读，基于VulDeepecker的三BiLSTM模型，分别提取上下文PDG（data+control）和基于调用的注意力，分别分析全局、本地以及综合特征用于分类，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中；
+- 开始Machine-learning Supported Vulnerability Detection in Source Code 论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中；
 
 ### 11.28 Monday
 

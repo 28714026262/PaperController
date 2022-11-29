@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-06 09:18:11
- * @LastEditTime: 2022-11-26 15:49:37
+ * @LastEditTime: 2022-11-29 15:00:35
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -61,6 +61,13 @@ ACFG 源自于Genius项目见下文
 ### DFG、DDG
 
 变量使用的依赖，eazy，pass
+
+### PDG，SDG
+
+![图 3](../images/19f6fe8d79f344c404a7143e2561e4101762fa0feea4b71688363caa6ffb4036.png)  
+  
+PDG是有向图，其中节点（或顶点）表示语句或控制谓词，弧（或有向边）表示两个节点之间的数据或控制依赖关系。
+SDG可以通过主叫-被叫关系从PDG导出。
 
 ## 图嵌入
 

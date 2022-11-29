@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-23 16:15:03
- * @LastEditTime: 2022-11-28 13:35:05
+ * @LastEditTime: 2022-11-29 16:25:44
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -43,8 +43,7 @@
 
 1. (CCF-A-2019) Software Vulnerability Discovery via Learning Multi-Domain Knowledge Bases  <https://github.com/DanielLin1986/RepresentationsLearningFromMulti_domain>
 2. (CCF-A-2019) Devign-Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks  ***Dataset available***  <https://sites.google.com/view/devign>
-3. (CCF-A-2019) µVulDeePecker- A Deep Learning-Based System for Multiclass Vulnerability Detection ***Dataset available*** <https://github.com/muVulDeePecker/muVulDeePecker>
-4. (CCF-A-2019) Machine-learning Supported Vulnerability Detection in Source Code
+3. (CCF-A-2019) Machine-learning Supported Vulnerability Detection in Source Code
 
 ### 其他相关方向文章
 
