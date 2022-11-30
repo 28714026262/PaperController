@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-23 16:15:03
- * @LastEditTime: 2022-11-29 16:25:44
+ * @LastEditTime: 2022-11-30 20:17:01
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -38,12 +38,6 @@
 1. (CCF-A-2020) Software Vulnerability Detection Using Deep Neural Networks: A Survey
 2. (CCF-A-2020) Combining Graph-Based Learning With Automated Data Collection for Code Vulnerability Detection  <https://github.com/HuantWang/FUNDED_NISL>
 3. (SCI-II-2020) A deep learning based static taint analysis approach for IoT software vulnerability location
-
-### 2019
-
-1. (CCF-A-2019) Software Vulnerability Discovery via Learning Multi-Domain Knowledge Bases  <https://github.com/DanielLin1986/RepresentationsLearningFromMulti_domain>
-2. (CCF-A-2019) Devign-Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks  ***Dataset available***  <https://sites.google.com/view/devign>
-3. (CCF-A-2019) Machine-learning Supported Vulnerability Detection in Source Code
 
 ### 其他相关方向文章
 

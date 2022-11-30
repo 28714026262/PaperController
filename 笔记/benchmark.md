@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-28 13:36:24
- * @LastEditTime: 2022-11-28 14:50:35
+ * @LastEditTime: 2022-11-30 17:23:40
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -27,3 +27,9 @@
 基于前k%的易受攻击测试用例进行回归以及准确度的计算；
 
 ## Magma
+
+## Machine-Learning Supported Vulnerability Detection in Source Code
+
+- 针对合成训练，投票机制
+- 针对现有图抽象方案
+![图 1](../images/5d74918c1a411f82ee8fc0f046c38e5273c5748b7f95bdefe853cca44d2b48a5.png)  

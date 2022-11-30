@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-06 09:18:11
- * @LastEditTime: 2022-11-29 15:00:35
+ * @LastEditTime: 2022-11-30 20:05:53
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -68,6 +68,20 @@ ACFG 源自于Genius项目见下文
   
 PDG是有向图，其中节点（或顶点）表示语句或控制谓词，弧（或有向边）表示两个节点之间的数据或控制依赖关系。
 SDG可以通过主叫-被叫关系从PDG导出。
+
+### NCS
+
+即源代码各个单词的顺序出现；
+
+论文举例：[Devign: Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks](../AI漏洞挖掘/Graph/NeurIPS-2019-devign-effective-vulnerability-identification-by-learning-comprehensive-program-semantics-via-graph-neural-networks-Paper.pdf)
+
+工作流程：
+
+1. 提取代码的AST、CFG、DFG、NCS，每个节点由代码+节点组成，分别使用word2vec进行编码再结合作为节点；
+2. 通过邻接矩阵来对邻接节点的信息进行聚合，将聚合节点和当前节点一起经过GRU网络得到下一时刻的当前节点。以此类推，经过T时刻，生成所有节点的最终的节点表征；（就剩了个邻接矩阵，初始为{0，1}，之前获取的那些信息不用了？）
+3. 不使用节点特征线性的输入到MLP中然后通过softmax分类的一般方案，本文使用Conv进行训练一维卷积和dense层来对节点特征进行提取从而实现图级别的分类
+
+效果一般，并不是很亮眼，不值得在read list中；
 
 ## 图嵌入
 
