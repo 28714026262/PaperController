@@ -1,13 +1,17 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-24 18:29:38
- * @LastEditTime: 2022-11-30 21:13:00
+ * @LastEditTime: 2022-12-01 20:57:37
  * @LastEditors: Suez_kip
  * @Description: 
 -->
 # 工作记录
 
 ***持续更新***
+
+## 12.1 Thusday
+
+- 开始A deep learning based static taint analysis approach for IoT software vulnerability location论文阅读，记录在[Traditional.md](./笔记/Traditional.md)中；
 
 ## 11.30 Wednesday
 
