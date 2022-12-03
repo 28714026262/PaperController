@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-23 16:15:03
- * @LastEditTime: 2022-11-30 20:17:01
+ * @LastEditTime: 2022-12-03 20:33:59
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -32,12 +32,6 @@
 7. (CCF-B-2021) AutoVAS: An automated vulnerability analysis system with a deep learning approach
 8. (CCF-C-2021) Deep neural-based vulnerability discovery demystified: data, model and performance
 9. (CCF-C-2021) A novel deep learning-based feature selection model for improving the static analysis of vulnerability detection ***Dataset available*** <https://seam.cs.umd.edu/webvuldat>
-
-### 2020
-
-1. (CCF-A-2020) Software Vulnerability Detection Using Deep Neural Networks: A Survey
-2. (CCF-A-2020) Combining Graph-Based Learning With Automated Data Collection for Code Vulnerability Detection  <https://github.com/HuantWang/FUNDED_NISL>
-3. (SCI-II-2020) A deep learning based static taint analysis approach for IoT software vulnerability location
 
 ### 其他相关方向文章
 

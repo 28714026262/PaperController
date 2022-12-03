@@ -1,13 +1,21 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-24 18:29:38
- * @LastEditTime: 2022-12-01 20:57:37
+ * @LastEditTime: 2022-12-03 20:58:32
  * @LastEditors: Suez_kip
- * @Description: 
+ * @Description: 工作记录
 -->
 # 工作记录
 
 ***持续更新***
+
+## 12.3 Saturday
+
+- 完成A deep learning based static taint analysis approach for IoT software vulnerability location论文阅读，记录在[Traditional.md](./笔记/Traditional.md)中，基于污点传播分析直接提取到目标路径，使用word2vec+CNN-BLSTM进行训练，实验数据的比较方式很魔幻；
+- 完成Combining Graph-Based Learning With Automated Data Collection for Code Vulnerability Detection论文阅读，记录在[FUNDED.md](./笔记/FUNDED.md)中，提出基于模型准确率的专家委员会机制的漏洞自动收集系统，以及复合AST的GGNN漏挖模型；
+- 了解基于MPP、CP的模型准确率相关知识，记录在[FUNDED.md](./笔记/FUNDED.md)中；
+- 了解基于GA相关知识，记录在[Note.md](./笔记/Note.md)中；
+- 开始A novel deep learning-based feature selection model for improving the static analysis of vulnerability detection论文阅读，记录在[Traditional.md](./笔记/Traditional.md)中，特征优化的遗传算法（GA）和用于分类的DNN相结合；
 
 ## 12.1 Thusday
 
