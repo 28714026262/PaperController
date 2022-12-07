@@ -1,13 +1,22 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-24 18:29:38
- * @LastEditTime: 2022-12-03 20:58:32
+ * @LastEditTime: 2022-12-07 21:22:35
  * @LastEditors: Suez_kip
  * @Description: 工作记录
 -->
 # 工作记录
 
 ***持续更新***
+
+## 12.7 Wednesday
+
+- 完成A novel deep learning-based feature selection model for improving the static analysis of vulnerability detection论文阅读，记录在[Traditional.md](./笔记/Traditional.md)中，特征优化的遗传算法（GA）和用于分类的DNN相结合；
+- 开始VulDetector: Detecting Vulnerabilities Using Weighted Feature Graph Comparison论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中；
+
+## 12.6 Tuesday
+
+- 调查了NDSS2022-2019年的相关漏洞挖掘文章获取了一批相关文章列入[TODO.md](./TODO.md)中等待学习；
 
 ## 12.3 Saturday
 
