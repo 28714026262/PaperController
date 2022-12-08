@@ -1,13 +1,17 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-24 18:29:38
- * @LastEditTime: 2022-12-07 21:22:35
+ * @LastEditTime: 2022-12-08 15:50:14
  * @LastEditors: Suez_kip
  * @Description: 工作记录
 -->
 # 工作记录
 
 ***持续更新***
+
+## 12.8 Thursday
+
+- 完成VulDetector: Detecting Vulnerabilities Using Weighted Feature Graph Comparison论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中，在$\mu VulDetector$的基础上，将图进一步发展为代码行和CFG获取的WFG进行genius的图匹配；
 
 ## 12.7 Wednesday
 
