@@ -9,6 +9,10 @@
 
 ***持续更新***
 
+## 12.11 Sunday
+
+- 完成VulDeeLocator: A Deep Learning-Based Fine-Grained Vulnerability Detector论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中，使用中间代码、代码插入实现切片，然后实现了一个BRNN-vdl，通过位置信息的乘法层和池化层实现了对BRNN的粒度细化和注意力机制；
+
 ## 12.8 Thursday
 
 - 完成VulDetector: Detecting Vulnerabilities Using Weighted Feature Graph Comparison论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中，在$\mu VulDetector$的基础上，将图进一步发展为代码行和CFG获取的WFG进行genius的图匹配；
