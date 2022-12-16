@@ -33,3 +33,8 @@
 - 针对合成训练，投票机制
 - 针对现有图抽象方案
 ![图 1](../images/5d74918c1a411f82ee8fc0f046c38e5273c5748b7f95bdefe853cca44d2b48a5.png)  
+
+# Deep neural-based vulnerability discovery demystified: data, model and performance
+
+手动标记了1471个易受攻击的功能，并从9个开源软件项目中收集了59297个非易受攻击功能样本。数据集中的每个样本都在源代码函数标签对中提供。
+<https://github.com/Seahymn2019/Function-level-Vulnerability-Dataset>

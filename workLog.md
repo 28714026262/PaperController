@@ -9,6 +9,13 @@
 
 ***持续更新***
 
+## 12.13 Tuesday
+
+- 完成SySeVR: A Framework for Using Deep Learning to Detect Software Vulnerabilities论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中，针对C、C++的，基于SyVC的slice切片的，使用BGRU的改进vuldeepecker；
+- 完成Deep Learning Based Vulnerability Detection: Are We There Yet?论文阅读，一篇很有意思的综述类文章，更加具体且有发展研究价值，适合都很多文章后再看；
+- 开始Deep neural-based vulnerability discovery demystified: data, model and performance论文阅读，记录在[benchmark.md](./笔记/benchmark.md)中；
+- 开始DeepWukong: Statically Detecting Software Vulnerabilities Using Deep Graph Neural Network论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中；
+
 ## 12.11 Sunday
 
 - 完成VulDeeLocator: A Deep Learning-Based Fine-Grained Vulnerability Detector论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中，使用中间代码、代码插入实现切片，然后实现了一个BRNN-vdl，通过位置信息的乘法层和池化层实现了对BRNN的粒度细化和注意力机制；

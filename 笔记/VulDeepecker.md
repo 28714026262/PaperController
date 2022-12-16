@@ -228,7 +228,8 @@ minibatch stochastic gradient descent together with ADAMAX；
 3. 对以下内容设置关注度：
    1. 库/API函数call中assignment的定义；
    2. 控制语句，判断边界检查和安全筛选的存在性和合理性；
-   3. 库/API函数call语句；
+   3. 库/API函数call语句；  
+   
 ![图 5](../images/9776dfd52d92d063df2a09596856c7cdd39d9a5bf101dad5c600339a95918b16.png)  
 
 ## Step V
@@ -393,3 +394,58 @@ LLVM在AST中提供了160多种类型，仅能用大向量表示，本文选top3
 
 ![picture 2](../images/84d1098e465fe4f1d674f056a4aadc0a459682ac2b24ca686ce22deed7781611.png)  
 
+# SySeVR
+
+针对C、C++的，基于SyVC的slice切片的，使用BGRU的vuldeepecker；
+Syntax-based Vulnerability Candidates (SyVCs)
+Semantics-based Vulnerability Candidates (SeVCs) 
+
+SySeVR:Syntax-based and Semantics-based vector representation；  
+![picture 4](../images/723b01fba86a8927db378486debcd86c4350a34006579a427cc390c9fb40f4d5.png)  
+
+## STEP I SyVC获取
+
+使用程序的抽象语法树（AST）上节点的属性来描述漏洞语法特征；
+
+定义：
+
+- P 程序；
+- f 函数：$P={f_1,...,f_n}$无序集；
+- s statement 语句：$f=[s_1,...,s_n]$有序集；
+- t token：$s=[t_1,...,t_n]$有序集；
+- e 代码元素，是在一个s范围内的一串连续的t；
+
+SyVC是匹配$h_k$漏洞模板的e（由于基于不同的漏洞模板，因此同一个e也会被多次提取），对应于：
+
+- AST的叶节点：一个token；
+- AST内部节点：一条语句s或由多个连续令牌t组成；
+
+模板在本文中包含：
+
+1. API/库调用；
+2. 数组使用；
+3. 指针使用；
+4. 算数表达式；
+
+## STEP II SyVCs 转换为 SeVCs
+
+1. 生成PDG，在CFG的基础上，研究PDG，同时考略data dependency以及control dependency；
+2. 同时进行上下文切片：
+   1. foward slice：从SyVC的e出发的可达各节点，根据是否包含func call可以进行细分；
+   2. backward slice：从该节点出发可达SyVC的e的节点集合，根据是否包含func call可以进行细分；
+   3. program slice： merge fs和bs，删除重复点和重复邻居；
+   4. 值得一提的是，文中为了获得SyVC的前向切片，我们仅利用数据依赖性，原因有两个：
+      1. 受SyVC通过控制依赖性影响的语句在大多数情况下不会受到攻击；
+      2. 利用对SyVC具有控制依赖性的语句将涉及许多与漏洞无关的语句；
+3. 生成SeVC，将ps中的statement还原并按与语句原顺序拼接；
+
+## STEP III embedding
+
+1. 归一化；
+2. 词划分；
+3. 嵌入拼接与居中定长补充或切割；（word2vec在深度学习中更为有效）
+
+## STEP IV training
+
+BGRU其实相对BLSTM仅有少量的优势，需要考虑样本和调参等问题，因此其优势待研究；  
+![picture 5](../images/f319137379e751460b2c2047646f9df6d3747bae3e72ff215cb4a33b2f65b062.png)  
