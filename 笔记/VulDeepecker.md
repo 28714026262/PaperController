@@ -493,4 +493,29 @@ doc2vec，将整句的节点嵌入为一个定长向量；
 ![图 4](../images/8c665be5a101adef9da5ed95bfeaf1938a011b8de7b15caef552904ef24f46ee.png)  
 pooling：  
 $\vec{y}=\frac{F\vec{p}}{||\vec{p}||}$, $\vec{i}=top-k(\vec{y},k)$, $F=(F* tanh(\vec{y}))_{\vec{i}}$, $A' = A_{i,i}$
-我们执行全局平均池和全局最大池，以增强表示的性能。  
+我们执行全局平均池和全局最大池，以增强表示的性能。 
+
+PRL
+
+![picture 6](../images/7cce88392cd433f3ee9cceebf3070bafb80e1e287ff896171b34e116afed3709.png)  
+![picture 8](../images/cc7a6a73093dc65eb9ba32c9854974c0902527f3b68eca7dc0be4185f8a69d13.png)  
+
+MEAN和MAX拼接，然后求和输出；
+
+MLP
+
+$q(lb_i)=\frac{exp(\vec{s}·lb_i)}{\sum_{lb_j\in Y}exp(\vec{s}·lb_j)}$
+
+## datase and result
+
+### dataset
+
+SARD；
+realworld： redis-5.0.85（一种著名的数据库系统服务器）和lua-5.346（一种广泛使用的脚本语言）。
+![picture 9](../images/de2e6909aae679879454db9cb176d2dc27f4d2d442509d836e10ec996798e4df.png)  
+
+### result
+
+![picture 10](../images/d823a6dbda4783fd72ceb9c33ea9b5fc6f0c617135cf336266e95a736cee802a.png)  
+![picture 11](../images/905e25470f602c80fcf00573513113a1ce454549693b81ed2170a7329ffd28ba.png)  
+![picture 12](../images/4aa2c07567d1ef874b62237f60ca3e1bfb2644a5d799a41e40b7f7c0a618758a.png)  

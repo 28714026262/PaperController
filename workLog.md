@@ -9,6 +9,11 @@
 
 ***持续更新***
 
+## 12.18 Sunday
+
+- 完成Deep neural-based vulnerability discovery demystified: data, model and performance论文阅读，记录在[benchmark.md](./笔记/benchmark.md)中；
+- 完成DeepWukong: Statically Detecting Software Vulnerabilities Using Deep Graph Neural Network论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中，使用CFG和DFG生成上下文的切片，然后使用top-k的池化层实现了卷积层、池化层、输出、MLP的deep learning GNN；
+
 ## 12.13 Tuesday
 
 - 完成SySeVR: A Framework for Using Deep Learning to Detect Software Vulnerabilities论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中，针对C、C++的，基于SyVC的slice切片的，使用BGRU的改进vuldeepecker；
