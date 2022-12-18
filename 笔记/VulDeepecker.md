@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-10-26 14:54:55
- * @LastEditTime: 2022-12-08 15:47:26
+ * @LastEditTime: 2022-12-19 00:02:03
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -229,7 +229,7 @@ minibatch stochastic gradient descent together with ADAMAX；
    1. 库/API函数call中assignment的定义；
    2. 控制语句，判断边界检查和安全筛选的存在性和合理性；
    3. 库/API函数call语句；  
-   
+
 ![图 5](../images/9776dfd52d92d063df2a09596856c7cdd39d9a5bf101dad5c600339a95918b16.png)  
 
 ## Step V
@@ -384,6 +384,7 @@ LLVM在AST中提供了160多种类型，仅能用大向量表示，本文选top3
 ![picture 3](../images/3b86fe6541dafddf325ad06c413a179aafb3371c3d70f9d51c7c6ee9b5790259.png)  
 
 本文使用针对性网络BRNN-vdl：
+
 1. 输入：
    1. 表示iSeVC的向量；
    2. 表示每个向量中漏洞位置的漏洞位置矩阵；
@@ -396,9 +397,10 @@ LLVM在AST中提供了160多种类型，仅能用大向量表示，本文选top3
 
 # SySeVR
 
+是VulDeePecker的同作者后续研究
 针对C、C++的，基于SyVC的slice切片的，使用BGRU的vuldeepecker；
 Syntax-based Vulnerability Candidates (SyVCs)
-Semantics-based Vulnerability Candidates (SeVCs) 
+Semantics-based Vulnerability Candidates (SeVCs)
 
 SySeVR:Syntax-based and Semantics-based vector representation；  
 ![picture 4](../images/723b01fba86a8927db378486debcd86c4350a34006579a427cc390c9fb40f4d5.png)  
@@ -449,3 +451,46 @@ SyVC是匹配$h_k$漏洞模板的e（由于基于不同的漏洞模板，因此�
 
 BGRU其实相对BLSTM仅有少量的优势，需要考虑样本和调参等问题，因此其优势待研究；  
 ![picture 5](../images/f319137379e751460b2c2047646f9df6d3747bae3e72ff215cb4a33b2f65b062.png)  
+
+# DeepWukong
+
+是一个基于PDG（CPG+DPG）的上下文code gadget获取，从而获取
+
+1. 以边为目标的结构化信息（区分CF和DF）；
+2. 以节点为目标的归一化后的doc2vec的嵌入
+
+## 控制流信息提取
+
+节点表示语句，边表示两条语句之间的控制流或执行顺序。
+
+1. 后向支配关系；
+   1. 给定CFG上的节点X和Y（X！=Y），如果从Y到程序结束的所有路径都穿过X，则X后向支配Y；
+2. 控制依赖关系，Y控制依赖于X存在以下两种可能：
+   1. 存在从X到Y的有向路径P，其中P中的任何Z（不包括X和Y）由Y后支配；
+   2. X不由Y后向支配；
+
+增广后支配树（APT），其在空间和时间上与程序的大小成比例，以计z算程序的控制依赖性。
+
+## 数据流信息提取
+
+节点表示语句，边表示两条语句之间变量的def-use关系。
+
+使用指令依赖于定义指令：节点X（变量v的定义）是Y（v的定义或使用）在VFG中，如果有从X开始到Y的路径P上没有v的重新定义，Y数据依赖于X；
+
+## 敏感点切片
+
+1. 参考SVF来自动识别系统API调用（总共1449个）
+2. 使用antlr来识别算术运算符
+
+## 节点嵌入
+
+doc2vec，将整句的节点嵌入为一个定长向量；
+
+## 训练
+
+![图 3](../images/f0ac54c798feffe785f6b362d6d04386695553380aa80d9147e8fb4977c8eb5d.png)  
+节点传播函数：  
+![图 4](../images/8c665be5a101adef9da5ed95bfeaf1938a011b8de7b15caef552904ef24f46ee.png)  
+pooling：  
+$\vec{y}=\frac{F\vec{p}}{||\vec{p}||}$, $\vec{i}=top-k(\vec{y},k)$, $F=(F* tanh(\vec{y}))_{\vec{i}}$, $A' = A_{i,i}$
+我们执行全局平均池和全局最大池，以增强表示的性能。  
