@@ -82,12 +82,14 @@
 
 其他嵌入：
 
+- GloVe
+- FastText 
+- code2vec
 - struc2vec
 - structure2vec
 - ASM2vec
 - node2vec
 - word2vec
-- code2vec
 
 - commit2vec？？？
 

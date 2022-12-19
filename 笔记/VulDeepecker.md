@@ -516,6 +516,25 @@ realworld： redis-5.0.85（一种著名的数据库系统服务器）和lua-5.3
 
 ### result
 
-![picture 10](../images/d823a6dbda4783fd72ceb9c33ea9b5fc6f0c617135cf336266e95a736cee802a.png)  
 ![picture 11](../images/905e25470f602c80fcf00573513113a1ce454549693b81ed2170a7329ffd28ba.png)  
 ![picture 12](../images/4aa2c07567d1ef874b62237f60ca3e1bfb2644a5d799a41e40b7f7c0a618758a.png)  
+
+
+# AutoVAS
+
+基于vuldeepecker，讨论切片方法、嵌入方式，使用了API敏感点和修改点；
+我们使用Weiser类型（包括控制依赖性信息）和SDG-IFDS类型（包括数据依赖性和控制依赖性）作为算法类型。这项研究使用了llvm切片（GitHub，访问日期：2021d年3月），这是一种基于低级虚拟机（llvm）编译器的开源程序切片工具。
+
+采样平衡：SMOTE（Chawla等人，2002年）、改良SMODE（Hu等人，2009年）和SMOTEENN（Li等人，2013年）；如果数据类别比率不同，则模型在选择优势类别方面的精度会提高，但使用少量数据的类别召回率会迅速降低。如果我们使用平衡技术，召回率会增加，但精度会降低。
+
+切片方案比较：
+![picture 13](../images/ae8508a81fe3a2e577acdb2e05f67ac0622d981db797d7b36250964a77189286.png)  
+
+嵌入方案比较：  
+![picture 16](../images/31c58e4600b3f3ac735be73626b86a9ecb0448e67d49628ed69b91b96151cfdf.png)  
+
+标准化中的符号化和定长化方式造成的影响，发现定长化方案影响很小，可以忽略：  
+![picture 17](../images/1a748d8d6ff0a4d26007da8b72627639bcc61adbf4439e350b6a516b0ccc7c05.png)  
+
+模型选择表示：
+![picture 18](../images/9e0864610a16f9755a74ec4b5eca53677ea9b900bee08ad511e3cebf29842935.png)  

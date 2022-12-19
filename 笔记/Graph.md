@@ -306,6 +306,21 @@ $lsh(g)=[h_1(q(g)),...,h_w(q(g))]$
 - Multi-MH和Multi-k-MH
 - 基于质心的搜索
 
+## 图模型
+
+部分性能的比较图如下：  
+
+- 图模型：  
+![picture 3](../images/406be646941bfa0d07fb183f2a0766214dc0c73d7620820722200578770ad854.png)  
+
+- 图表示：  
+![picture 4](../images/c653c8755e9d50f3dd71d0152b161dfddbccecee44762201460ced90cc6adf52.png)  
+
+- 图嵌入：  
+![picture 5](../images/5d21762565e2342d46d71ab537c6b19993d62bd8da641dabe0edf58a8b64c087.png)  
+
+来自论文[Neural software vulnerability analysis using rich intermediate graph representations of programs](../AI漏洞挖掘/Graph/Neural%20software%20vulnerability%20analysis%20using%20rich%20intermediate.pdf)
+
 ### GGNN
 
 [论文链接](../AI漏洞挖掘/Graph/GGNN.pdf)
@@ -341,10 +356,20 @@ i和j是神经网络,以$h_v^{(T)}$和$x_v$的级联作为输入,输出实值向
 
 RNN针对一维结构，针对序列前后信息的互相影响，图不存在这样的线性关系；
 CNN针对二维结构，依靠的是平移时的结构不变性，使得参数能够在各个核中共享，但图不存在这样的优势；
-图并不能用上述欧式空间描述；-> GNN;DeepWalk;Node2vec
+图并不能用上述欧式空间描述；-> GNN;DeepWalk;Node2vec  
+
 ![图 4](../images/ba8cc8f067bf58fbc6831c74fec422d951584b30a754553f3539721faee03ad6.png)  
-邻接矩阵A对角为0，因此与H相乘时，会放弃自己node的特征，因此$\hat{A}=A+I$,让H相乘时获取自身特征；
-$\hat{D}^{-\frac{1}{2}}\hat{A}\hat{D}^{-\frac{1}{2}}$进行归一化
+
+$\hat{A}=A+I, \hat{D}是A$的节点度矩阵；
+
+邻接矩阵A对角为0，因此与H相乘时，会放弃自己node的特征，因此$\hat{A}=A+I$,让H相乘时获取自身特征；  
+
+$\hat{D}^{-\frac{1}{2}}\hat{A}\hat{D}^{-\frac{1}{2}}$进行归一化  
+
+![picture 2](../images/01842f73546788c10ca4392d35bd01ba73f65a4c800c0fcffe7dc02e63125957.png)  
+
+$c_{ij}$为归一化因子；N是该层中第i个单位的单跳邻居集合；  
+
 ![图 3](../images/16fba8ee3d3a2733c50f8ede3ee324e03b19023a42b62708ff35f044d6df9ab3.png)  
 
 [作者博客链接](http://tkipf.github.io/graph-convolutional-networks/)
@@ -394,3 +419,13 @@ TODO
 ### JUMP KNOWLEDGE NETWORK
 
 TODO
+
+## TF-IDF
+
+TF-IDF是潜在语义分析（LSA）技术的一个示例，该技术给出了一个文档语料库，为语料库的每个文档中的每个术语提供了分数。  
+TF-IDF(t,d,D)=$f_{t,d}\multimaplog\frac{|D|}{|D_t|}$
+
+其中$f_{t,d}$,是文档d中的t术语频率；|D|文档数量，|$D_t$|包含t的文档数量；TF-IDF的一个重要限制是该技术产生的张量的高维度。解决这个问题的一种方法是使用统计降维技术，例如主成分分析（PCA）或奇异值分解（SVD）。这种方法执行正交线性变换，并且能够将高维数据投影到低维空间[1]。  
+
+![picture 1](../images/477b3503abfb8eab4b9d2e51a789139ee69fd5c70a79e375d465569fb812a3aa.png)  
+

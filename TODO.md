@@ -13,18 +13,12 @@
 1. 完成对图神经网络的相关技术了解；
    1. 基于DGL网站的图神经网络的研究；
    2. 待定；
-2. 完成论文清单阅读；
-3. 完成web前端原理进一步调研；
-4. 进行逻辑漏洞的前沿论文；
-5. 完成基于CVE或者SARD的逻辑漏洞调研；
-6. 完成微信小程序调研；
+2. 完成web前端原理进一步调研；
+3. 进行逻辑漏洞的前沿论文阅读；
+4. 完成基于CVE或者SARD的逻辑漏洞调研；
+5. 完成微信小程序调研；
 
 ## 论文阅读清单
-
-### 2021
-
-1. (CCF-B-2021) Neural software vulnerability analysis using rich intermediate graph representations of programs
-2. (CCF-B-2021) AutoVAS: An automated vulnerability analysis system with a deep learning approach
 
 ### 其他相关方向文章
 

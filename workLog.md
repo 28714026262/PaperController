@@ -9,10 +9,21 @@
 
 ***持续更新***
 
+## 12.19 Monday
+
+- 完成AutoVAS: An automated vulnerability analysis system with a deep learning approach 论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中,从切片、嵌入、处理、模型选择上进行了全测试，可以看作一篇综述文章；
+- 开始Neural software vulnerability analysis using rich intermediate graph representations of programs论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中；
+- 完成了code2vec的学习，是由AST提取路径在前的注意力加权的预测模型，对给定一些单词候选标签进行预测，记录在[word2vec.md](./笔记/word2vec.md)中；
+- 完成了fasttext等文字嵌入方案的学习，记录在[word2vec.md](./笔记/word2vec.md)中；
+
 ## 12.18 Sunday
 
 - 完成Deep neural-based vulnerability discovery demystified: data, model and performance论文阅读，记录在[benchmark.md](./笔记/benchmark.md)中；
 - 完成DeepWukong: Statically Detecting Software Vulnerabilities Using Deep Graph Neural Network论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中，使用CFG和DFG生成上下文的切片，然后使用top-k的池化层实现了卷积层、池化层、输出、MLP的deep learning GNN；
+
+## 12.14-16 
+
+- HOSPITAL...
 
 ## 12.13 Tuesday
 
