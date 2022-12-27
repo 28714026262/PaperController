@@ -9,12 +9,41 @@
 
 ***持续更新***
 
-## 12.19 Monday
+## 12.25 Sunday
 
+- 开始对Blackhat会议进行调研，结果已发送至微信群，具体presentation topic还未确定；
+- 完成Quo Vadis: Hybrid Machine Learning Meta-Model based on Contextual and Behavioral Malware Representations的论文阅读，使用动静态结合的方案，获取的运用文件路径、API调用以及Ember数据集的信息。进行三合一综合AI模型漏洞挖掘，作为会议论文叙述，很不详细，仅作参考；
+- 完成对Ember数据集的学习，记录在[dataset.md](./笔记/dataSets.md)中，是一个针对windows的PE漏洞文件的数据集，有一定的综合工作量；
+
+## 12.24 Saturday
+
+- 完成The Fusion of Secure Function Evaluation and Logic Synthesis的论文阅读；
 - 完成AutoVAS: An automated vulnerability analysis system with a deep learning approach 论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中,从切片、嵌入、处理、模型选择上进行了全测试，可以看作一篇综述文章；
 - 开始Neural software vulnerability analysis using rich intermediate graph representations of programs论文阅读，记录在[VulDeepecker.md](./笔记/VulDeepecker.md)中；
+
+## 12.22 Tursday
+
+- 进行[《从VulDeePecker出发对AI漏洞挖掘技术讨论》](../笔记/../PaperController/笔记/从VulDeePecker出发对AI漏洞挖掘技术讨论.docx)的课程论文的撰写，，未进行格式化；
+- 开始进行漏洞挖掘领域信息论使用的相关信息进行调研，未形成一个较好的分析结果与内容，需进一步研究，获取的结果放置在了[信息论相关内容](../PaperController/信息论相关内容)中；
+
+## 12.21 Wednesday
+
+- 完成对IEEE S&P会议的2020-2022年的论文进行了调研，获取的结果放置在了[未分类文件夹](../PaperController/其他未分类)中；
+- 完成Detecting Logical Bugs of DBMS with Coverage-based Guidance的论文阅读；
+
+## 12.20 Tuesday
+
+- 完成ACM和usenix的论文调研，获取的结果放置在了[未分类文件夹](../PaperController/其他未分类)中；
+- 开始对FUGIO进行论文阅读；
+- 完成Devils in the Guidance: Predicting Logic Vulnerabilities in Payment Syndication Services through Automated ocumentation Analysis的阅读；
+- 完成Mining Node.js Vulnerabilities via Object Dependence Graph and Query的论文阅读；
+
+## 12.19 Monday
+
 - 完成了code2vec的学习，是由AST提取路径在前的注意力加权的预测模型，对给定一些单词候选标签进行预测，记录在[word2vec.md](./笔记/word2vec.md)中；
 - 完成了fasttext等文字嵌入方案的学习，记录在[word2vec.md](./笔记/word2vec.md)中；
+- 开始进行usenix和ACM的论文调研；
+- 完成NDSS会议的论文调研，获取的结果放置在了[未分类文件夹](../PaperController/其他未分类)中；
 
 ## 12.18 Sunday
 
