@@ -106,3 +106,46 @@ word2vec的词嵌入很优秀，但其拼接后表达长句子仍然表现力很
 ## 分布词袋版本的段落向量（Distributed Bag of Words version of Paragraph Vector，PV-DBOW）->Skip-gram模型。
 
 另外一种训练方法是忽略输入的上下文，让模型去预测段落中的随机一个单词。就是在每次迭代的时候，从文本中采样得到一个窗口，再从这个窗口中随机采样一个单词作为预测任务，让模型去预测，输入就是段落向量。
+
+# sent2vec
+
+上下文窗口大小与句子中的单词数匹配。
+
+# GloVe
+
+针对word2vec的语义嵌入的局限性（仅保留在窗口中，而无法实现挖掘语料库的全局共现性）
+
+# FastText 
+
+将原始单词表示为子单词向量并进行处理，然后再使用word2vec，一般使用3-6grams；处理不足语料库的能力也会提高，在嘈杂（错词）的语料库中具有优势。  
+![picture 2](../images/7106938f98516fc100935d90c6fdfcfad1e58ca50d5457a458b5612a36bc4ad8.png)  
+
+# code2vec
+
+## STEP I 代码片段对应的AST，提取不同的路径
+
+将每个path-context中的结点embedding后concatenate成一个vector来代表这个path-context。对于每个path-context按权重(attention)加权融合成总体的向量，这个总体的向量就是最终对应方法名字的向量。  
+路径的长度与其对应的attention权重是成比例的，红色路径比蓝色路径长，其attention值也更高。  
+![picture 3](../images/32124a95d85072bbf4b403e080cc0d85301b2975bd1c21c95c63b5400474b197.png)  
+值得注意的是，一条路径的attention并不是恒定的，是和上下文相关的。即使一模一样的两条路径，如果上下文代码不同，则attention值一般也不相同。
+
+## STEP II Training
+
+![picture 4](../images/ad8d5720b747c12158c2bddcf7e04c39ab191fd8a6f0a60ef92662bddfaf5690.png)  
+
+首先我们对于代码片段的每个token和路径都做编码，为两个矩阵如下：  
+![picture 5](../images/741055203c352887208197ffe4ac387a82176e98eb19625f7c3500f6b0b662ec.png)  
+
+而后对于每一个path-context，结合首末token(看作keyword)和路径得到一个综合向量：
+![picture 6](../images/9894d1a803feb185a053e4128e50b7bf69956ac7b0bd149ca2142cfd649ca816.png)  
+a为global attention的值,则：  
+path context attention weight $\alpha _i = \frac{exp((tanh(W*c_i))^T*a)}{\sum_{j=i}^n((tanh(W*c_j))^T*a)}$  
+此时我们会给出一些单词作为候选标签，构成一个标签矩阵：
+
+![picture 7](../images/1102d129f6041ecfd5bd4a664217345219773876253e509f139782f3ae397bef.png)  
+
+利用softmax计算我们得到的向量适合哪个标签，则该标签就作为方法的名字：  
+
+![picture 8](../images/36bd93c7bbc705b92a76f07b10d1d89888f6898da07299b646849694a003fe95.png)  
+
+以上就是该模型的过程简述。
