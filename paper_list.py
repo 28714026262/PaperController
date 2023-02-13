@@ -1,7 +1,7 @@
 '''
 Author: Suez_kip 287140262@qq.com
 Date: 2023-02-13 16:30:57
-LastEditTime: 2023-02-13 20:53:34
+LastEditTime: 2023-02-13 20:54:48
 LastEditors: Suez_kip
 Description: 
 '''
@@ -22,6 +22,6 @@ for files in os.walk(file_dir):#遍历指定文件夹及其下的所有子文件
             if dir_out_flag:
                 f.write(u"- **Dir name** : " + files[0] + "\n")
                 dir_out_flag = False
-            f.write(u"    - **File name** : " + file + "\n")
+            f.write(u"  - **File name** : " + file + "\n")
             file_list.append(file)#给文件名加入文件夹路径
 f.close()
