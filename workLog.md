@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-24 18:29:38
- * @LastEditTime: 2023-02-13 17:20:32
+ * @LastEditTime: 2023-02-13 17:26:11
  * @LastEditors: Suez_kip
  * @Description: 工作记录
 -->
@@ -13,6 +13,7 @@
 
 - 对2023NDSS文章中Summer Cycle和Full Cycle，选定一定预读论文：
 ![图 1](images2/a48aa391159d92822b0af547d046949d5976f114f26bf1f958bfb9b63a3dda42.png)  
+- 自动更新代码完成，以后更新直接执行update.bat
 - 完成对RoBERTa的块嵌入模式的相关知识学习；
 - 开始对VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search论文阅读；
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-23 16:15:03
- * @LastEditTime: 2022-12-08 16:58:57
+ * @LastEditTime: 2023-02-13 17:24:58
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -34,7 +34,7 @@
 6. WATSON：通过上下文语义聚合从审核日志中抽象行为；
 7. Preventing and Detecting State Inference Attacks on Android；
 8. KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel；
-9.  The Abuser Inside Apps: Finding the Culprit Committing Mobile Ad Fraud；
+9. The Abuser Inside Apps: Finding the Culprit Committing Mobile Ad Fraud；
 10. fakeguard: Exploring haptic response to mitigate the vulnerability in commercial fingerprint anti-spoofing；
 11. Testability Tarpits: the Impact of Code Patterns on the Security Testing of Web Applications；
 12. Shaduf；
