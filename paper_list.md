@@ -1,8 +1,5 @@
 # 论文收录清单
 
-- **Paper name** : Deep_Learning_Based_Vulnerability_Detection_Are_We_There_Yet.pdf
-- **Paper name** : Evaluating_Complexity_Code_Churn_and_Developer_Activity_Metrics_as_Indicators_of_Software_Vulnerabilities.pdf
-- **Paper name** : Software_Vulnerability_Detection_Using_Deep_Neural_Networks_A_Survey.pdf
 - **Paper name** : 周志华-机器学习.pdf
 - **Paper name** : The_sequential_attack_against_power_grid_networks.pdf
 - **Paper name** : Deep Learning-Based Vulnerable.pdf
@@ -13,18 +10,22 @@
 - **Paper name** : VulDetector_Detecting_Vulnerabilities_Using_Weighted_Feature_Graph_Comparison.pdf
 - **Paper name** : Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs.pdf
 - **Paper name** : Semantics-Based Obfuscation-Resilient Binary Code.pdf
+- **Paper name** : EMBER.pdf
 - **Paper name** : VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf
 - **Paper name** : CodeSearching.pdf
 - **Paper name** : Combining_Graph-Based_Learning_With_Automated_Data_Collection_for_Code_Vulnerability_Detection.pdf
 - **Paper name** : Cross-Project_Transfer_Representation_Learning_for_Vulnerable_Function_Discovery.pdf
+- **Paper name** : DeepWukong_Statically_Detecting_Software_Vulnerabilities.pdf
 - **Paper name** : GAT.pdf
 - **Paper name** : GGNN.pdf
 - **Paper name** : Neural Network-based Graph Embedding for Cross-Platform.pdf
+- **Paper name** : Neural software vulnerability analysis using rich intermediate.pdf
 - **Paper name** : NeurIPS-2019-devign-effective-vulnerability-identification-by-learning-comprehensive-program-semantics-via-graph-neural-networks-Paper.pdf
 - **Paper name** : Predicting-SQL-injection-and-cross-site-scripting-vul_2013_Information-and-S.pdf
 - **Paper name** : Scalable Graph-based Bug Search for Firmware Images.pdf
 - **Paper name** : struc2vec.pdf
 - **Paper name** : structrue2vec.pdf
+- **Paper name** : A novel deep learning-based feature selection model for improving.pdf
 - **Paper name** : E2E_MemoryNet_BufferOverruns.pdf
 - **Paper name** : muVulDeePecker_A_Deep_Learning-Based_System_for_Multiclass_Vulnerability_Detection.pdf
 - **Paper name** : SySeVR_A_Framework_for_Using_Deep_Learning_to_Detect_Software_Vulnerabilities.pdf
@@ -32,14 +33,7 @@
 - **Paper name** : vuldeepecker.pdf
 - **Paper name** : Generating_robust_parsers_using_island_grammars.pdf
 - **Paper name** : Q-Learning-Based_Vulnerability_Analysis_of_Smart_Grid_Against_Sequential_Topology_Attacks.pdf
-- **Paper name** : 1-s2.0-S0951832018303041-main.pdf
-- **Paper name** : 138032CS13F06.pdf
-- **Paper name** : 3548606.3563527.pdf
-- **Paper name** : A novel deep learning-based feature selection model for improving.pdf
-- **Paper name** : A_New_Tracking-Attack_Scenario_Based_on_the_Vulnerability_and_Privacy_Violation_of_5G_AKA_Protocol.pdf
 - **Paper name** : code2vec.pdf
-- **Paper name** : DeepWukong_Statically_Detecting_Software_Vulnerabilities.pdf
-- **Paper name** : Deep_neural-based_vulnerability_discovery_demystified_data_model_and_performance.pdf
 - **Paper name** : ndss2023_Anomaly Detection in the Open World.pdf
 - **Paper name** : ndss2023_Assessing the Impact of Interface Vulnerabilities.pdf
 - **Paper name** : ndss2023_Automata-Based Automated Detection of State.pdf
@@ -53,9 +47,19 @@
 - **Paper name** : ndss2023_Sometimes, You Aren’t What You Do.pdf
 - **Paper name** : ndss2023_VulHawk Cross-architecture Vulnerability Detection.pdf
 - **Paper name** : Software_Vulnerability_Discovery_via_Learning_Multi-Domain_Knowledge_Bases.pdf
+- **Paper name** : AutoVAS An automated vulnerability analysis system with a deep learning approach.pdf
+- **Paper name** : Deep_Learning_Based_Vulnerability_Detection_Are_We_There_Yet.pdf
+- **Paper name** : Deep_neural-based_vulnerability_discovery_demystified_data_model_and_performance.pdf
+- **Paper name** : Evaluating_Complexity_Code_Churn_and_Developer_Activity_Metrics_as_Indicators_of_Software_Vulnerabilities.pdf
+- **Paper name** : Software_Vulnerability_Detection_Using_Deep_Neural_Networks_A_Survey.pdf
+- **Paper name** : 3548606.3563527.pdf
 - **Paper name** : A deep learning based static taint analysis approach for IoT software vulnerability location.pdf
 - **Paper name** : A novel deep learning-based feature selection model for improving the static analysis of vulnerability detection.pdf
+- **Paper name** : Arbiter Bridging the Static and Dynamic Divide.pdf
+- **Paper name** : Automated Discovery of Cross-Plane Event-Based.pdf
 - **Paper name** : Machine-Learning-Guided Typestate Analysis for Static Use-After-Free Detection.pdf
+- **Paper name** : Object Dependency Graph.pdf
 - **Paper name** : VulPecker.pdf
+- **Paper name** : FUGIO Automatic Exploit Generation for PHP Object Injection Vulnerabilities.pdf
 - **Paper name** : Efficient estimation of word representations in.pdf
 - **Paper name** : NIPS-2013-distributed-representations-of-words-and-phrases-and-their-compositionality-Paper.pdf
