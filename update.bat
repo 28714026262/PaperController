@@ -1,3 +1,4 @@
+@echo off
 cd /d %~dp0
 python paper_list.py
 set https_proxy=127.0.0.1:7890
