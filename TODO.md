@@ -37,4 +37,4 @@
 9. The Abuser Inside Apps: Finding the Culprit Committing Mobile Ad Fraud；
 10. fakeguard: Exploring haptic response to mitigate the vulnerability in commercial fingerprint anti-spoofing；
 11. Testability Tarpits: the Impact of Code Patterns on the Security Testing of Web Applications；
-12. Shaduf；
+12. Shaduf；## NDSS

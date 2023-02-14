@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-02-13 17:36:08
- * @LastEditTime: 2023-02-13 20:41:30
+ * @LastEditTime: 2023-02-14 13:05:22
  * @LastEditors: Suez_kip
  * @Description: Contextualized Word Embedding
 -->
@@ -68,6 +68,27 @@ BERT是一个句子级别的语言模型，不像ELMo模型在与下游具体NLP
 
 # RoBERTa
 
+## mask操作区别
+
+- static masking: 原本的BERT采用的是static mask的方式，就是在create pretraining data中，先对数据进行提前的mask，为了充分利用数据，定义了dupe_factor，这样可以将训练数据复制dupe_factor份，然后同一条数据可以有不同的mask。注意这些数据不是全部都喂给同一个epoch，是不同的epoch，例如dupe_factor=10， epoch=40， 则每种mask的方式在训练中会被使用4次。  
+
+- dynamic masking: 每一次将训练example喂给模型的时候，才进行随机mask。
+
+## 去除NSP（Next Sentence Prediction发）和输入标准化
+
+NSP: 0.5:从同一篇文章中连续的两个segment。0.5:不同的文章中的segment
+
+Segment+NSP：bert style
+Sentence pair+NSP：使用两个连续的句子+NSP。用更大的batch size
+Full-sentences：如果输入的最大长度为512，那么就是尽量选择512长度的连续句子。如果跨document了，就在中间加上一个特殊分隔符。无NSP。实验使用了这个，因为能够固定batch size的大小。
+Doc-sentences：和full-sentences一样，但是不跨document。无NSP。最优。
+
+![图 9](../images2/43acc7891f2d0ee63d0a9d8945d19b560b0603e3d4497b5a2f4057b6841f191d.png)  
+
+## 编码形式
+
+BERT原型使用的是 character-level BPE vocabulary of size 30K, RoBERTa使用了GPT2的 byte BPE 实现，使用的是byte而不是unicode characters作为subword的单位。
+
 # GPT（Transformer Decoder）
 
 GPT 則是使用 Transformer 的 Decoder 來訓練一個中規中矩，從左到右的單向語言模型。
@@ -82,6 +103,11 @@ GPT-2 1542M
 ## GPT3
 
 相对bert收集资料，针对每个task实现每个model；
+
+## GPT分析与总结
+
+GPT是个有效的利用体量换效益的方案，但是他本身还是离不开上下文预测的形式，其中的前向attention仍然是一个可以关注的点，需要受到关注。
+但是在此基础上，gpt本身仍然无法超越海量文本本身。就比如在数据集生成或者描述生成中，因其对小样本问题的知识量匮乏导致的结果随机、正确与否随机，都会导致在这种辅助性操作时造成大量的不确定性和专业性上的降低，而在特征文案生成中，会导致本来要用于区分的语义信息，由于同时通过GPT以及所给example生成，其反而会导致分类的对象之间相似度提高而导致难以分类。
 
 # ELMo（Transformer Eecoder）
 
