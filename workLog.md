@@ -1,13 +1,18 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-24 18:29:38
- * @LastEditTime: 2023-02-14 16:34:14
+ * @LastEditTime: 2023-02-15 14:49:01
  * @LastEditors: Suez_kip
  * @Description: 工作记录
 -->
 # 工作记录
 
 ***持续更新***
+
+## 2.15 Wednsday
+
+- 开始对越权类逻辑漏洞的产生和挖掘进行研究，记录在文件夹[BrokenAccessControl](./BrokenAccessControl/)中；
+- 记录一篇有意义的越权漏洞blog，并开始尝试其中提到的burpsuite的越权漏洞挖掘插件，记录在[blog.md](BrokenAccessControl/literature/blog.md)中；
 
 ## 2.14 Tuesday Fucking Valentine's Day
 
