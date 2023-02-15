@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-24 18:29:38
- * @LastEditTime: 2023-02-15 14:49:01
+ * @LastEditTime: 2023-02-15 17:29:57
  * @LastEditors: Suez_kip
  * @Description: 工作记录
 -->
@@ -13,6 +13,7 @@
 
 - 开始对越权类逻辑漏洞的产生和挖掘进行研究，记录在文件夹[BrokenAccessControl](./BrokenAccessControl/)中；
 - 记录一篇有意义的越权漏洞blog，并开始尝试其中提到的burpsuite的越权漏洞挖掘插件，记录在[blog.md](BrokenAccessControl/literature/blog.md)中；
+- 对AurhMatrix插件完成调研，记录在[AuthMatrix.md](./BrokenAccessControl/literature/AuthMatrix.md)中；
 
 ## 2.14 Tuesday Fucking Valentine's Day
 
