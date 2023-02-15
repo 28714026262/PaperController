@@ -1,7 +1,7 @@
 '''
 Author: Suez_kip 287140262@qq.com
 Date: 2023-02-13 16:30:57
-LastEditTime: 2023-02-13 20:54:48
+LastEditTime: 2023-02-15 15:22:55
 LastEditors: Suez_kip
 Description: 
 '''
@@ -22,8 +22,8 @@ for files in os.walk(file_dir):#遍历指定文件夹及其下的所有子文件
         if os.path.splitext(file)[1]=='.PDF' or os.path.splitext(file)[1]=='.pdf':#检查文件后缀名,逻辑判断用==
             # file_list.append(file)#筛选后的文件名为字符串，将得到的文件名放进去列表，方便以后调用
             if dir_out_flag:
-                f.write(u"- **Dir name** : " + files[0] + "\n")
+                f.write(u"- ***" + files[0] + "***\n")
                 dir_out_flag = False
-            f.write(u"  - **File name** : " + file + "\n")
+            f.write(u"  - **File** : " + file + "\n")
             file_list.append(file)#给文件名加入文件夹路径
 f.close()

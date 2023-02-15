@@ -1,139 +1,139 @@
 # 论文以及资料收录清单
 
-- **Dir name** : ./AI漏洞挖掘
-  - **File name** : 周志华-机器学习.pdf
-- **Dir name** : ./AI漏洞挖掘\AttackMode
-  - **File name** : The_sequential_attack_against_power_grid_networks.pdf
-- **Dir name** : ./AI漏洞挖掘\Benchmark
-  - **File name** : Deep Learning-Based Vulnerable.pdf
-  - **File name** : Machine-Learning Supported Vulnerability Detection.pdf
-  - **File name** : Magma.pdf
-- **Dir name** : ./AI漏洞挖掘\CodeRepresenting
-  - **File name** : Automated Vulnerability Detection in Source Code Using Minimum Intermediate Representation Learning.pdf
-  - **File name** : Automated_Vulnerability_Detection_in_Source_Code_Using_Deep_Representation_Learning.pdf
-  - **File name** : VulDetector_Detecting_Vulnerabilities_Using_Weighted_Feature_Graph_Comparison.pdf
-- **Dir name** : ./AI漏洞挖掘\CodeSimilarity
-  - **File name** : Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs.pdf
-  - **File name** : Semantics-Based Obfuscation-Resilient Binary Code.pdf
-- **Dir name** : ./AI漏洞挖掘\Database
-  - **File name** : EMBER.pdf
-- **Dir name** : ./AI漏洞挖掘\FingerPrint
-  - **File name** : VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf
-- **Dir name** : ./AI漏洞挖掘\Graph
-  - **File name** : CodeSearching.pdf
-  - **File name** : Combining_Graph-Based_Learning_With_Automated_Data_Collection_for_Code_Vulnerability_Detection.pdf
-  - **File name** : Cross-Project_Transfer_Representation_Learning_for_Vulnerable_Function_Discovery.pdf
-  - **File name** : DeepWukong_Statically_Detecting_Software_Vulnerabilities.pdf
-  - **File name** : GAT.pdf
-  - **File name** : GGNN.pdf
-  - **File name** : Neural Network-based Graph Embedding for Cross-Platform.pdf
-  - **File name** : Neural software vulnerability analysis using rich intermediate.pdf
-  - **File name** : NeurIPS-2019-devign-effective-vulnerability-identification-by-learning-comprehensive-program-semantics-via-graph-neural-networks-Paper.pdf
-  - **File name** : Predicting-SQL-injection-and-cross-site-scripting-vul_2013_Information-and-S.pdf
-  - **File name** : Scalable Graph-based Bug Search for Firmware Images.pdf
-  - **File name** : struc2vec.pdf
-  - **File name** : structrue2vec.pdf
-- **Dir name** : ./AI漏洞挖掘\NewModel
-  - **File name** : A novel deep learning-based feature selection model for improving.pdf
-  - **File name** : E2E_MemoryNet_BufferOverruns.pdf
-- **Dir name** : ./AI漏洞挖掘\NLP
-  - **File name** : gpt3.pdf
-  - **File name** : muVulDeePecker_A_Deep_Learning-Based_System_for_Multiclass_Vulnerability_Detection.pdf
-  - **File name** : SySeVR_A_Framework_for_Using_Deep_Learning_to_Detect_Software_Vulnerabilities.pdf
-  - **File name** : VulDeeLocator_A_Deep_Learning-Based_Fine-Grained_Vulnerability_Detector.pdf
-  - **File name** : vuldeepecker.pdf
-- **Dir name** : ./AI漏洞挖掘\other
-  - **File name** : Generating_robust_parsers_using_island_grammars.pdf
-- **Dir name** : ./AI漏洞挖掘\Q-learning
-  - **File name** : Q-Learning-Based_Vulnerability_Analysis_of_Smart_Grid_Against_Sequential_Topology_Attacks.pdf
-- **Dir name** : ./AI漏洞挖掘\Reading
-  - **File name** : code2vec.pdf
-  - **File name** : ndss2023_Anomaly Detection in the Open World.pdf
-  - **File name** : ndss2023_Assessing the Impact of Interface Vulnerabilities.pdf
-  - **File name** : ndss2023_Automata-Based Automated Detection of State.pdf
-  - **File name** : ndss2023_BinaryInferno.pdf
-  - **File name** : ndss2023_Cryptographic Oracle-Based Conditional Payments.pdf
-  - **File name** : ndss2023_DiffCSP.pdf
-  - **File name** : ndss2023_Fine-Grained Trackability in Protocol Executions.pdf
-  - **File name** : ndss2023_Navigating Murky Waters.pdf
-  - **File name** : ndss2023_ReScan.pdf
-  - **File name** : ndss2023_Smarter Contracts Detecting Vulnerabilities in.pdf
-  - **File name** : ndss2023_Sometimes, You Aren’t What You Do.pdf
-  - **File name** : ndss2023_VulHawk Cross-architecture Vulnerability Detection.pdf
-- **Dir name** : ./AI漏洞挖掘\SampleSizeIssue
-  - **File name** : Software_Vulnerability_Discovery_via_Learning_Multi-Domain_Knowledge_Bases.pdf
-- **Dir name** : ./AI漏洞挖掘\survey
-  - **File name** : AutoVAS An automated vulnerability analysis system with a deep learning approach.pdf
-  - **File name** : Deep_Learning_Based_Vulnerability_Detection_Are_We_There_Yet.pdf
-  - **File name** : Deep_neural-based_vulnerability_discovery_demystified_data_model_and_performance.pdf
-  - **File name** : Evaluating_Complexity_Code_Churn_and_Developer_Activity_Metrics_as_Indicators_of_Software_Vulnerabilities.pdf
-  - **File name** : Software_Vulnerability_Detection_Using_Deep_Neural_Networks_A_Survey.pdf
-- **Dir name** : ./AI漏洞挖掘\TraditionalStatic
-  - **File name** : 3548606.3563527.pdf
-  - **File name** : A deep learning based static taint analysis approach for IoT software vulnerability location.pdf
-  - **File name** : A novel deep learning-based feature selection model for improving the static analysis of vulnerability detection.pdf
-  - **File name** : Arbiter Bridging the Static and Dynamic Divide.pdf
-  - **File name** : Automated Discovery of Cross-Plane Event-Based.pdf
-  - **File name** : Machine-Learning-Guided Typestate Analysis for Static Use-After-Free Detection.pdf
-  - **File name** : Object Dependency Graph.pdf
-  - **File name** : VulPecker.pdf
-- **Dir name** : ./AI漏洞挖掘\VulGenerator
-  - **File name** : FUGIO Automatic Exploit Generation for PHP Object Injection Vulnerabilities.pdf
-- **Dir name** : ./AI漏洞挖掘\Word2vec
-  - **File name** : Efficient estimation of word representations in.pdf
-  - **File name** : NIPS-2013-distributed-representations-of-words-and-phrases-and-their-compositionality-Paper.pdf
-- **Dir name** : ./其他未分类
-  - **File name** : 1308.6745.pdf
-  - **File name** : A_Decade_of_Reoccurring_Software_Weaknesses.pdf
-  - **File name** : Being the Developers Friend.pdf
-  - **File name** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
-  - **File name** : Defensive_Technology_Use_During_the_2018-2019_Sudanese_Revolution.pdf
-  - **File name** : Devils in the Guidance.pdf
-  - **File name** : Different_Kind_of_Smells_Security_Smells_in_Infrastructure_as_Code_Scripts.pdf
-  - **File name** : Is_Vulnerability_Report_Confidence_Redundant_Pitfalls_Using_Temporal_Risk_Scores.pdf
-  - **File name** : Machine Learning for Source Code .pdf
-  - **File name** : Machine_Learning_for_Web_Vulnerability_Detection_The_Case_of_Cross-Site_Request_Forgery.pdf
-  - **File name** : Never Mind the Malware.pdf
-  - **File name** : Nudging_Software_Developers_Toward_Secure_Code.pdf
-  - **File name** : Phishing_Detection_Leveraging_Machine_Learning_and_Deep_Learning_A_Review.pdf
-  - **File name** : Practical_Attacks_on_Machine_Learning_A_Case_Study_on_Adversarial_Windows_Malware.pdf
-  - **File name** : Privacy_Leakage_Vulnerability_Detection_for_Privacy-Preserving_Computation_Services.pdf
-  - **File name** : sec22-park-sunnyeo.pdf
-  - **File name** : Software_Security_for_the_People_Free_and_Open_Resources_for_Software_Security_Training.pdf
-  - **File name** : The_Fusion_of_Secure_Function_Evaluation_and_Logic_Synthesis.pdf
-  - **File name** : Threat_Modeling_Tools_A_Taxonomy.pdf
-  - **File name** : Trusting Trust Humans in the.pdf
-  - **File name** : us-20-Jin-CloudLeak-DNN-Model-Extractions-From-Commercial-MLaaS-Platform-wp.pdf
-  - **File name** : US-22-Trizna-Malware-Classification-with-machine-learning-wp.pdf
-  - **File name** : US-22-Trizna-Malware-Classification-with-machine-learning.pdf
-  - **File name** : “Free” as in Freedom.pdf
-- **Dir name** : ./其他未分类\DDoS
-  - **File name** : JESS_Joint_Entropy-Based_DDoS_Defense_Scheme_in_SDN.pdf
-- **Dir name** : ./支付逻辑漏洞
-  - **File name** : 2020中国互联网网络安全报告.pdf
-  - **File name** : 2021年上半年我过互联网网络安全监测数据分析报告.pdf
-  - **File name** : A Black-Box Approach for Detecting Business-Layer.pdf
-  - **File name** : BBA ZH.pdf
-  - **File name** : BBA.pdf
-  - **File name** : bba11-16.pdf
-  - **File name** : DetLogic-A black-box approach for detecting logic vulnerabilities in web applications(1)-1-11 ZH.pdf
-  - **File name** : DetLogic-A black-box approach for detecting logic vulnerabilities in web applications(1).pdf
-  - **File name** : iOS应用内支付安全分析_罗成.pdf
-  - **File name** : ndss14Black-box ZH.pdf
-  - **File name** : ndss14Black-box.pdf
-  - **File name** : ndss14静态分析.pdf
-  - **File name** : NoTamper  Opportunities in Web Applications zh.pdf
-  - **File name** : NoTamper  Opportunities in Web Applications.pdf
-  - **File name** : Testing_Software_Design_Modeled_by_Finite-State_Machines.pdf
-  - **File name** : The Dangers of Human Touch Fingerprinting.pdf
-  - **File name** : 业务逻辑漏洞的利用机理与检测方法研究.pdf
-  - **File name** : 基于动态检测技术的软件设计安全漏洞查找方法.pdf
-  - **File name** : 白盒 逻辑漏洞 ndss zh.pdf
-  - **File name** : 白盒 逻辑漏洞 ndss.pdf
-  - **File name** : 系统安全防护中的业务逻辑漏洞检测与防御策略_肖帅帅.pdf
-  - **File name** : 结合静态分析与动态符号执行的软件漏洞检测方法.pdf
-  - **File name** : 计算机安全漏洞的动态检测.pdf
-  - **File name** : 计算机漏洞分类研究.pdf
-  - **File name** : 软件安全漏洞检测技术综述.pdf
-  - **File name** : 逻辑漏洞检测与软件行为分析关键技术研究.pdf
-  - **File name** : 面向源代码的软件漏洞静态检测综述_李珍.pdf
+- ***./AI漏洞挖掘***
+  - **File** : 周志华-机器学习.pdf
+- ***./AI漏洞挖掘\AttackMode***
+  - **File** : The_sequential_attack_against_power_grid_networks.pdf
+- ***./AI漏洞挖掘\Benchmark***
+  - **File** : Deep Learning-Based Vulnerable.pdf
+  - **File** : Machine-Learning Supported Vulnerability Detection.pdf
+  - **File** : Magma.pdf
+- ***./AI漏洞挖掘\CodeRepresenting***
+  - **File** : Automated Vulnerability Detection in Source Code Using Minimum Intermediate Representation Learning.pdf
+  - **File** : Automated_Vulnerability_Detection_in_Source_Code_Using_Deep_Representation_Learning.pdf
+  - **File** : VulDetector_Detecting_Vulnerabilities_Using_Weighted_Feature_Graph_Comparison.pdf
+- ***./AI漏洞挖掘\CodeSimilarity***
+  - **File** : Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs.pdf
+  - **File** : Semantics-Based Obfuscation-Resilient Binary Code.pdf
+- ***./AI漏洞挖掘\Database***
+  - **File** : EMBER.pdf
+- ***./AI漏洞挖掘\FingerPrint***
+  - **File** : VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf
+- ***./AI漏洞挖掘\Graph***
+  - **File** : CodeSearching.pdf
+  - **File** : Combining_Graph-Based_Learning_With_Automated_Data_Collection_for_Code_Vulnerability_Detection.pdf
+  - **File** : Cross-Project_Transfer_Representation_Learning_for_Vulnerable_Function_Discovery.pdf
+  - **File** : DeepWukong_Statically_Detecting_Software_Vulnerabilities.pdf
+  - **File** : GAT.pdf
+  - **File** : GGNN.pdf
+  - **File** : Neural Network-based Graph Embedding for Cross-Platform.pdf
+  - **File** : Neural software vulnerability analysis using rich intermediate.pdf
+  - **File** : NeurIPS-2019-devign-effective-vulnerability-identification-by-learning-comprehensive-program-semantics-via-graph-neural-networks-Paper.pdf
+  - **File** : Predicting-SQL-injection-and-cross-site-scripting-vul_2013_Information-and-S.pdf
+  - **File** : Scalable Graph-based Bug Search for Firmware Images.pdf
+  - **File** : struc2vec.pdf
+  - **File** : structrue2vec.pdf
+- ***./AI漏洞挖掘\NewModel***
+  - **File** : A novel deep learning-based feature selection model for improving.pdf
+  - **File** : E2E_MemoryNet_BufferOverruns.pdf
+- ***./AI漏洞挖掘\NLP***
+  - **File** : gpt3.pdf
+  - **File** : muVulDeePecker_A_Deep_Learning-Based_System_for_Multiclass_Vulnerability_Detection.pdf
+  - **File** : SySeVR_A_Framework_for_Using_Deep_Learning_to_Detect_Software_Vulnerabilities.pdf
+  - **File** : VulDeeLocator_A_Deep_Learning-Based_Fine-Grained_Vulnerability_Detector.pdf
+  - **File** : vuldeepecker.pdf
+- ***./AI漏洞挖掘\other***
+  - **File** : Generating_robust_parsers_using_island_grammars.pdf
+- ***./AI漏洞挖掘\Q-learning***
+  - **File** : Q-Learning-Based_Vulnerability_Analysis_of_Smart_Grid_Against_Sequential_Topology_Attacks.pdf
+- ***./AI漏洞挖掘\Reading***
+  - **File** : code2vec.pdf
+  - **File** : ndss2023_Anomaly Detection in the Open World.pdf
+  - **File** : ndss2023_Assessing the Impact of Interface Vulnerabilities.pdf
+  - **File** : ndss2023_Automata-Based Automated Detection of State.pdf
+  - **File** : ndss2023_BinaryInferno.pdf
+  - **File** : ndss2023_Cryptographic Oracle-Based Conditional Payments.pdf
+  - **File** : ndss2023_DiffCSP.pdf
+  - **File** : ndss2023_Fine-Grained Trackability in Protocol Executions.pdf
+  - **File** : ndss2023_Navigating Murky Waters.pdf
+  - **File** : ndss2023_ReScan.pdf
+  - **File** : ndss2023_Smarter Contracts Detecting Vulnerabilities in.pdf
+  - **File** : ndss2023_Sometimes, You Aren’t What You Do.pdf
+  - **File** : ndss2023_VulHawk Cross-architecture Vulnerability Detection.pdf
+- ***./AI漏洞挖掘\SampleSizeIssue***
+  - **File** : Software_Vulnerability_Discovery_via_Learning_Multi-Domain_Knowledge_Bases.pdf
+- ***./AI漏洞挖掘\survey***
+  - **File** : AutoVAS An automated vulnerability analysis system with a deep learning approach.pdf
+  - **File** : Deep_Learning_Based_Vulnerability_Detection_Are_We_There_Yet.pdf
+  - **File** : Deep_neural-based_vulnerability_discovery_demystified_data_model_and_performance.pdf
+  - **File** : Evaluating_Complexity_Code_Churn_and_Developer_Activity_Metrics_as_Indicators_of_Software_Vulnerabilities.pdf
+  - **File** : Software_Vulnerability_Detection_Using_Deep_Neural_Networks_A_Survey.pdf
+- ***./AI漏洞挖掘\TraditionalStatic***
+  - **File** : 3548606.3563527.pdf
+  - **File** : A deep learning based static taint analysis approach for IoT software vulnerability location.pdf
+  - **File** : A novel deep learning-based feature selection model for improving the static analysis of vulnerability detection.pdf
+  - **File** : Arbiter Bridging the Static and Dynamic Divide.pdf
+  - **File** : Automated Discovery of Cross-Plane Event-Based.pdf
+  - **File** : Machine-Learning-Guided Typestate Analysis for Static Use-After-Free Detection.pdf
+  - **File** : Object Dependency Graph.pdf
+  - **File** : VulPecker.pdf
+- ***./AI漏洞挖掘\VulGenerator***
+  - **File** : FUGIO Automatic Exploit Generation for PHP Object Injection Vulnerabilities.pdf
+- ***./AI漏洞挖掘\Word2vec***
+  - **File** : Efficient estimation of word representations in.pdf
+  - **File** : NIPS-2013-distributed-representations-of-words-and-phrases-and-their-compositionality-Paper.pdf
+- ***./其他未分类***
+  - **File** : 1308.6745.pdf
+  - **File** : A_Decade_of_Reoccurring_Software_Weaknesses.pdf
+  - **File** : Being the Developers Friend.pdf
+  - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
+  - **File** : Defensive_Technology_Use_During_the_2018-2019_Sudanese_Revolution.pdf
+  - **File** : Devils in the Guidance.pdf
+  - **File** : Different_Kind_of_Smells_Security_Smells_in_Infrastructure_as_Code_Scripts.pdf
+  - **File** : Is_Vulnerability_Report_Confidence_Redundant_Pitfalls_Using_Temporal_Risk_Scores.pdf
+  - **File** : Machine Learning for Source Code .pdf
+  - **File** : Machine_Learning_for_Web_Vulnerability_Detection_The_Case_of_Cross-Site_Request_Forgery.pdf
+  - **File** : Never Mind the Malware.pdf
+  - **File** : Nudging_Software_Developers_Toward_Secure_Code.pdf
+  - **File** : Phishing_Detection_Leveraging_Machine_Learning_and_Deep_Learning_A_Review.pdf
+  - **File** : Practical_Attacks_on_Machine_Learning_A_Case_Study_on_Adversarial_Windows_Malware.pdf
+  - **File** : Privacy_Leakage_Vulnerability_Detection_for_Privacy-Preserving_Computation_Services.pdf
+  - **File** : sec22-park-sunnyeo.pdf
+  - **File** : Software_Security_for_the_People_Free_and_Open_Resources_for_Software_Security_Training.pdf
+  - **File** : The_Fusion_of_Secure_Function_Evaluation_and_Logic_Synthesis.pdf
+  - **File** : Threat_Modeling_Tools_A_Taxonomy.pdf
+  - **File** : Trusting Trust Humans in the.pdf
+  - **File** : us-20-Jin-CloudLeak-DNN-Model-Extractions-From-Commercial-MLaaS-Platform-wp.pdf
+  - **File** : US-22-Trizna-Malware-Classification-with-machine-learning-wp.pdf
+  - **File** : US-22-Trizna-Malware-Classification-with-machine-learning.pdf
+  - **File** : “Free” as in Freedom.pdf
+- ***./其他未分类\DDoS***
+  - **File** : JESS_Joint_Entropy-Based_DDoS_Defense_Scheme_in_SDN.pdf
+- ***./支付逻辑漏洞***
+  - **File** : 2020中国互联网网络安全报告.pdf
+  - **File** : 2021年上半年我过互联网网络安全监测数据分析报告.pdf
+  - **File** : A Black-Box Approach for Detecting Business-Layer.pdf
+  - **File** : BBA ZH.pdf
+  - **File** : BBA.pdf
+  - **File** : bba11-16.pdf
+  - **File** : DetLogic-A black-box approach for detecting logic vulnerabilities in web applications(1)-1-11 ZH.pdf
+  - **File** : DetLogic-A black-box approach for detecting logic vulnerabilities in web applications(1).pdf
+  - **File** : iOS应用内支付安全分析_罗成.pdf
+  - **File** : ndss14Black-box ZH.pdf
+  - **File** : ndss14Black-box.pdf
+  - **File** : ndss14静态分析.pdf
+  - **File** : NoTamper  Opportunities in Web Applications zh.pdf
+  - **File** : NoTamper  Opportunities in Web Applications.pdf
+  - **File** : Testing_Software_Design_Modeled_by_Finite-State_Machines.pdf
+  - **File** : The Dangers of Human Touch Fingerprinting.pdf
+  - **File** : 业务逻辑漏洞的利用机理与检测方法研究.pdf
+  - **File** : 基于动态检测技术的软件设计安全漏洞查找方法.pdf
+  - **File** : 白盒 逻辑漏洞 ndss zh.pdf
+  - **File** : 白盒 逻辑漏洞 ndss.pdf
+  - **File** : 系统安全防护中的业务逻辑漏洞检测与防御策略_肖帅帅.pdf
+  - **File** : 结合静态分析与动态符号执行的软件漏洞检测方法.pdf
+  - **File** : 计算机安全漏洞的动态检测.pdf
+  - **File** : 计算机漏洞分类研究.pdf
+  - **File** : 软件安全漏洞检测技术综述.pdf
+  - **File** : 逻辑漏洞检测与软件行为分析关键技术研究.pdf
+  - **File** : 面向源代码的软件漏洞静态检测综述_李珍.pdf
