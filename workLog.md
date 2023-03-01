@@ -21,7 +21,7 @@
 
 ## 2.14 Tuesday Fucking Valentine's Day
 
-- 快完成对VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search论文阅读，还差一个渐进搜索部分，记录在[codeRepresentation.md](笔记/codeRepresentation.md)中；
+- 快完成对VulHawk: Cross-architecture Vulnerability Detection with Entropy-based Binary Code Search论文阅读，还差一个渐进搜索部分，记录在[codeRep vresentation.md](笔记/codeRepresentation.md)中；
 
 ## 2.13 Monday
 

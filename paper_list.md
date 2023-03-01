@@ -11,6 +11,7 @@
 - ***./AI漏洞挖掘\CodeRepresenting***
   - **File** : Automated Vulnerability Detection in Source Code Using Minimum Intermediate Representation Learning.pdf
   - **File** : Automated_Vulnerability_Detection_in_Source_Code_Using_Deep_Representation_Learning.pdf
+  - **File** : ndss2023_VulHawk Cross-architecture Vulnerability Detection.pdf
   - **File** : VulDetector_Detecting_Vulnerabilities_Using_Weighted_Feature_Graph_Comparison.pdf
 - ***./AI漏洞挖掘\CodeSimilarity***
   - **File** : Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs.pdf
@@ -57,9 +58,7 @@
   - **File** : ndss2023_Fine-Grained Trackability in Protocol Executions.pdf
   - **File** : ndss2023_Navigating Murky Waters.pdf
   - **File** : ndss2023_ReScan.pdf
-  - **File** : ndss2023_Smarter Contracts Detecting Vulnerabilities in.pdf
   - **File** : ndss2023_Sometimes, You Aren’t What You Do.pdf
-  - **File** : ndss2023_VulHawk Cross-architecture Vulnerability Detection.pdf
 - ***./AI漏洞挖掘\SampleSizeIssue***
   - **File** : Software_Vulnerability_Discovery_via_Learning_Multi-Domain_Knowledge_Bases.pdf
 - ***./AI漏洞挖掘\survey***
@@ -107,8 +106,6 @@
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning-wp.pdf
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning.pdf
   - **File** : “Free” as in Freedom.pdf
-- ***./其他未分类\DDoS***
-  - **File** : JESS_Joint_Entropy-Based_DDoS_Defense_Scheme_in_SDN.pdf
 - ***./支付逻辑漏洞***
   - **File** : 2020中国互联网网络安全报告.pdf
   - **File** : 2021年上半年我过互联网网络安全监测数据分析报告.pdf
