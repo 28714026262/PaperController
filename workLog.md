@@ -1,13 +1,17 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-24 18:29:38
- * @LastEditTime: 2023-02-20 16:06:52
+ * @LastEditTime: 2023-03-02 18:40:33
  * @LastEditors: Suez_kip
  * @Description: 工作记录
 -->
 # 工作记录
 
 ***持续更新***
+
+## 3.1 Wednesday
+
+- 开始进行ReScan: A Middleware Framework for Realistic and Robust Black-box Web Application Scanning论文阅读，提出了一个全新的黑盒web检测框架，有源码，需要尽快调研；
 
 ## 2.20 Monday
 

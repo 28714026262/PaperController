@@ -57,7 +57,6 @@
   - **File** : ndss2023_DiffCSP.pdf
   - **File** : ndss2023_Fine-Grained Trackability in Protocol Executions.pdf
   - **File** : ndss2023_Navigating Murky Waters.pdf
-  - **File** : ndss2023_ReScan.pdf
   - **File** : ndss2023_Sometimes, You Aren’t What You Do.pdf
 - ***./AI漏洞挖掘\SampleSizeIssue***
   - **File** : Software_Vulnerability_Discovery_via_Learning_Multi-Domain_Knowledge_Bases.pdf
@@ -106,7 +105,9 @@
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning-wp.pdf
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning.pdf
   - **File** : “Free” as in Freedom.pdf
-- ***./支付逻辑漏洞***
+- ***./逻辑漏洞***
+  - **File** : ndss2023_ReScan.pdf
+- ***./逻辑漏洞\支付逻辑漏洞***
   - **File** : 2020中国互联网网络安全报告.pdf
   - **File** : 2021年上半年我过互联网网络安全监测数据分析报告.pdf
   - **File** : A Black-Box Approach for Detecting Business-Layer.pdf
