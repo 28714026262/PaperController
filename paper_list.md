@@ -50,14 +50,12 @@
 - ***./AI漏洞挖掘\Reading***
   - **File** : code2vec.pdf
   - **File** : ndss2023_Anomaly Detection in the Open World.pdf
-  - **File** : ndss2023_Assessing the Impact of Interface Vulnerabilities.pdf
   - **File** : ndss2023_Automata-Based Automated Detection of State.pdf
   - **File** : ndss2023_BinaryInferno.pdf
   - **File** : ndss2023_Cryptographic Oracle-Based Conditional Payments.pdf
   - **File** : ndss2023_DiffCSP.pdf
   - **File** : ndss2023_Fine-Grained Trackability in Protocol Executions.pdf
   - **File** : ndss2023_Navigating Murky Waters.pdf
-  - **File** : ndss2023_Sometimes, You Aren’t What You Do.pdf
 - ***./AI漏洞挖掘\SampleSizeIssue***
   - **File** : Software_Vulnerability_Discovery_via_Learning_Multi-Domain_Knowledge_Bases.pdf
 - ***./AI漏洞挖掘\survey***
@@ -75,38 +73,45 @@
   - **File** : Machine-Learning-Guided Typestate Analysis for Static Use-After-Free Detection.pdf
   - **File** : Object Dependency Graph.pdf
   - **File** : VulPecker.pdf
+- ***./AI漏洞挖掘\Vul***
+  - **File** : A_Decade_of_Reoccurring_Software_Weaknesses.pdf
 - ***./AI漏洞挖掘\VulGenerator***
   - **File** : FUGIO Automatic Exploit Generation for PHP Object Injection Vulnerabilities.pdf
 - ***./AI漏洞挖掘\Word2vec***
   - **File** : Efficient estimation of word representations in.pdf
   - **File** : NIPS-2013-distributed-representations-of-words-and-phrases-and-their-compositionality-Paper.pdf
-- ***./其他未分类***
-  - **File** : 1308.6745.pdf
-  - **File** : A_Decade_of_Reoccurring_Software_Weaknesses.pdf
-  - **File** : Being the Developers Friend.pdf
-  - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
-  - **File** : Defensive_Technology_Use_During_the_2018-2019_Sudanese_Revolution.pdf
-  - **File** : Devils in the Guidance.pdf
-  - **File** : Different_Kind_of_Smells_Security_Smells_in_Infrastructure_as_Code_Scripts.pdf
-  - **File** : Is_Vulnerability_Report_Confidence_Redundant_Pitfalls_Using_Temporal_Risk_Scores.pdf
+- ***./其他及未分类\AI***
+  - **File** : A_Security_Model_and_Fully_Verified_Implementation_for_the_IETF_QUIC_Record_Layer.pdf
   - **File** : Machine Learning for Source Code .pdf
-  - **File** : Machine_Learning_for_Web_Vulnerability_Detection_The_Case_of_Cross-Site_Request_Forgery.pdf
-  - **File** : Never Mind the Malware.pdf
-  - **File** : Nudging_Software_Developers_Toward_Secure_Code.pdf
-  - **File** : Phishing_Detection_Leveraging_Machine_Learning_and_Deep_Learning_A_Review.pdf
+  - **File** : Novel_MultiPipe_QUIC_Protocols_to_Enhance_the_Wireless_Network_Performance.pdf
   - **File** : Practical_Attacks_on_Machine_Learning_A_Case_Study_on_Adversarial_Windows_Malware.pdf
-  - **File** : Privacy_Leakage_Vulnerability_Detection_for_Privacy-Preserving_Computation_Services.pdf
   - **File** : sec22-park-sunnyeo.pdf
-  - **File** : Software_Security_for_the_People_Free_and_Open_Resources_for_Software_Security_Training.pdf
-  - **File** : The_Fusion_of_Secure_Function_Evaluation_and_Logic_Synthesis.pdf
-  - **File** : Threat_Modeling_Tools_A_Taxonomy.pdf
-  - **File** : Trusting Trust Humans in the.pdf
+  - **File** : Turning Your Weakness Into a Strength Watermarking Deep Neural Network by Backdooring.pdf
   - **File** : us-20-Jin-CloudLeak-DNN-Model-Extractions-From-Commercial-MLaaS-Platform-wp.pdf
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning-wp.pdf
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning.pdf
-  - **File** : “Free” as in Freedom.pdf
+- ***./其他及未分类\DDoS***
+  - **File** : 1308.6745.pdf
+  - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
+- ***./其他及未分类\FUZZ***
+  - **File** : Stateful Greybox Fuzzing.pdf
+- ***./其他及未分类\OrinalCode***
+  - **File** : Different_Kind_of_Smells_Security_Smells_in_Infrastructure_as_Code_Scripts.pdf
+- ***./其他及未分类\VulSub***
+  - **File** : Is_Vulnerability_Report_Confidence_Redundant_Pitfalls_Using_Temporal_Risk_Scores.pdf
+  - **File** : Never Mind the Malware.pdf
+- ***./其他及未分类\Web***
+  - **File** : Automated Discovery of Application-Layer.pdf
+  - **File** : Machine_Learning_for_Web_Vulnerability_Detection_The_Case_of_Cross-Site_Request_Forgery.pdf
+  - **File** : Phishing_Detection_Leveraging_Machine_Learning_and_Deep_Learning_A_Review.pdf
+  - **File** : Pre-hijacked accounts.pdf
+  - **File** : usenix2022-The Security Lottery Measuring Client-Side.pdf
 - ***./逻辑漏洞***
+  - **File** : 2201.10833.pdf
+  - **File** : 2212.12308.pdf
+  - **File** : Devils in the Guidance.pdf
   - **File** : ndss2023_ReScan.pdf
+  - **File** : sec22-siby.pdf
 - ***./逻辑漏洞\支付逻辑漏洞***
   - **File** : 2020中国互联网网络安全报告.pdf
   - **File** : 2021年上半年我过互联网网络安全监测数据分析报告.pdf
