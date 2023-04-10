@@ -8,7 +8,7 @@
   - **File** : Deep Learning-Based Vulnerable.pdf
   - **File** : Machine-Learning Supported Vulnerability Detection.pdf
   - **File** : Magma.pdf
-- ***./AI漏洞挖掘\CodeRepresenting***
+- ***./AI漏洞挖掘\codeRepresenting***
   - **File** : Automated Vulnerability Detection in Source Code Using Minimum Intermediate Representation Learning.pdf
   - **File** : Automated_Vulnerability_Detection_in_Source_Code_Using_Deep_Representation_Learning.pdf
   - **File** : ndss2023_VulHawk Cross-architecture Vulnerability Detection.pdf
@@ -18,7 +18,7 @@
   - **File** : Semantics-Based Obfuscation-Resilient Binary Code.pdf
 - ***./AI漏洞挖掘\Database***
   - **File** : EMBER.pdf
-- ***./AI漏洞挖掘\FingerPrint***
+- ***./AI漏洞挖掘\fingerPrint***
   - **File** : VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf
 - ***./AI漏洞挖掘\Graph***
   - **File** : CodeSearching.pdf
@@ -63,6 +63,7 @@
   - **File** : Deep_Learning_Based_Vulnerability_Detection_Are_We_There_Yet.pdf
   - **File** : Deep_neural-based_vulnerability_discovery_demystified_data_model_and_performance.pdf
   - **File** : Evaluating_Complexity_Code_Churn_and_Developer_Activity_Metrics_as_Indicators_of_Software_Vulnerabilities.pdf
+  - **File** : Machine Learning for Source Code A Review .pdf
   - **File** : Software_Vulnerability_Detection_Using_Deep_Neural_Networks_A_Survey.pdf
 - ***./AI漏洞挖掘\TraditionalStatic***
   - **File** : 3548606.3563527.pdf
@@ -80,6 +81,20 @@
 - ***./AI漏洞挖掘\Word2vec***
   - **File** : Efficient estimation of word representations in.pdf
   - **File** : NIPS-2013-distributed-representations-of-words-and-phrases-and-their-compositionality-Paper.pdf
+- ***./AI漏洞挖掘\反漏洞检测***
+  - **File** : windows恶意软件的反检测手段.pdf
+  - **File** : 隐写技术的恶意软件反检测.pdf
+- ***./代码审计***
+  - **File** : IaC综述.pdf
+  - **File** : 基于论坛代码的安全性编程.pdf
+- ***./代码审计\漏洞分类及报告***
+  - **File** : cwe评分系统改进- 提高漏洞相似性计算能力.pdf
+  - **File** : 漏洞报告置信度冗余分析.pdf
+- ***./其他***
+  - **File** : POI漏洞的注入生成.pdf
+  - **File** : 云模型DNN防御.pdf
+  - **File** : 粗粒度的系统威胁模型6步.pdf
+  - **File** : 隐私计算+fuzz.pdf
 - ***./其他及未分类\AI***
   - **File** : A_Security_Model_and_Fully_Verified_Implementation_for_the_IETF_QUIC_Record_Layer.pdf
   - **File** : Machine Learning for Source Code .pdf
@@ -106,6 +121,33 @@
   - **File** : Phishing_Detection_Leveraging_Machine_Learning_and_Deep_Learning_A_Review.pdf
   - **File** : Pre-hijacked accounts.pdf
   - **File** : usenix2022-The Security Lottery Measuring Client-Side.pdf
+- ***./支付逻辑漏洞***
+  - **File** : Devils in the Guidance.pdf
+- ***./支付逻辑漏洞\电路网表、***
+  - **File** : The_Fusion_of_Secure_Function_Evaluation_and_Logic_Synthesis.pdf
+- ***./未分类***
+  - **File** : 2210.00875v3.pdf
+  - **File** : 3548606.3559384.pdf
+  - **File** : AIML for Network Security.pdf
+  - **File** : Attacking Static Hardware Trojan Detection.pdf
+  - **File** : ATTRITION Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning.pdf
+  - **File** : Automatic Detection of Speculative Execution Combinations.pdf
+  - **File** : Enhanced Membership Inference Attacks against Machine Learning Models.pdf
+  - **File** : Group Property Inference Attacks Against.pdf
+  - **File** : Imitation Adversarial Attacks for Black-box Neural Ranking Models.pdf
+  - **File** : JIT-Picking Differential Fuzzing of JavaScript Engines.pdf
+  - **File** : P-Verifier Understanding and Mitigating Security Risks in.pdf
+  - **File** : Query-driven Scalable Vulnerability Detection in OAuth Service Provider Implementations.pdf
+  - **File** : Tidy Symbolic Verification of Timed Cryptographic Protocols.pdf
+  - **File** : Understanding and Mitigating Remote Code Execution.pdf
+- ***./流量分析\DDoS***
+  - **File** : 1308.6745.pdf
+  - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
+  - **File** : JESS_Joint_Entropy-Based_DDoS_Defense_Scheme_in_SDN.pdf
+- ***./流量分析\ML\CSRF***
+  - **File** : Machine_Learning_for_Web_Vulnerability_Detection_The_Case_of_Cross-Site_Request_Forgery.pdf
+- ***./流量分析\ML\phishing***
+  - **File** : 截图&前端代码的页面相似性.pdf
 - ***./逻辑漏洞***
   - **File** : 2201.10833.pdf
   - **File** : 2212.12308.pdf
