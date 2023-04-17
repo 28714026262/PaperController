@@ -8,7 +8,7 @@
   - **File** : Deep Learning-Based Vulnerable.pdf
   - **File** : Machine-Learning Supported Vulnerability Detection.pdf
   - **File** : Magma.pdf
-- ***./AI漏洞挖掘\CodeRepresenting***
+- ***./AI漏洞挖掘\codeRepresenting***
   - **File** : Automated Vulnerability Detection in Source Code Using Minimum Intermediate Representation Learning.pdf
   - **File** : Automated_Vulnerability_Detection_in_Source_Code_Using_Deep_Representation_Learning.pdf
   - **File** : ndss2023_VulHawk Cross-architecture Vulnerability Detection.pdf
@@ -18,7 +18,7 @@
   - **File** : Semantics-Based Obfuscation-Resilient Binary Code.pdf
 - ***./AI漏洞挖掘\Database***
   - **File** : EMBER.pdf
-- ***./AI漏洞挖掘\FingerPrint***
+- ***./AI漏洞挖掘\fingerPrint***
   - **File** : VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf
 - ***./AI漏洞挖掘\Graph***
   - **File** : CodeSearching.pdf
@@ -102,6 +102,7 @@
   - **File** : Practical_Attacks_on_Machine_Learning_A_Case_Study_on_Adversarial_Windows_Malware.pdf
   - **File** : sec22-park-sunnyeo.pdf
   - **File** : Turning Your Weakness Into a Strength Watermarking Deep Neural Network by Backdooring.pdf
+  - **File** : Understanding and Mitigating Remote Code Execution.pdf
   - **File** : us-20-Jin-CloudLeak-DNN-Model-Extractions-From-Commercial-MLaaS-Platform-wp.pdf
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning-wp.pdf
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning.pdf
@@ -140,7 +141,6 @@
   - **File** : P-Verifier Understanding and Mitigating Security Risks in.pdf
   - **File** : Query-driven Scalable Vulnerability Detection in OAuth Service Provider Implementations.pdf
   - **File** : Tidy Symbolic Verification of Timed Cryptographic Protocols.pdf
-  - **File** : Understanding and Mitigating Remote Code Execution.pdf
 - ***./流量分析\DDoS***
   - **File** : 1308.6745.pdf
   - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
