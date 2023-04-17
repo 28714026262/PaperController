@@ -132,6 +132,7 @@
   - **File** : Attacking Static Hardware Trojan Detection.pdf
   - **File** : ATTRITION Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning.pdf
   - **File** : Automatic Detection of Speculative Execution Combinations.pdf
+  - **File** : Bypassing Cloud-based Security Providers.pdf
   - **File** : Enhanced Membership Inference Attacks against Machine Learning Models.pdf
   - **File** : Group Property Inference Attacks Against.pdf
   - **File** : Imitation Adversarial Attacks for Black-box Neural Ranking Models.pdf
