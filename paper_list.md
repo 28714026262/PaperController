@@ -109,6 +109,12 @@
 - ***./其他及未分类\DDoS***
   - **File** : 1308.6745.pdf
   - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
+- ***./其他及未分类\foundation_model***
+  - **File** : CoCa.pdf
+  - **File** : FLAVA.pdf
+  - **File** : LLaMA.pdf
+  - **File** : PLUG2.pdf
+  - **File** : 大模型综述.pdf
 - ***./其他及未分类\FUZZ***
   - **File** : Stateful Greybox Fuzzing.pdf
 - ***./其他及未分类\OrinalCode***
