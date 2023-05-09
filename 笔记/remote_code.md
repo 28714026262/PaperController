@@ -1,14 +1,15 @@
 <!--
- * @Description: 
--->
-<!--
+ * @Author: Suez_kip 287140262@qq.com
+ * @Date: 2023-04-17 14:33:36
+ * @LastEditTime: 2023-04-17 14:48:23
+ * @LastEditors: Suez_kip
  * @Description: 
 -->
 # Understanding and Mitigating Remote Code Execution Vulnerabilities in Cross-platform Ecosystem
 
 [源码地址](https://github.com/xiaofen9/XGuard)
 
-但是目前源码仍未放出，后续再做调研；
+但是目前可能由于仍未发表，源码仍未放出，后续再做调研；
 
 ## 对远程代码的分析
 
@@ -65,3 +66,17 @@
       2. 沙箱执行时，我们根据目标API列表创建一个过滤的API列表，并且在沙盒执行中只允许该列表中的方法。通过白名单策略轻量化的实现对沙箱内的运行实现限制；
 
 ## 实验与结果
+
+实验对象：  
+
+![图 1](../images2/9c6077edb38d200ec0f7b304e2c44cbc66d9c7cc1f44f04a74920b6bfae2ab02.png)  
+
+具体的版本、覆盖率、防御效能记录：  
+
+![图 2](../images2/90ee10b59b2c1fdb8bc86486c83aca2232ee2799167be7f976ed310bac098378.png)  
+
+根据不同体量的软件检测：  
+
+![图 3](../images2/b62e641be3b267f2ec7fd0ee60f6994db7c39e154469b4f3d944077dca1f5b02.png)  
+
+最大只有VScode的水平，654KLoC  

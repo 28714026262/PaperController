@@ -90,12 +90,9 @@
 - ***./代码审计\漏洞分类及报告***
   - **File** : cwe评分系统改进- 提高漏洞相似性计算能力.pdf
   - **File** : 漏洞报告置信度冗余分析.pdf
-- ***./其他***
-  - **File** : POI漏洞的注入生成.pdf
-  - **File** : 云模型DNN防御.pdf
-  - **File** : 粗粒度的系统威胁模型6步.pdf
-  - **File** : 隐私计算+fuzz.pdf
-- ***./其他及未分类\AI***
+- ***./其他分类\AI***
+  - **File** : 3548606.3559384.pdf
+  - **File** : AIML for Network Security.pdf
   - **File** : A_Security_Model_and_Fully_Verified_Implementation_for_the_IETF_QUIC_Record_Layer.pdf
   - **File** : Machine Learning for Source Code .pdf
   - **File** : Novel_MultiPipe_QUIC_Protocols_to_Enhance_the_Wireless_Network_Performance.pdf
@@ -106,47 +103,45 @@
   - **File** : us-20-Jin-CloudLeak-DNN-Model-Extractions-From-Commercial-MLaaS-Platform-wp.pdf
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning-wp.pdf
   - **File** : US-22-Trizna-Malware-Classification-with-machine-learning.pdf
-- ***./其他及未分类\DDoS***
+- ***./其他分类\DDoS***
   - **File** : 1308.6745.pdf
   - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
+- ***./其他分类\FUZZ***
+  - **File** : Stateful Greybox Fuzzing.pdf
+- ***./其他分类\OrinalCode***
+  - **File** : Different_Kind_of_Smells_Security_Smells_in_Infrastructure_as_Code_Scripts.pdf
+- ***./其他分类\VulSub***
+  - **File** : Is_Vulnerability_Report_Confidence_Redundant_Pitfalls_Using_Temporal_Risk_Scores.pdf
+  - **File** : Never Mind the Malware.pdf
+- ***./其他分类\Web***
+  - **File** : Automated Discovery of Application-Layer.pdf
+  - **File** : Machine_Learning_for_Web_Vulnerability_Detection_The_Case_of_Cross-Site_Request_Forgery.pdf
+  - **File** : Phishing_Detection_Leveraging_Machine_Learning_and_Deep_Learning_A_Review.pdf
+  - **File** : Pre-hijacked accounts.pdf
+  - **File** : usenix2022-The Security Lottery Measuring Client-Side.pdf
+- ***./其他分类\其他***
+  - **File** : POI漏洞的注入生成.pdf
+  - **File** : 云模型DNN防御.pdf
+  - **File** : 粗粒度的系统威胁模型6步.pdf
+  - **File** : 隐私计算+fuzz.pdf
 - ***./其他及未分类\foundation_model***
   - **File** : CoCa.pdf
   - **File** : FLAVA.pdf
   - **File** : LLaMA.pdf
   - **File** : PLUG2.pdf
   - **File** : 大模型综述.pdf
-- ***./其他及未分类\FUZZ***
-  - **File** : Stateful Greybox Fuzzing.pdf
-- ***./其他及未分类\OrinalCode***
-  - **File** : Different_Kind_of_Smells_Security_Smells_in_Infrastructure_as_Code_Scripts.pdf
-- ***./其他及未分类\VulSub***
-  - **File** : Is_Vulnerability_Report_Confidence_Redundant_Pitfalls_Using_Temporal_Risk_Scores.pdf
-  - **File** : Never Mind the Malware.pdf
-- ***./其他及未分类\Web***
-  - **File** : Automated Discovery of Application-Layer.pdf
-  - **File** : Machine_Learning_for_Web_Vulnerability_Detection_The_Case_of_Cross-Site_Request_Forgery.pdf
-  - **File** : Phishing_Detection_Leveraging_Machine_Learning_and_Deep_Learning_A_Review.pdf
-  - **File** : Pre-hijacked accounts.pdf
-  - **File** : usenix2022-The Security Lottery Measuring Client-Side.pdf
 - ***./支付逻辑漏洞***
   - **File** : Devils in the Guidance.pdf
 - ***./支付逻辑漏洞\电路网表、***
   - **File** : The_Fusion_of_Secure_Function_Evaluation_and_Logic_Synthesis.pdf
 - ***./未分类***
-  - **File** : 2210.00875v3.pdf
-  - **File** : 3548606.3559384.pdf
-  - **File** : AIML for Network Security.pdf
-  - **File** : Attacking Static Hardware Trojan Detection.pdf
   - **File** : ATTRITION Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning.pdf
-  - **File** : Automatic Detection of Speculative Execution Combinations.pdf
   - **File** : Bypassing Cloud-based Security Providers.pdf
   - **File** : Enhanced Membership Inference Attacks against Machine Learning Models.pdf
   - **File** : Group Property Inference Attacks Against.pdf
   - **File** : Imitation Adversarial Attacks for Black-box Neural Ranking Models.pdf
   - **File** : JIT-Picking Differential Fuzzing of JavaScript Engines.pdf
-  - **File** : P-Verifier Understanding and Mitigating Security Risks in.pdf
   - **File** : Query-driven Scalable Vulnerability Detection in OAuth Service Provider Implementations.pdf
-  - **File** : Tidy Symbolic Verification of Timed Cryptographic Protocols.pdf
 - ***./流量分析\DDoS***
   - **File** : 1308.6745.pdf
   - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
