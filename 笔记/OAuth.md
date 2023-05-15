@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-04-17 15:50:15
- * @LastEditTime: 2023-04-17 20:51:55
+ * @LastEditTime: 2023-04-18 09:31:11
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -216,7 +216,6 @@ OAuthlin、S3kvetter
 
 我们在授权服务器的十个流行库中发现了47个已确认的漏洞，其中24个以前是未知的。  
 ![图 11](../images2/edb4cecc15311f338a5bec3643ec8bfeb75fdc85af124480b60c87473a78fbcb.png)  
-
 
 Cerberus成功识别了47个属性违规（表5），并在数据集中报告了7个假阳性（FP）案例和3个假阴性（FN），三类未知漏洞导致我们有三个新的CVE条目，主要原因是WALA框架中对目标的虚假指向。此外，在Javascript库分析过程中，少数情况下也可能出现不一致性。我们总结了FP和FN情况的原因如下：
 
