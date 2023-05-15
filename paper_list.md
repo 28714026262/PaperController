@@ -8,7 +8,7 @@
   - **File** : Deep Learning-Based Vulnerable.pdf
   - **File** : Machine-Learning Supported Vulnerability Detection.pdf
   - **File** : Magma.pdf
-- ***./AI漏洞挖掘\CodeRepresenting***
+- ***./AI漏洞挖掘\codeRepresenting***
   - **File** : Automated Vulnerability Detection in Source Code Using Minimum Intermediate Representation Learning.pdf
   - **File** : Automated_Vulnerability_Detection_in_Source_Code_Using_Deep_Representation_Learning.pdf
   - **File** : ndss2023_VulHawk Cross-architecture Vulnerability Detection.pdf
@@ -18,7 +18,7 @@
   - **File** : Semantics-Based Obfuscation-Resilient Binary Code.pdf
 - ***./AI漏洞挖掘\Database***
   - **File** : EMBER.pdf
-- ***./AI漏洞挖掘\FingerPrint***
+- ***./AI漏洞挖掘\fingerPrint***
   - **File** : VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf
 - ***./AI漏洞挖掘\Graph***
   - **File** : CodeSearching.pdf
@@ -84,6 +84,21 @@
 - ***./AI漏洞挖掘\反漏洞检测***
   - **File** : windows恶意软件的反检测手段.pdf
   - **File** : 隐写技术的恶意软件反检测.pdf
+- ***./foundation_model***
+  - **File** : 大模型综述.pdf
+- ***./foundation_model\Hallucination***
+  - **File** : A Comprehensive Study of Hallucinations in Neural Machine Translation.pdf
+  - **File** : A Review on Fact Extraction and Verification.pdf
+  - **File** : Annotation Artifacts in Natural Language Inference Data.pdf
+  - **File** : Fact Checking Task definition and dataset construction.pdf
+  - **File** : Factual Error Correction for Abstractive Summarization Models.pdf
+  - **File** : On Faithfulness and Factuality in Abstractive Summarization.pdf
+  - **File** : Retrieval Augmentation Reduces Hallucination in Conversation.pdf
+- ***./foundation_model\Model***
+  - **File** : CoCa.pdf
+  - **File** : FLAVA.pdf
+  - **File** : LLaMA.pdf
+  - **File** : PLUG2.pdf
 - ***./代码审计***
   - **File** : IaC综述.pdf
   - **File** : 基于论坛代码的安全性编程.pdf
@@ -124,12 +139,6 @@
   - **File** : 云模型DNN防御.pdf
   - **File** : 粗粒度的系统威胁模型6步.pdf
   - **File** : 隐私计算+fuzz.pdf
-- ***./其他及未分类\foundation_model***
-  - **File** : CoCa.pdf
-  - **File** : FLAVA.pdf
-  - **File** : LLaMA.pdf
-  - **File** : PLUG2.pdf
-  - **File** : 大模型综述.pdf
 - ***./支付逻辑漏洞***
   - **File** : Devils in the Guidance.pdf
 - ***./支付逻辑漏洞\电路网表、***
