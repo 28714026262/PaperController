@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-05-15 15:33:13
- * @LastEditTime: 2023-06-06 01:16:00
+ * @LastEditTime: 2023-06-06 01:17:25
  * @LastEditors: Please set LastEditors
  * @Description: 
 -->
@@ -373,3 +373,31 @@ paragraph-level其实是相对于sentence-level来说的，前文也讲过了QG�
 语义匹配分类：这个任务的设计出发点也是SQuAD的数据特点，对于一个passage存在多个answer-question训练数据，模型对这样的数据容易产生一些宽泛不具体的问题。所以作者把passage-question作为正样本，passage-random selected question， random selected passage-question作为副样本进行分类任务。
 
 answer-position 位置预测：为了让模型更好的利用answer信息，设计了一个预测answer在上下文中start和end位置的模型（pointer network），其中基础的编码部分采用BiDAF的方式。然后QG和这两个辅助任务一起训练，效果可。
+
+***References***  
+
+- [博客来源](https://zhuanlan.zhihu.com/p/150665394)
+- [Heilman and Smith, 2009] Question generation via overgenerating transformations and ranking.
+- [Heilman and Smith, 2010] Good question! statistical ranking for question generation.
+- [Chali and Hasan, 2015] Towards topic- to-question generation.
+- [Du and Cardie, 2017] Identifying Where to Focus in Reading Comprehension for Neural Question Generation
+- [Du et al., 2017] Learning to Ask: Neural Question Generation for Reading Comprehension
+- [Zhou et al., 2017] Neural Question Generation from Text: A Preliminary Study
+- [Tang et al., 2017] Question Answering and Question Generation as Dual Tasks
+- [Duan et al., 2017] Question Generation for Question Answering
+- [Song et al., 2018] Leveraging Context Information for Natural Question Generation
+- [Sun et al., 2018] Answer-focused and Position-aware Neural Question Generation
+- [Kim et al., 2018] Improving Neural Question Generation using Answer Separation
+- [Zhao et al., 2018] Paragraph-level Neural Question Generation with Maxout Pointer and Gated Self-attention Networks
+- [Zhou et al., 2019a] Multi-Task Learning with Language Modeling for Question Generation
+- [Zhou et al., 2019b] Question-type Driven Question Generation
+- [Dong et al., 2019] Unified Language Model Pre-training for Natural Language Understanding and Generation
+- [Gupta et al., 2019] Improving Neural Question Generation using World Knowledge
+- [Li et al., 2019] Improving Question Generation With to the Point Context
+- [Tuan et al., 2019] Capturing Greater Context for Question Generation
+- [Liu et al., 2019] Learning to Generate Questions by Learning What not to Generate
+- Chen et al., 2019] Natural Question Generation with Reinforcement Learning Based Graph-to-Sequence Model
+- [Zhang and Bansal, 2019] Addressing Semantic Drift in Question Generation for Semi-Supervised Question Answering
+- [Jia et al., 2020] How to Ask Good Questions? Try to Leverage Paraphrases
+- [Ma et al., 2020]Improving Question Generation with Sentence-level Semantic Matching and Answer Position Inferring
+- [Xiao et al., 2020] ERNIE-GEN: An Enhanced Multi-Flow Pre-training and Fine-tuning Framework for Natural Language Generation
