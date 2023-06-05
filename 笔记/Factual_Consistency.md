@@ -1,8 +1,8 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-05-15 15:33:13
- * @LastEditTime: 2023-05-22 21:23:25
- * @LastEditors: Suez_kip
+ * @LastEditTime: 2023-06-06 01:16:00
+ * @LastEditors: Please set LastEditors
  * @Description: 
 -->
 # Factual Consistency 事实一致性
@@ -258,3 +258,118 @@ NLI和QGQA指标都存在问题
 - 由于基于QG-QA和nli的方法比其他方法表现出更好的性能，特别是当结合在一起时；
 - 建议报告ROC AUC而不是相关性，因为它更易于解释和操作；
 - 鼓励数据管理员使用二进制注释方案；
+
+
+MultiFC数据集(Augenstein等人，2019)，该数据集由政治主张和来自PolitiFact和Snopes的相关真相标签组成;
+NRC情感强度词典，它将大约6000个术语映射到0到1之间的值，代表了术语在8种不同情绪中的强度(Mohammad, 2017)。例如，“interrupt”和“rage”都属于愤怒词，但强度值分别为0.333和0.911。
+
+## QG
+
+### QG分类
+
+从QG的发展史来看，整体上的方法无非是规则方法和神经网络方法，规则方法相对久远了，主要是通过词法、句法分析，将陈述句通过人工规则改写为疑问句。目前使用规则方法的研究不太多（没太关注，也没读过），主要还是集中火力在深度学习上。下面按我自己的理解把最近的一些工作进行了G方法上的分类，这里只简单介绍，后边会有每篇文章的具体内容。
+
+1. Answer Position + Lexical Features
+
+在做有答案问题生成时，answer可以看作是一个标杆，直观地指示了当前该生成的问题的类型、内容、关注点。所以如何利用answer信息基本是每篇工作的重点。
+
+一个比较直接且有效的利用answer的方式就是通过Answer Tagging的方式把标记上下文中每个词是否是answer的tagging embedding直接拼接到word embedding上，比如BIO的方式，或者answer distance的方式。相比于不使用answer信息，这种拼接tagging的方法基本上可以直接提高模型最后的效果大约5%的BLEU-4，甚至更高。
+
+在此基础上，众多的工作也是把上下文中每个词的POS，NER，word case等特征通过feature embedding的方式拼接到词向量上，也有不错的提升。
+
+Answer Position + Lexical Features其实大多数的工作都有使用，可认为是一些basic的操作。
+
+2. Multi-task learning
+
+Multi-task算是QG中比较热的一种方法了，单纯的QG缺少某些方面的信息，因此就通过设计相对应auxiliary task来为QG补充缺少的信息。比如QG生成问题时，第一个词（疑问词）生成的不太准确，那么就设计一个预测疑问词的辅助任务来专门地提高第一个词的生成准确率。比如生成的问题缺少paraphrase信息，那么辅助的paraph生成任务可以用来为QG补充原数据集中没有的paraphrase信息。
+
+3. Pre-training
+
+4. External knowledge
+
+这一类方法跟multi-task learning其实有交叉，multi-task learning的一些方法也是通过引入外部知识来设计辅助任务。另一种利用外部知识的方式是直接在encode或者decode的时候引入抽取到的外部知识，而不再设计其他的辅助任务。
+
+5. Paragraph-Level
+
+paragraph-level其实是相对于sentence-level来说的，前文也讲过了QG的输入上下文可能是passage（对应paragraph-level）和sentence（对应sentence-level），二者主要的区别就是输入的长短。paragraph的输入更长，包含的信息更多，通常在最后的效果上比sentence-level要好一些，做相关的工作时，二者通常不会交叉比较，即paragraph-level的模型一般跟paragraph-level的工作对比，sentence-level的工作跟sentence-level的工作对比。
+
+6. Graph Neural Network
+
+图神经网络不出意外的由分类任务应用到了生成任务上，但是在QG领域，使用GNNorGCN的工作还是不多的，有通过GCN对上下文先进行一波关键词预测，再将预测之后的标签以tagging的方式加入到后边的seq2seq生成中去的方式，也有直接使用GNN作为encoder对上下文进行编码的，效果都比较好。
+
+7. QG&QA
+
+直观上来看，QG跟QA就像是“对立”的一个过程，QG根据上下文产生问题，问题又可反过来为QA服务，所以有一些工作研究了把QG和QA作为统一的框架去学习，或者利用QG来提升QA的效果等。
+
+### QG相关工作
+
+**Learning to Ask Neural Question Generation for Reading Comprehension**
+最早使用神经网络做QG的奠基工作之一，基于attention的seq2seq模型，基本跟之前的基于检索的模型最好效果差不多。
+
+**Neural Question Generation from Text：A Preliminary Study**
+
+神经网络做QG的奠基工作之二，使用了前面提到的answer position和lexical features，把QG的SOTA提到了一个相对高于检索方式的位置。
+
+**Identifying Where to Focus in Reading Comprehension for Neural Question Generation**
+作者的出发点是，在面对一个较长的passage时，人们通常会先挑选出几个比较重要的句子，再根据这几个重要的句子提问。在实现时也是先对passage进行编码（对词向量sum或Max pooling），然后通过softmax对句子进行分类，标签为1的在后边生成问题时使用。
+
+**Leveraging Context Information for Natural Question Generation**
+
+也是在研究如何更好的利用较长passage中的信息，不同的是作者使用answer的表示去跟passage的每一个hidden算相似度，总共三种方式，第一种是用anwer的最后一个hidden，第二种是把answer 的所有hiddens取加权和，第三种是取max answer hidden。通过这三种方式跟passage进行计算相似度，最后把三种方式的表示拼接作为encoder的输入。
+
+**Answer-focused and Position-aware Neural Question Generation**
+
+这个工作解决的问题比较直观，一是解决生成第一个疑问词不准确的问题，二是解决copy机制在上下文中copy一些距离answer较远且无关的词的问题。为解决第一个问题，作者专门设计了一个疑问词表，用于生成疑问词。然后通过把answer positon embedding加入到计算encoder context中来获得包含距离信息的上下文表示。从疑问词表中生成疑问词，从常规词表中生成词和copy上下文中的词三种方式通过gate结合在一起。然后实验结果基本上比之前的高很多。
+
+**Improving Neural Question Generation using Answer Separation**
+
+针对SQuAD这个数据集来说，answer是原文中的span，作者发现生成的问题中，有一些包含answer的问题，即提问的问题本身包含答案，这显然是不合理的，为了避免这种情况，作者把上下文中的ansewr替换为mask，然后把answer单独进行编码，在解码时同时利用被mask掉answer 的passage表示和answer的单独表示。
+
+**Paragraph-level Neural Question Generation with Maxout Pointer and Gated Self-attention Networks**
+
+这篇文章是我最喜欢的工作之一，本身的模型仍旧沿用pointer-generator框架，但是在copy概率计算时提出了改进，即原本的copy概率是求和，但这种方式对于在上下文中多次出现的词会有偏向，作者将求和改为求max，完美解决了这个问题。而且作者在paragraph和sentence level都做了实验，效果比较好。
+
+**Improving Question Generation With to the Point Context**
+
+作者发现上下文中，距离ansewr比较远的词并不一定不重要，相对的跟answer紧贴的词也有很多无关的，为了捕捉这种关系，作者使用OpenIE这个工具抽取上下文中存在的关系三元组。在抽取之后，这个三元组也会被编码，作为另一个source，跟原本上下文的编码结合成为新的context提供给decoder，decode阶段可以从原文中copy词，也可以从抽取出的三元组中copy词（dual copy mechanism）。
+
+**Learning to Generate Questions by Learning What not to Generate**
+
+使用GCN的工作出现了。作者发现对于一个输入sentence，可以从不同的方向提出一个符合要求的问题，比如图中的例子，answer是奥巴马，但是提问方式可以是谁在（某个时间）做了啥，也可以是谁（在某个地点）做了啥，两种提问方式都是切合上下文，并且能被answer回答的。因此作者想在生成问题前先确定要针对哪一部分进行提问。方式就是通过GCN进行一波分类，把分类为1的词打个标签，作为feature embedding提供给后边的seq2seq生成。GCN建图是通过dependency parsing：
+
+**Multi-Task Learning with Language Modeling for Question Generation**
+
+为了得到更好的句子表示，把语言模型（预测前后词）和QG作为multi-task一起进行训练。两个任务是层级的关系，先进行语言模型的预测，然后将语言模型的hidden作为特征提供给后面seq2seq，效果棒棒的
+
+
+**Question-type Driven Question Generation**
+
+是multi-task 的思路，把预测第一个词和QG作为联合学习的内容，预测的结果直接用于生成。实验效果上看，确实能很好的提高第一个词的生成准确率，并且提高QG的整体效果：
+
+**How to Ask Good Questions? Try to Leverage Paraphrases**
+我自己之前的工作，我们组就是喜欢做multi-task 。对于SQuAD来说，设计数据集的时候就有要求crowd-workers在生成问题时要加一些改写进去提高问题的难度，比如原文中使用的表述是the notion of number，而crowd-workers设计的问题表述变更为the idea of a number。这种paraphrase的知识从原文中是获取不到的，缺少这种知识导致生成的问题质量不像人生成的问题那么高。
+
+所以想法就是向QG过程中引入paraphrase知识，并且要是针对于SQuAD的特定的paraphrase知识。因为广而泛的paraphrase知识并一定能对当前特定的数据集起作用。所以在构造paraphrase时，我们通过back-translation的方式，把SQuAD中的sentence和question都进行扩展，得到对应的paraphrase。这样扩展的paraphrase是针对性的。
+
+然后就是基于两部分扩展的paraphrase pair设计模型。对sentence-sentecen paraphrase，可以进行paraphrase generation（PG）的训练，作为辅助任务给QG提供paraphrase信息，PG和QG共享encoder，二者的输入都是sentence，只不过训练的目标一个是sentence paraphrase，一个是question。在二者的decoder上，使用soft sharing加强互相的影响。PG和QG的loss加权和作为整体模型的loss。
+
+对于question 和question paraphrase，二者都可作为正确的reference question使用，因此在QG过程中，计算loss时会分别跟二者计算，然后取较小值作为当前的loss。
+
+两个部分（PG&QG，min-loss）对最后的效果都有提升，同时利用二者也有比较好的效果。
+
+**Neural Models for Key Phrase Extraction and Question Generation**
+利用GNN进行encode的工作，非常细节。其实在使用GNN之前，作者设计了一个非常细节的deep alignment network，就是将passage和answer的表示（包含bert向量，glove向量，词汇特征等）进行多次反复的交互，具体的方式可以详读paper。在deep alignment network之后，就是通过GNN来编码的模块，这一部分作者构图时设计了两种方式，一种是对sentence做dependency parsing，然后相邻的句子链接得到passage的图，第二种比巧，通过self attention的方式得到passage 的图（权值矩阵）。后边还利用RL的方法进一步提高效果，把BLEU-4的值作为reward。
+
+**Capturing Greater Context for Question Generation**
+
+这片文章想解决的问题是这样的，图中绿色的句子是答案（1985）所在的sentence，但是其中的this unit具体指代的内容是另外一句话中的内容（红色）。因此使用answer-passage这样一次的attention方式很可能关注不到红色的部分，导致生成的问题定位不到红色部分。作者解决这个问题使用了两次attention：即首先answer-passage做attention，得到的结果再跟passage attention一次。效果还是很好的。
+
+**Improving Question Generation with Sentence-level Semantic Matching and Answer Position Inferring**
+
+又是通过multi-task方式增强QG的工作，这边作者的出发点是解决生成错误的疑问词和copy原文中无关词的问题，跟之前的工作很像。作者认为生成错误词的原因是没有正确的利用answer positon信息，copy无关词的原因是缺乏局部语义信息。
+
+为了分别缓解这两个问题，作者也是设计了两个辅助任务：
+
+语义匹配分类：这个任务的设计出发点也是SQuAD的数据特点，对于一个passage存在多个answer-question训练数据，模型对这样的数据容易产生一些宽泛不具体的问题。所以作者把passage-question作为正样本，passage-random selected question， random selected passage-question作为副样本进行分类任务。
+
+answer-position 位置预测：为了让模型更好的利用answer信息，设计了一个预测answer在上下文中start和end位置的模型（pointer network），其中基础的编码部分采用BiDAF的方式。然后QG和这两个辅助任务一起训练，效果可。
