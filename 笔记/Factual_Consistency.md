@@ -1,8 +1,8 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-05-15 15:33:13
- * @LastEditTime: 2023-06-06 01:16:00
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-06-06 09:49:15
+ * @LastEditors: Suez_kip
  * @Description: 
 -->
 # Factual Consistency 事实一致性
@@ -259,7 +259,6 @@ NLI和QGQA指标都存在问题
 - 建议报告ROC AUC而不是相关性，因为它更易于解释和操作；
 - 鼓励数据管理员使用二进制注释方案；
 
-
 MultiFC数据集(Augenstein等人，2019)，该数据集由政治主张和来自PolitiFact和Snopes的相关真相标签组成;
 NRC情感强度词典，它将大约6000个术语映射到0到1之间的值，代表了术语在8种不同情绪中的强度(Mohammad, 2017)。例如，“interrupt”和“rage”都属于愤怒词，但强度值分别为0.333和0.911。
 
@@ -280,25 +279,18 @@ NRC情感强度词典，它将大约6000个术语映射到0到1之间的值，�
 Answer Position + Lexical Features其实大多数的工作都有使用，可认为是一些basic的操作。
 
 2. Multi-task learning
-
 Multi-task算是QG中比较热的一种方法了，单纯的QG缺少某些方面的信息，因此就通过设计相对应auxiliary task来为QG补充缺少的信息。比如QG生成问题时，第一个词（疑问词）生成的不太准确，那么就设计一个预测疑问词的辅助任务来专门地提高第一个词的生成准确率。比如生成的问题缺少paraphrase信息，那么辅助的paraph生成任务可以用来为QG补充原数据集中没有的paraphrase信息。
-
 3. Pre-training
-
 4. External knowledge
-
 这一类方法跟multi-task learning其实有交叉，multi-task learning的一些方法也是通过引入外部知识来设计辅助任务。另一种利用外部知识的方式是直接在encode或者decode的时候引入抽取到的外部知识，而不再设计其他的辅助任务。
 
 5. Paragraph-Level
-
 paragraph-level其实是相对于sentence-level来说的，前文也讲过了QG的输入上下文可能是passage（对应paragraph-level）和sentence（对应sentence-level），二者主要的区别就是输入的长短。paragraph的输入更长，包含的信息更多，通常在最后的效果上比sentence-level要好一些，做相关的工作时，二者通常不会交叉比较，即paragraph-level的模型一般跟paragraph-level的工作对比，sentence-level的工作跟sentence-level的工作对比。
 
 6. Graph Neural Network
-
 图神经网络不出意外的由分类任务应用到了生成任务上，但是在QG领域，使用GNNorGCN的工作还是不多的，有通过GCN对上下文先进行一波关键词预测，再将预测之后的标签以tagging的方式加入到后边的seq2seq生成中去的方式，也有直接使用GNN作为encoder对上下文进行编码的，效果都比较好。
 
 7. QG&QA
-
 直观上来看，QG跟QA就像是“对立”的一个过程，QG根据上下文产生问题，问题又可反过来为QA服务，所以有一些工作研究了把QG和QA作为统一的框架去学习，或者利用QG来提升QA的效果等。
 
 ### QG相关工作
@@ -307,43 +299,33 @@ paragraph-level其实是相对于sentence-level来说的，前文也讲过了QG�
 最早使用神经网络做QG的奠基工作之一，基于attention的seq2seq模型，基本跟之前的基于检索的模型最好效果差不多。
 
 **Neural Question Generation from Text：A Preliminary Study**
-
 神经网络做QG的奠基工作之二，使用了前面提到的answer position和lexical features，把QG的SOTA提到了一个相对高于检索方式的位置。
 
 **Identifying Where to Focus in Reading Comprehension for Neural Question Generation**
 作者的出发点是，在面对一个较长的passage时，人们通常会先挑选出几个比较重要的句子，再根据这几个重要的句子提问。在实现时也是先对passage进行编码（对词向量sum或Max pooling），然后通过softmax对句子进行分类，标签为1的在后边生成问题时使用。
 
 **Leveraging Context Information for Natural Question Generation**
-
 也是在研究如何更好的利用较长passage中的信息，不同的是作者使用answer的表示去跟passage的每一个hidden算相似度，总共三种方式，第一种是用anwer的最后一个hidden，第二种是把answer 的所有hiddens取加权和，第三种是取max answer hidden。通过这三种方式跟passage进行计算相似度，最后把三种方式的表示拼接作为encoder的输入。
 
 **Answer-focused and Position-aware Neural Question Generation**
-
 这个工作解决的问题比较直观，一是解决生成第一个疑问词不准确的问题，二是解决copy机制在上下文中copy一些距离answer较远且无关的词的问题。为解决第一个问题，作者专门设计了一个疑问词表，用于生成疑问词。然后通过把answer positon embedding加入到计算encoder context中来获得包含距离信息的上下文表示。从疑问词表中生成疑问词，从常规词表中生成词和copy上下文中的词三种方式通过gate结合在一起。然后实验结果基本上比之前的高很多。
 
 **Improving Neural Question Generation using Answer Separation**
-
 针对SQuAD这个数据集来说，answer是原文中的span，作者发现生成的问题中，有一些包含answer的问题，即提问的问题本身包含答案，这显然是不合理的，为了避免这种情况，作者把上下文中的ansewr替换为mask，然后把answer单独进行编码，在解码时同时利用被mask掉answer 的passage表示和answer的单独表示。
 
 **Paragraph-level Neural Question Generation with Maxout Pointer and Gated Self-attention Networks**
-
 这篇文章是我最喜欢的工作之一，本身的模型仍旧沿用pointer-generator框架，但是在copy概率计算时提出了改进，即原本的copy概率是求和，但这种方式对于在上下文中多次出现的词会有偏向，作者将求和改为求max，完美解决了这个问题。而且作者在paragraph和sentence level都做了实验，效果比较好。
 
 **Improving Question Generation With to the Point Context**
-
 作者发现上下文中，距离ansewr比较远的词并不一定不重要，相对的跟answer紧贴的词也有很多无关的，为了捕捉这种关系，作者使用OpenIE这个工具抽取上下文中存在的关系三元组。在抽取之后，这个三元组也会被编码，作为另一个source，跟原本上下文的编码结合成为新的context提供给decoder，decode阶段可以从原文中copy词，也可以从抽取出的三元组中copy词（dual copy mechanism）。
 
 **Learning to Generate Questions by Learning What not to Generate**
-
 使用GCN的工作出现了。作者发现对于一个输入sentence，可以从不同的方向提出一个符合要求的问题，比如图中的例子，answer是奥巴马，但是提问方式可以是谁在（某个时间）做了啥，也可以是谁（在某个地点）做了啥，两种提问方式都是切合上下文，并且能被answer回答的。因此作者想在生成问题前先确定要针对哪一部分进行提问。方式就是通过GCN进行一波分类，把分类为1的词打个标签，作为feature embedding提供给后边的seq2seq生成。GCN建图是通过dependency parsing：
 
 **Multi-Task Learning with Language Modeling for Question Generation**
-
 为了得到更好的句子表示，把语言模型（预测前后词）和QG作为multi-task一起进行训练。两个任务是层级的关系，先进行语言模型的预测，然后将语言模型的hidden作为特征提供给后面seq2seq，效果棒棒的
 
-
 **Question-type Driven Question Generation**
-
 是multi-task 的思路，把预测第一个词和QG作为联合学习的内容，预测的结果直接用于生成。实验效果上看，确实能很好的提高第一个词的生成准确率，并且提高QG的整体效果：
 
 **How to Ask Good Questions? Try to Leverage Paraphrases**

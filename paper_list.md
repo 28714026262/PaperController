@@ -8,7 +8,7 @@
   - **File** : Deep Learning-Based Vulnerable.pdf
   - **File** : Machine-Learning Supported Vulnerability Detection.pdf
   - **File** : Magma.pdf
-- ***./AI漏洞挖掘\codeRepresenting***
+- ***./AI漏洞挖掘\CodeRepresenting***
   - **File** : Automated Vulnerability Detection in Source Code Using Minimum Intermediate Representation Learning.pdf
   - **File** : Automated_Vulnerability_Detection_in_Source_Code_Using_Deep_Representation_Learning.pdf
   - **File** : ndss2023_VulHawk Cross-architecture Vulnerability Detection.pdf
@@ -18,7 +18,7 @@
   - **File** : Semantics-Based Obfuscation-Resilient Binary Code.pdf
 - ***./AI漏洞挖掘\Database***
   - **File** : EMBER.pdf
-- ***./AI漏洞挖掘\fingerPrint***
+- ***./AI漏洞挖掘\FingerPrint***
   - **File** : VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf
 - ***./AI漏洞挖掘\Graph***
   - **File** : CodeSearching.pdf
@@ -87,11 +87,13 @@
 - ***./foundation_model***
   - **File** : 大模型综述.pdf
 - ***./foundation_model\Hallucination***
+  - **File** : 1904.09380.pdf
   - **File** : A Comprehensive Study of Hallucinations in Neural Machine Translation.pdf
   - **File** : A Review on Fact Extraction and Verification.pdf
   - **File** : Annotation Artifacts in Natural Language Inference Data.pdf
   - **File** : Fact Checking Task definition and dataset construction.pdf
   - **File** : Factual Error Correction for Abstractive Summarization Models.pdf
+  - **File** : Get Your Vitamin C!.pdf
   - **File** : On Faithfulness and Factuality in Abstractive Summarization.pdf
   - **File** : Retrieval Augmentation Reduces Hallucination in Conversation.pdf
   - **File** : The Fact Extraction and VERification (FEVER) Shared Task.pdf
