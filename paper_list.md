@@ -129,6 +129,10 @@
   - **File** : Stateful Greybox Fuzzing.pdf
 - ***./其他分类\OrinalCode***
   - **File** : Different_Kind_of_Smells_Security_Smells_in_Infrastructure_as_Code_Scripts.pdf
+- ***./其他分类\SAT***
+  - **File** : 1-s2.0-S138912862200319X-main.pdf
+  - **File** : 350x1g3.pdf
+  - **File** : s10207-020-00503-w.pdf
 - ***./其他分类\VulSub***
   - **File** : Is_Vulnerability_Report_Confidence_Redundant_Pitfalls_Using_Temporal_Risk_Scores.pdf
   - **File** : Never Mind the Malware.pdf
@@ -148,13 +152,20 @@
 - ***./支付逻辑漏洞\电路网表、***
   - **File** : The_Fusion_of_Secure_Function_Evaluation_and_Logic_Synthesis.pdf
 - ***./未分类***
+  - **File** : 1-s2.0-S1319157821003311-main.pdf
+  - **File** : 1910.14599.pdf
+  - **File** : 3238147.3240480.pdf
   - **File** : ATTRITION Attacking Static Hardware Trojan Detection Techniques Using Reinforcement Learning.pdf
   - **File** : Bypassing Cloud-based Security Providers.pdf
+  - **File** : Cyber_Vulnerability_Intelligence_for_Internet_of_Things_Binary.pdf
   - **File** : Enhanced Membership Inference Attacks against Machine Learning Models.pdf
   - **File** : Group Property Inference Attacks Against.pdf
   - **File** : Imitation Adversarial Attacks for Black-box Neural Ranking Models.pdf
   - **File** : JIT-Picking Differential Fuzzing of JavaScript Engines.pdf
+  - **File** : Karonte_Detecting_Insecure_Multi-binary_Interactions_in_Embedded_Firmware.pdf
+  - **File** : ndss2023_f415_paper.pdf
   - **File** : Query-driven Scalable Vulnerability Detection in OAuth Service Provider Implementations.pdf
+  - **File** : W19-5058.pdf
 - ***./流量分析\DDoS***
   - **File** : 1308.6745.pdf
   - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
