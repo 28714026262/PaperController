@@ -84,6 +84,11 @@
 - ***./AI漏洞挖掘\反漏洞检测***
   - **File** : windows恶意软件的反检测手段.pdf
   - **File** : 隐写技术的恶意软件反检测.pdf
+- ***./BrokenAccessControl***
+  - **File** : A Model-Driven-Engineering Approach for Detecting Privilege Escalation in.pdf
+  - **File** : A Survey of Prevent and Detect Access Control Vulnerabilities.pdf
+  - **File** : AUTOMATIC DETECTION OF ACCESS CONTROL VULNERABILITIES VIA API .pdf
+  - **File** : Evaluating security vulnerabilities in web-based.pdf
 - ***./foundation_model***
   - **File** : 大模型综述.pdf
 - ***./foundation_model\Hallucination***
@@ -103,6 +108,13 @@
   - **File** : FLAVA.pdf
   - **File** : LLaMA.pdf
   - **File** : PLUG2.pdf
+- ***./foundation_model\文献\Benchmark+不确定性***
+  - **File** : Look Before You Leap An Exploratory Study of Uncertainty Measurement for Large Language Models_1_15_merged_public_with_bookmark.pdf
+  - **File** : TRUSTGPT A Benchmark for Trustworthy and Responsible LLMS_1_10_merged_public_with_bookmark.pdf
+- ***./foundation_model\文献\LVLM***
+  - **File** : Evaluating Object Hallucination in Large Vision-Language Models_1_50_merged_public.pdf
+- ***./foundation_model\文献\综述***
+  - **File** : TRUSTWORTHY LLMS A SURVEY AND GUIDELINE FOR_1_99_merged_public_with_bookmark.pdf
 - ***./代码审计***
   - **File** : IaC综述.pdf
   - **File** : 基于论坛代码的安全性编程.pdf
@@ -133,6 +145,7 @@
   - **File** : 1-s2.0-S138912862200319X-main.pdf
   - **File** : 350x1g3.pdf
   - **File** : s10207-020-00503-w.pdf
+  - **File** : SatSec.pdf
 - ***./其他分类\VulSub***
   - **File** : Is_Vulnerability_Report_Confidence_Redundant_Pitfalls_Using_Temporal_Risk_Scores.pdf
   - **File** : Never Mind the Malware.pdf
