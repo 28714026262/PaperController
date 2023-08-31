@@ -173,4 +173,161 @@
 
 ### 6G 的安全和隐私
 
+<<<<<<< HEAD
 6G网络将容纳卫星，无人机和海底通信。在这种情况下制定的任何安全提案都必须保护通信，同时保证可靠性、低延迟以及安全高效的传输服务，这一点至关重要。物理层安全是这些新兴技术的第一个候选防御，但如果与现有服务仔细系统化和协调，新兴的基于密码学的解决方案也可以发挥作用。在6G计划的背景下，3GPP声称，对于所引用的场景，期望采用实时安全通信协议和新兴的架构解决方案，例如零信任。
+=======
+6G网络将容纳卫星，无人机和海底通信。在这种情况下制定的任何安全提案都必须保护通信，同时保证可靠性、低延迟以及安全高效的传输服务，这一点至关重要。物理层安全是这些新兴技术的第一个候选防御，但如果与现有服务仔细系统化和协调，新兴的基于密码学的解决方案也可以发挥作用。在6G计划的背景下，3GPP声称，对于所引用的场景，期望采用实时安全通信协议和新兴的架构解决方案，例如零信任.
+
+## HACK-A-SAT 相关题库
+
+HACK-A-SAT的题目主要分为以下几类：
+
+1. 使用卫星系统进行卫星的信息获取、功能执行以考察相关系统、航空相关计算的熟练掌握；
+2. 提供二进制文件用于逆向分析漏洞，或者提供一些已知漏洞线索，让做题人利用；
+3. 提供加解密的相关代码、二进制、接口，用于密码学CTF题；
+4. 信号分析问题（包括纠错、解码等）；
+
+### HACK-A-SAT2
+
+#### 1
+
+```C
+puts "Challenge 1 Recover Satellite Solver"
+puts "Mode to SAFE since SEPERATION doesn't have wheels on"
+display("EPS_MGR EPS_MGR_FSW_TLM")
+cmd("EPS_MGR SET_MODE with CCSDS_STREAMID 6416, CCSDS_SEQUENCE 49152, CCSDS_LENGTH
+2, CCSDS_FUNCCODE 4, CCSDS_CHECKSUM 0, MODE SAFE")↪
+wait_check("EPS_MGR FSW_TLM_PKT WHEEL_SWITCH == 'ON'", 5)
+puts "Let spacecraft attitude recover and settle for 60 seconds"
+wait(60)
+```
+
+在求解脚本的基础上，挑战一是通过发送“MODE_SAFE”命令恢复卫星的姿态
+
+#### 2
+
+```C
+puts "Dump Current EPS Configuration Table"
+cmd("EPS_MGR DUMP_TBL with CCSDS_STREAMID 6416, CCSDS_SEQUENCE 49152, CCSDS_LENGTH
+67, CCSDS_FUNCCODE 3, CCSDS_CHECKSUM 0, ID 0, TYPE 0, FILENAME
+'/cf/eps_cfg_tbl_d.json'")
+wait_time=15
+wait(wait_time)
+puts "Playback Dumped EPS Config File to Ground"
+# if(File.file?("/cosmos/downloads/eps_cfg_tbl_d.json"))
+# puts "Delete old downlinked table file"
+# File.delete("/cosmos/downloads/eps_cfg_tbl_d.json")
+# end
+filetime = Time.now.to_i
+filedl = "/cosmos/downloads/eps_cfg_tbl_d_#{filetime}.json"
+cmd("CF2 PLAYBACK_FILE with CCSDS_STREAMID 6339, CCSDS_SEQUENCE 49152, CCSDS_LENGTH
+149, CCSDS_FUNCCODE 2, CCSDS_CHECKSUM 0, CLASS 2, CHANNEL 0, PRIORITY 0,
+PRESERVE 0, PEER_ID '0.21', SRC_FILENAME '/cf/eps_cfg_tbl_d.json',
+DEST_FILENAME '#{filedl}'")
+puts "Wait #{wait_time} seconds for file playback to finish"
+wait(wait_time)
+
+puts "Teams analyze dumped table, fix then prep new table for upload"
+puts "Upload Corrected File to Spacecraft"
+cmd("CFDP SEND_FILE with CLASS 2, DEST_ID '24', SRCFILENAME
+'/cosmos/procedures/hack-a-sat/eps_mgr_cfg_tbl_working.json', DSTFILENAME
+'/cf/eps_cfg_up.json', CPU 2")
+puts "Wait #{wait_time} seconds for file upload to finish"
+wait(wait_time)
+puts "Load new EPS Configuration Table"
+cmd("EPS_MGR LOAD_TBL with CCSDS_STREAMID 6416, CCSDS_SEQUENCE 49152, CCSDS_LENGTH
+67, CCSDS_FUNCCODE 2, CCSDS_CHECKSUM 0, ID 0, TYPE 0, FILENAME
+'/cf/eps_cfg_up.json'")
+puts "Wait #{wait_time} for table load to complete"
+wait(wait_time)
+puts "Mode spacecraft into nominal mode and let the packets flow"
+cmd("EPS_MGR SET_MODE with CCSDS_STREAMID 6416, CCSDS_SEQUENCE 49152, CCSDS_LENGTH
+2, CCSDS_FUNCCODE 4, CCSDS_CHECKSUM 0, MODE NOMINAL_OPS_PAYLOAD_ON")
+wait_check("EPS_MGR FSW_TLM_PKT COMM_PAYLOAD_SWITCH == 'ON'", 3)
+wait(1)
+wait_check("EPS_MGR FSW_TLM_PKT COMM_PAYLOAD_SWITCH == 'ON'", 1)
+```
+
+挑战2包括激活C&DH模块，即STANDBY, NOMINAL_OPS_PAYLOAD_ON, ADCS_MOMENTUM_DUMP, ADCS_FSS_EXPERIMENTAL，尽管最后一个模块在CTF期间根本没有用，这可能意味着它与取消的挑战7相关联。
+
+#### 3
+
+我们得到了一个客户端程序(二进制)和一个RSA密钥对，用于与卫星的无线电通信。客户端与服务器通信，需要对消息进行RSA签名。
+
+#### 4
+
+挑战4发布:DANX寻呼机服务正在部署在通信有效载荷子系统上。在这里监视挑战4的完整版本和接下来15分钟内的任何更新…DANX寻呼机服务的二进制文件已经部署到您的cosmos机器主目录中!通信负载子系统上的DANX寻呼机服务器已启动!如果您使用DANX标志通过您的用户段客户端二进制文件发送，您可以向挑战4发送数据包。管理层已经授权在每个团队的系统上部署向后兼容的原始“报告API”服务器。
+
+#### 5
+
+挑战5是部署到您的CDH!保持SLA_TLM应用程序启动并报告遥测，并使用您对其他卫星的访问来利用其他团队的CDH!如果您发送的数据没有DANX标志，它将被路由到新的应用程序!对其进行逆向分析来寻找漏洞；
+
+#### 6
+
+端口收到消息 
+
+```C
+svrdig: Digest failed: pickle data was truncated
+svrdig: Digest failed: invalid load key, 'A'
+```
+Python pickle反序列漏洞，发生截断？
+
+#### 7
+
+cotton-eye-geo: 给出了地球轨道上一颗卫星的位置和速度，并要求给出一次机动将我们带到新轨道的时间和 delta-v。
+
+#### 8
+
+credence: 收到一个包含 IQ 数据的文件并被告知对其进行解码。 将 I 和 Q 数据绘制为图中的 x 和 y 值，我们看到这些值很好地对齐到四个象限中，表明数据是通过 QPSK 传输的。
+
+#### 9
+
+error-correct: 有重要的遥测数据，但有一个位错误阻止我们对其进行解码。 我们再次得到一个看起来像是 IQ 数据的文件，并绘制它（同时排除开始时看起来有噪声的一些样本）给出了一个很好的 QPSK 星座，指示 QPSK 数据。 
+
+#### 10
+
+kings-ransom: 在目标系统上运行的带有您的“银行帐户”信息的易受攻击的服务。不幸的是它已经被勒索软件利用了。勒索软件接管了目标，加密了文件系统上的一些文件，并恢复了执行循环。 
+
+decode_data函数会盲目地将数据复制到目标缓冲区中。通过溢出产生rop来执行shellcode；
+
+#### 11
+
+给定卫星的雷达脉冲返回，确定其轨道参数（假设二体动力学）。每个脉冲被提供为： t，时间戳（UTC） az，方位角（度）+/- 0.001 度 el，仰角（度）+/- 0.001 度 r，范围（公里）+/- 0.1 公里 雷达位于夸贾林环礁，纬度 8.7256 度，经度 167.715 度，海拔 35m。 通过提供以下参数来估计卫星的轨道： a、长半轴（km） e、偏心率（无量纲） i、倾角（度） Ω，RAAN（度） ω, 近地点角（度） υ，最终雷达脉冲时的真实异常（度），2021-06-27-00:09:52.000-UTC
+
+连接参加挑战时出示此票： 门票{hotel708324victor2:...} 不要与其他团队分享您的门票。 
+
+连接 连接到以下挑战： moon-virus.satellitesabove.me:5021 使用 netcat，您可以运行： nc moon-virus.satellitesabove.me 5021 文件 您将需要这些文件来解决挑战。
+
+是一道轨道计算问题；
+
+![picture 9](../images/f96b9482977357949a0eab95bc0b19f972e0503528bf0915419298e1a85b27ae.png)  
+
+### HACK-A-SAT 3 challenge
+
+[github](https://github.com/cromulencellc/hackasat-finals-2022/tree/main)
+
+![picture 8](../images/c42634cd8dd6b8b534b45da8f17837d261eec1f6adfda906250abbad13db05d2.png)  
+
+#### satellite_chals
+
+1. 类型混淆导致内存损坏 此挑战的目的是提供卫星系统上可能被其他团队触及的漏洞。这将允许从其他团队卫星收集代币作为奖励或“控制”卫星的游戏机制。挑战分布在 3 个应用程序中，主要 RE 部分位于 3 个应用程序中的 2 个中。 从原始开发挑战到综合决赛挑战的应用程序名称映射 GEN_TOK_MSK -> SPACEFLAG NORMAL_APP -> SMS VULN_APP -> MON;
+2. 此挑战的目的是为团队提供从复杂流程中检索令牌的逆向挑战。复杂的过程是 64 字符纯文本输入的编码方案。挑战以带有 64 个字符编码结果的剥离二进制形式提供。团队应该反转应用程序的操作来获取创建所提供输出的特定输入。确定输入会解锁令牌。 将为团队提供共享对象和编码字符串的剥离二进制文件 3333@@@@222255553333EEEEDDDDyyyy+tQs+tQs+tQs+tQsXc94_#5 5S-ovTo\ 。该值可以在程序中找到，因此可以单独提供二进制文件。与应用程序的交互是通过往返地面站的命令和遥测消息提供的。该过程分为 4 个阶段。每个阶段都有一个带有 4x4 字符输入的输入命令。第 3 阶段包括为每个 4x4 字符输入选择编码方案。随着每个阶段的尝试和 已解决，遥测页面已更新通知消息。 当所有 4 个阶段均已成功解锁后，将通过遥测页面提供令牌。 目的是求解输入：This_1snt_the_aNsWeR_cH3cK_7hE_t0k3n_p@9e_pRoLly_s0meth!n_tH3re。
+3. 此挑战是逆向的、夺取代币的挑战。目的是要求团队在卫星的 riscv32 架构上构建一个 rop 设备链。所提供代码的目的是实现挑战目标并提供 rop 攻击的概念验证所需的最低限度。应要求团队保持飞行软件正常运行，同时仍检索令牌。他们可以通过破坏软件来获取令牌，但建议这样做会产生一些后果。
+
+#### ground_chals
+
+1. 程序允许在 DES 中引入一个故障，从而可以确定密钥;
+2. 至少符合协议规范的自定义 ftp 服务器。当然还有一些功能尚未实现，但标准 ftp 客户端可以与该服务器通信就足够了。在比赛期间，该服务器可以提供一些飞行软件二进制文件，其中包括需要解决的挑战。使用这些二进制文件访问用户帐户将需要以某种方式利用服务器。 以 root 身份启动服务器二进制文件，绑定端口 21,删除特权。该服务器实现了对命令进行排队并将它们存储在链接列表中的非标准功能。此列表的管理已被破坏，并且在释放后最小使用量 (UAF) 和双重释放错误中存在并且可被利用。最直接的利用方法 该服务器将使用损坏的链表错误来覆盖实施不佳的 chroot 功能，该功能允许登录用户逃出自己的主目录。
+3. 加密关键数据以与人们共享的服务通过填充oracle容易受到攻击;
+4. 网络服务器包含一个访问控制文件夹，一旦发现绕过访问控制功能的方法，地面站设置就会被泄露。以 root 身份启动服务器二进制文件，以便它可以绑定到端口 80。之后，它将把 privs 删除到 UID/GID 1000。server.ini 文件应该位于服务器的工作目录中。所有其他设置都在此文件中配置。当用户请求没有 index.html 文件且不受访问控制的现有文件夹时，它会调用 system() 来创建目录列表。命令注入中使用的部分常用分隔符都被过滤 如果“..”的 urlencode 为“%2E%2E”，则服务器也容易受到目录遍历的攻击；
+5. 在特定的时间段将卫星传感器指向各个行星。当他们完成给定的任务时，他们的传感器将生成数据；玩家可以通过地面站发射器设置破解挑战来发现这些设置，可以使用卫星接收任务、执行任务、卫星回传任务。
+
+#### 预选
+
+1. 获得了卫星观测数据，其中包括距离和距离变化率数据。任务是找出哪颗卫星正在进行这些观测；
+2. 使用先进的隐写术技术发现了嵌入在 9 个图像中的 MD5 哈希值，而我们在 oahu 图像中发现了明文。使用 md5decrypt.net，我们能够解密大部分哈希值；
+3. 获取一个已损坏的 Rust 二进制文件；对图中的权重进行逆向工程并运行标准 dijkstras 即可获得解决方案。 重新实现如solve.py所示。
+4. 一个信号分析挑战，我们获得了 IQ 样本。任务是根据这些数据计算信号和噪声功率；32bit little-endian IQ samples->对整个信号进行 FFT 并选择幅度最大的 bin 来确定频率->从同一 FFT 获取信号和噪声功率;
+5. 控制接收天线的方位角和仰角，并且需要使其保持指向卫星;
+6. 得到了一个使用 Xilinx microblaze 架构进行逆向的二进制文件。 二进制文件计算 crc32(flag[:i]) 并将结果与​​二进制文件中的固定值进行比较。该标志检查例程逐个字符地工作。
+>>>>>>> e1b7f3b44670f0a7c97dadec465df1fbd2eb6031
