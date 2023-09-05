@@ -26,3 +26,5 @@
 - 所有笔记均存放在[笔记](./%E7%AC%94%E8%AE%B0/)文件夹中，其中[images1](./images)和[images2](./images2)用于存放笔记内的图片。
 - 添加记录在[workLog.md](./workLog.md)中（已废弃）。
 - 待做事项[TODO.md](./TODO.md)中，但近期不一定想起来叠加（已废弃）。
+
+![图 0](images2/fde1c9f0798e2d3081189de21707fbd1bfda107ddd1b74e64093ca3e46222c22.png)  
