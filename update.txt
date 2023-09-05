@@ -1,0 +1,14 @@
+@echo off
+cd /d %~dp0
+python paper_list.py
+set https_proxy=127.0.0.1:7890
+git add *
+git commit -m %date:~6,4%-%date:~0,2%-%date:~3,2%
+git pull
+git push
+
+@echo off
+python -m venv --system-site-packages ./%date:~6,4%_%date:~0,2%_%date:~3,2%_%time:~0,2%_%time:~3,2%_%time:~6,2%
+cd %date:~6,4%_%date:~0,2%_%date:~3,2%_%time:~0,2%_%time:~3,2%_%time:~6,2%
+cd Script
+activate

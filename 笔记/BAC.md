@@ -1,8 +1,8 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-09-04 10:06:16
- * @LastEditTime: 2023-09-04 19:59:48
- * @LastEditors: Suez_kip
+ * @LastEditTime: 2023-09-05 08:33:46
+ * @LastEditors: Please set LastEditors
  * @Description: 
 -->
 # Break Access Control
@@ -154,7 +154,7 @@ FixMeUp的工作过程：
 3. FixMeUp检查每个调用上下文，以验证访问控制逻辑是否与ACT匹配。查看程序的入口点，访问控制检查通常在那里进行规范化。然后，如果缺少检查，则生成修复。
 
 ***A Model-Driven-Engineering Approach for Detecting Privilege Escalation in IoT Systems***
-第一阶段从SmartThings应用程序的描述、偏好和代码中恢复权限规则。恢复的权限模型符合我们为SmartThings构建的元模型；
+第一阶段从SmartThings应用程序的描述、首选项和代码中部分基于TXL恢复权限规则。恢复的权限模型符合我们为SmartThings构建的元模型；
 
 ![图 10](../images2/49a0abc6b2764043e233b9f0fa119898b86c517bbb5f93a8585386468a4a7fb3.png)  
 
@@ -164,6 +164,22 @@ FixMeUp的工作过程：
 
 ![图 11](../images2/3c86cd8cfb0cd036ccfc81445710c24fd88a409a6726feadf8d064fb205f8fbe.png)  
 
+![picture 0](../images/19dbfe5c5f0505ada85ecf27b831d2bc7adfa12f57b9f0f13579833bb35b1b7e.png)  
+
+![picture 1](../images/bf75a11c693e0ae65b6d26f9284322a124554cd4ed1d2b2cc2a0e184468d5514.png)  
+
+![picture 2](../images/3ce1cd9b39814f2486ebe1487345a5fcc1fb965f951fe3744d6d6954c13aafa4.png)  
+
+- ***related work***
+
+Earlence Fernandes, Jaeyeon Jung, and Atul Prakash. Security analysis of emerging smart home applications. In Proceedings of the IEEE Symposium on Security and Privacy, 2016, pages 636–654, 2016.
+Fernandes介绍了SmartThings平台中发现的不同类型的漏洞，并通过利用平台中的设计缺陷进行了概念验证攻击。Fernandes等人开发了一种静态分析工具，用于检测SmartThings中的过度特权，此外还有运行时分析和手工分析，该工具无法完成分析。没有评估开发工具的有效性，也没有为研究人员提供一种简单的评估方法。
+
+Wei Zhang, Yan Meng, Yugeng Liu, Xiaokuan Zhang, Yinqian Zhang, and Haojin Zhu. Homonit: Monitoring smart home apps from encrypted traffic. In Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security, pages 1074–1088. ACM, 2018
+设计开发的HoMonit系统使用灰盒技术可以检测SmartThings平台的两类漏洞:SmartApps中的过权限漏洞和事件窃听和欺骗漏洞。HoMonit首先通过对开源SmartApps的静态分析或对闭源SmartApps的NLP技术提取SmartApp的预期行为。然后进行侧信道分析，监控加密报文的大小和时间间隔。良性和恶意应用程序之间嗅探包的变化表明DFA状态的变化并分析，并获得了0.98的基于过度权限访问的正确标记行为不端的SmartApps的率。但HoMonit中的过度特权检测只针对由粗粒度功能引起的问题，并且需要在良性和恶意状态下执行应用程序，以比较它们之间的差异，自动化水平低。
+
+Yuan Tian, Nan Zhang, Yue-Hsun Lin, XiaoFeng Wang, Blase Ur, Xianzheng Guo, and Patrick Tague. Smartauth: User-centered authorization for the internet of things. In Proceedings of the 26th USENIX Security Symposium, pages 361–378, 2017.
+提出了一种名为SmartAuth的技术，SmartAuth通过基于应用程序实际执行的内容生成新的授权用户界面，提出以用户为中心的授权。SmartAuth使用NLP和程序分析来分析应用程序的描述、代码和注释，以检测应用程序中的过度权限。
 
 #### 自动化检测
 
