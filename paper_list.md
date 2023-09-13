@@ -89,6 +89,8 @@
   - **File** : A Survey of Prevent and Detect Access Control Vulnerabilities.pdf
   - **File** : AUTOMATIC DETECTION OF ACCESS CONTROL VULNERABILITIES VIA API .pdf
   - **File** : Evaluating security vulnerabilities in web-based.pdf
+  - **File** : Finding Security Bugs in Web Applications using a.pdf
+  - **File** : RoleCast Finding Missing Security Checks.pdf
 - ***./foundation_model***
   - **File** : 大模型综述.pdf
 - ***./foundation_model\Hallucination***
