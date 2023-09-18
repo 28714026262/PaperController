@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-09-04 10:06:16
- * @LastEditTime: 2023-09-16 17:26:07
+ * @LastEditTime: 2023-09-18 19:16:41
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -231,6 +231,27 @@ Security Pattern Checker 安全模式检查器，一个查找访问控制错误�
 1. 如果一个角色只包含一个上下文，ROLECAST就不能应用一致性分析，并且保守地报告一个潜在的漏洞；
 2. Web应用程序可能只对一小部分上下文使用一组特殊的关键变量(这种情况很少见)；
 3. 其次一小部分上下文导致敏感数据库操作；
+
+#### AUTOMATIC DETECTION OF ACCESS CONTROL VULNERABILITIES VIA API SPECIFICATION PROCESSING
+
+截至2023的IDOR和BOLA漏洞收集；
+
+1. 我们无法找到大量关于包含IDOR/BOLA漏洞的学术文献(只找到两篇)。
+2. 许多CVE报告没有描述，只有外部网站的链接，以任何形式提供信息。并不是所有的漏洞都有合适的CWE分配:大多数IDOR漏洞是CWE-639或CWE-22，但其中一些漏洞有CWE-20, CWE-869等。也许我们可以使用反向搜索技术在CWE-639，或CWE-20, CWE285上找到更多的CVE。并非所有这些cve都是关于HTTP中的idor的。
+3. 漏洞赏金计划“HackerOne”:有相当数量的公开报告完全或部分披露了细节。报告的重要部分给出了攻击向量技术和属性的充分理解。
+4. 漏洞赏金计划“BugCrowd”:除了内部CTF挑战摘要外，没有披露idor。
+5. 漏洞赏金计划“YesWeHack”:没有任何披露，只有发现漏洞的CWEtags流日志。大量CWE-639/ idor，但无法查看披露。
+6. 我们分析了个人和公司关于漏洞披露的博客和文章，并对攻击或利用进行了详细描述。一些披露没有分配CVE或报告漏洞赏收平台(或报告发布时没有我们搜索的适当标签)，但仍然考虑真实的企业网站或应用程序(Facebook, Twitter, Instagram等)。我们确定并分析了几个安全工具，专注于检测IDOR/BOLA漏洞:RESTler(微软)6,authorize (Burp扩展)7,fuzz-lightyear (Yelp)8。
+
+根据所提供的文献综述(其中“CVE”为CVE报告，“BB”为漏洞赏金报告，“AL”为学术文献，“SW”为软件工具，“GL”为灰色文献)，对IDOR/BOLA攻击技术进行了系统化描述。
+
+![图 18](../images2/b8162da5193d54acf23281864853ea7982af413c92942758b6aa6b79fcb01785.png)  
+
+![图 21](../images2/83943801bba2b8e1886a618ba7a57a2487b174dafce26684c369107515be7d6e.png)  
+
+![图 22](../images2/1c1c2512ef31ce0906615e16ea95190b79897a3c6d1065a785a1a66b034aa701.png)  
+
+![图 23](../images2/37e7737710ebbf7dafc58653379a9c36f04497d49503f96fe3d285c88c93ee20.png)  
 
 #### Static Detection of Access Control Vulnerabilities in Web Applications
 
