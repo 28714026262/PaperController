@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-09-04 10:06:16
- * @LastEditTime: 2023-09-18 19:16:41
+ * @LastEditTime: 2023-10-10 10:40:34
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -253,6 +253,13 @@ Security Pattern Checker 安全模式检查器，一个查找访问控制错误�
 
 ![图 23](../images2/37e7737710ebbf7dafc58653379a9c36f04497d49503f96fe3d285c88c93ee20.png)  
 
+##### RESTler
+
+针对遵循REST框架的API进行的分析，
+
+REST的架构如下:[REST框架介绍](https://segmentfault.com/a/1190000014768057)
+REST的四级框架：[框架级别wiki](https://en.wikipedia.org/wiki/Richardson_Maturity_Model)
+
 #### Static Detection of Access Control Vulnerabilities in Web Applications
 
 可以检测访问控制漏洞，而不需要提供显式的访问控制规范。从PHP程序源代码中捕获隐式访问控制假设，其中隐式地指示系统中每个角色的预期访问。  
@@ -350,8 +357,32 @@ Rui Wang, Yuchen Zhou, Shuo Chen, Shaz Qadeer, David Evans, and Yuri Gurevich. 2
 
 ## 运行时检测
 
-pass
+这里需要包括身份认证，可以参照Nemesis，Michael Dalton, Christos Kozyrakis, and Nickolai Zeldovich. 2009. Nemesis:Preventing Authentication & [and] Access Control Vulnerabilities in Web Applications. (2009).
 
 # Alloy
 
 [alloy github website](https://github.com/AlloyTools/org.alloytools.alloy)
+
+## 功能测试
+
+功能测试包括：逻辑测试、界面测试、易用性测试、安装测试、兼容性测试
+
+1. 需求分析人员根据需求对功能进行预期编写
+2. 测试工程师在需求分析师给出的执行预期的基础上编写测试案例
+3. 测试工程师根据需求分析师给出的执行预期，准备与预期结果相关的必要数据，包括测试所需数据
+4. 测试工程师在测试用例的基础上执行测试用例
+5. 测试工程师对实际结果与预期结果是否一致，并给出报告报告
+6. 需求分析人员根据测试工程师提供的报告来判断一个应用是否满足了用户的需要
+
+1.手动测试：测试工程师根据测试用例，手工方式操作，灵活性强，耗费时间少，但如果需要多次测试同一功能，则会导致测试时间延长，准确度不高，有可能多次测试的结果一致性低;适用于一些功能，或一些小功能，或简单操作的测试用例。
+
+2.自动化测试：由测试工程师编写自动化测试用例，用计算机代替手工测试，灵活性会有所降低，但对于需要多次测试的功能，可以极大地提高测试效率，减少重复操作，并且可以保证多次测试的一致性;适用于一些需要反复测试、测试用例复杂、操作繁琐的测试用例
+
+针对功能进行测试是否会导致测试流量的不连贯？测试点  
+
+[具体测试流程](https://www.zhihu.com/question/27928199?from=profile_question_card)  
+
+我们需要的是具体的功能测试如下：
+
+连接测试：这用于确定的每个用户组图的主要节点和功能；
+表单测试：
