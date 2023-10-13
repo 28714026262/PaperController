@@ -1,7 +1,7 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-09-04 10:06:16
- * @LastEditTime: 2023-10-10 10:40:34
+ * @LastEditTime: 2023-10-13 19:59:56
  * @LastEditors: Suez_kip
  * @Description: 
 -->
@@ -386,3 +386,47 @@ Rui Wang, Yuchen Zhou, Shuo Chen, Shaz Qadeer, David Evans, and Yuri Gurevich. 2
 
 连接测试：这用于确定的每个用户组图的主要节点和功能；
 表单测试：
+
+## IDOR&BOLA Dataset
+
+由于逻辑漏洞的运行基本都依赖于某个具有漏洞的业务逻辑，因此靶场必须由一个完整的系统去支持一个或多个漏洞，而不能由部分网页片段来支持某个漏洞。
+
+这里主要收集部分逻辑漏洞相关的靶场以及数据集（当然这类数据集的数量都是非常稀少的，因为每一个数据集要么是单设的Web Application，要么是真实存在的Web Application，而真实存在的Web APP大多会随着更新将漏洞去除，而不保留暴露漏洞的版本，因此十分稀少）
+
+具体的漏洞数据集主要分为以下两类，包括CVE，即现实存在的漏洞类型，和Range，即其他论文中实现的逻辑漏洞靶场，当然这些靶场都将使用商用的现实Web APP，提高靶场可信度；
+
+![图 24](../images2/8ad2441c3c9390f5d56d943614bd79ee6e4573ea6599ff4fb9281823f5004bae.png)  
+
+### CVE
+
+CVE主要由CWE-639（通过用户控制的密钥绕过授权）、CWE-284（访问控制不当）等其他CWE的漏洞；  
+
+可以在诸如[OpenCVE](https://www.opencve.io)等网站中查询CWE所针对的CVE；  
+
+#### CVE-2006-5909
+
+[Stanford Conference And Research Forum(SCARF)](https://scarf.sourceforge.net/)，似乎可以进一步进行下载[下载网址](https://sourceforge.net/projects/scarf/files/)；
+
+### Range
+
+#### puzzlemall
+
+Indirect Application Attack Vectors Technical Report Ernst & Young
+[main_website](https://code.google.com/archive/p/puzzlemall/)  
+[download_website](https://code.google.com/archive/p/puzzlemall/source/default/source)  
+
+#### WackoPicko
+
+[github](https://github.com/adamdoupe/WackoPicko)
+[BLOCK: a black-box approach for detection of state violation attacks towards web applications](../%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E/%E6%94%AF%E4%BB%98%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E/A%20Black-Box%20Approach%20for%20Detecting%20Business-Layer.pdf)
+
+#### OPENIT
+
+[NoTamper: automatic blackbox detection of parameter tampering opportunities in web applications](../%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E/NoTamper%20Automatic%20Blackbox%20Detection%20of%20Parameter.pdf)
+OpenIT应用程序存储用户配置文件，并使用web表单允许用户编辑他们的配置文件。
+
+登录后，应用程序为用户提供一个用于编辑其个人资料的web表单。该表单中包含隐藏字段userid，应用程序在其中存储用户的唯一标识符。提交表单时，服务器更新与userid对应的用户标识符的配置文件。通过将userid更改为另一个用户的userid，可以更新任何用户的配置文件。当NOTAMPER分析此表单时，它生成一个敌对的输入，将userid的值设置为数字2(而不是初始值1)。服务器的响应实际上与良性输入响应相同(其中值设置为1)，因此被报告为篡改机会。  
+
+在确认此漏洞后，我们增强了该漏洞，以便修改管理员用户的配置文件，以包含跨站点脚本(XSS)有效负载。每次admin用户登录时，脚本将执行并将admin cookie发送到我们控制下的服务器。在被盗cookie的帮助下，我们重新构建并劫持了admin会话，从而获得了admin的所有特权。该实验表明，参数篡改漏洞可以作为其他特权升级攻击的发射台。  
+
+但是这个漏洞目前没有找到源码下载和可部署点；

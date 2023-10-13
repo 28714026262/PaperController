@@ -195,11 +195,13 @@
   - **File** : 2212.12308.pdf
   - **File** : Devils in the Guidance.pdf
   - **File** : ndss2023_ReScan.pdf
+  - **File** : NoTamper Automatic Blackbox Detection of Parameter.pdf
   - **File** : sec22-siby.pdf
 - ***./逻辑漏洞\支付逻辑漏洞***
   - **File** : 2020中国互联网网络安全报告.pdf
   - **File** : 2021年上半年我过互联网网络安全监测数据分析报告.pdf
   - **File** : A Black-Box Approach for Detecting Business-Layer.pdf
+  - **File** : AMNESIA Analysis and Monitoring.pdf
   - **File** : BBA ZH.pdf
   - **File** : BBA.pdf
   - **File** : bba11-16.pdf
