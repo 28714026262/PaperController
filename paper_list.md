@@ -84,6 +84,13 @@
 - ***./AI漏洞挖掘\反漏洞检测***
   - **File** : windows恶意软件的反检测手段.pdf
   - **File** : 隐写技术的恶意软件反检测.pdf
+- ***./AI漏洞挖掘\版本分析***
+  - **File** : A Differential Testing Approach for Evaluating.pdf
+  - **File** : A Large-Scale Empirical Study on Vulnerability Distribution.pdf
+  - **File** : A Manually-Curated Dataset of Fixes to Vulnerabilities of Open-Source Software.pdf
+  - **File** : CoRA_Decomposing_and_Describing_Tangled_Code_Changes_for_Reviewer.pdf
+  - **File** : Identifying Casualty Changes in Software Patches.pdf
+  - **File** : V-SZZ Automatic Identification of Version Ranges Affected by.pdf
 - ***./BrokenAccessControl***
   - **File** : A Model-Driven-Engineering Approach for Detecting Privilege Escalation in.pdf
   - **File** : A Survey of Prevent and Detect Access Control Vulnerabilities.pdf
