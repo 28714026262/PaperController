@@ -125,6 +125,7 @@
 - ***./foundation_model\文献\综述***
   - **File** : TRUSTWORTHY LLMS A SURVEY AND GUIDELINE FOR_1_99_merged_public_with_bookmark.pdf
 - ***./代码审计***
+  - **File** : Combining_Graph-Based_Learning_With_Automated_Data_Collection_for_Code_Vulnerability_Detection.pdf
   - **File** : IaC综述.pdf
   - **File** : PinpointSVFG.pdf
   - **File** : 基于论坛代码的安全性编程.pdf
