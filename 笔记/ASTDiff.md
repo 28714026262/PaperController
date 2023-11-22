@@ -7,6 +7,35 @@
 -->
 # AST Diff
 
+- [AST Diff](#ast-diff)
+  - [GUMTree(GT)](#gumtreegt)
+  - [MTDiff(MTD)](#mtdiffmtd)
+  - [IJM](#ijm)
+  - [AST\_DIFF](#ast_diff)
+    - [无意义修改](#无意义修改)
+    - [DIFFCAT](#diffcat)
+      - [类型绑定](#类型绑定)
+      - [技术路线](#技术路线)
+  - [A Differential Testing Approach for Evaluating Abstract Syntax Tree Mapping Algorithms](#a-differential-testing-approach-for-evaluating-abstract-syntax-tree-mapping-algorithms)
+    - [STEP1 Tokenization](#step1-tokenization)
+    - [STEP2 按语句分组映射](#step2-按语句分组映射)
+    - [STEP3 创建语句和令牌的映射](#step3-创建语句和令牌的映射)
+    - [STEP4 计算具有不一致映射的语句](#step4-计算具有不一致映射的语句)
+    - [STEP5 算法精度判定](#step5-算法精度判定)
+    - [STEP6 相似性比较](#step6-相似性比较)
+      - [NIT](#nit)
+      - [PM](#pm)
+      - [TYPE](#type)
+      - [STMT](#stmt)
+      - [VAL](#val)
+      - [LLCS length of the longest common subsequence](#llcs-length-of-the-longest-common-subsequence)
+    - [具体方案步骤](#具体方案步骤)
+    - [实验结果](#实验结果)
+      - [RQ1 对于所研究的算法，我们的方法在检测具有不准确映射的语句方面有多有效?](#rq1-对于所研究的算法我们的方法在检测具有不准确映射的语句方面有多有效)
+      - [RQ2 当将一个算法与多个算法进行比较时，我们的方法与另一个算法进行比较时，效果如何?](#rq2-当将一个算法与多个算法进行比较时我们的方法与另一个算法进行比较时效果如何)
+      - [RQ3 最先进的AST映射算法会生成许多不准确的映射吗?](#rq3-最先进的ast映射算法会生成许多不准确的映射吗)
+    - [有效性威胁](#有效性威胁)
+
 首先介绍三种常见的AST Diff方案
 
 ## GUMTree(GT)

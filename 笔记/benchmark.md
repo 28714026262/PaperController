@@ -7,6 +7,12 @@
 -->
 # BenchMark
 
+- [BenchMark](#benchmark)
+  - [Deep Learning-Based Vulnerable Function Detection: A Benchmark](#deep-learning-based-vulnerable-function-detection-a-benchmark)
+  - [Magma](#magma)
+  - [Machine-Learning Supported Vulnerability Detection in Source Code](#machine-learning-supported-vulnerability-detection-in-source-code)
+- [Deep neural-based vulnerability discovery demystified: data, model and performance](#deep-neural-based-vulnerability-discovery-demystified-data-model-and-performance)
+
 ## Deep Learning-Based Vulnerable Function Detection: A Benchmark
 
 - 封装六个主流AI框架；

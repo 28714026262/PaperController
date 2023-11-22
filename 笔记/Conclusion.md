@@ -7,6 +7,18 @@
 -->
 # AI Vulnerability detector
 
+- [AI Vulnerability detector](#ai-vulnerability-detector)
+  - [基本步骤](#基本步骤)
+    - [I 数据集获取](#i-数据集获取)
+    - [II 代码预处理](#ii-代码预处理)
+    - [III I 代码嵌入](#iii-i-代码嵌入)
+    - [III II 其余语义信息获取](#iii-ii-其余语义信息获取)
+    - [IV-I 训练分类器模型](#iv-i-训练分类器模型)
+    - [IV-II 相似性获取](#iv-ii-相似性获取)
+    - [其他漏洞获取探索方案](#其他漏洞获取探索方案)
+  - [漏洞分类与数据来源](#漏洞分类与数据来源)
+  - [bench-mark](#bench-mark)
+
 ***持续更新***  
 针对技术漏洞，安全代码漏洞检测主要可以分为以下几个部分
 
@@ -83,7 +95,7 @@
 其他嵌入：
 
 - GloVe
-- FastText 
+- FastText
 - code2vec
 - struc2vec
 - structure2vec

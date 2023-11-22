@@ -1,6 +1,28 @@
 
 # ReScan: A Middleware Framework for Realistic and Robust Black-box Web Application Scanning
 
+- [ReScan: A Middleware Framework for Realistic and Robust Black-box Web Application Scanning](#rescan-a-middleware-framework-for-realistic-and-robust-black-box-web-application-scanning)
+  - [结构组成](#结构组成)
+    - [结构一 Proxy](#结构一-proxy)
+    - [结构二 Orchestrator](#结构二-orchestrator)
+    - [结构三 Worker](#结构三-worker)
+    - [结构四 Graph](#结构四-graph)
+    - [结构五 Background Worker](#结构五-background-worker)
+    - [结构六 Authentication helper身份权限验证器](#结构六-authentication-helper身份权限验证器)
+      - [证书验证](#证书验证)
+      - [Oracle](#oracle)
+      - [重登录](#重登录)
+      - [假阳性和假阴性排除模块](#假阳性和假阴性排除模块)
+  - [URL聚类](#url聚类)
+    - [代码相似性 mNDD](#代码相似性-mndd)
+    - [流程](#流程)
+  - [结论](#结论)
+    - [漏洞检测结果](#漏洞检测结果)
+    - [漏洞检测速度](#漏洞检测速度)
+    - [代码覆盖率](#代码覆盖率)
+    - [基于XSS与Black Widow比较](#基于xss与black-widow比较)
+  - [展望](#展望)
+
 Rescan是一个较为全面的基于扫描器的黑盒检测框架（即该框架不包括扫描器），他的概念图如下：
 ![图 1](../images2/cb1e709ad48759ebc7057853550364b731221323cf6919a097010dea297e4f76.png)  
 

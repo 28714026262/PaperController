@@ -8,6 +8,24 @@
 
 # 代码表示
 
+- [代码表示](#代码表示)
+  - [Automated Vulnerability Detection in Source Code Using Deep Representation Learning](#automated-vulnerability-detection-in-source-code-using-deep-representation-learning)
+- [IRFM](#irfm)
+  - [micro code\&归一化和简化](#micro-code归一化和简化)
+  - [embedding](#embedding)
+  - [Pre Train](#pre-train)
+    - [mask语言模型(MLM)](#mask语言模型mlm)
+    - [根操作数预测(ROP)](#根操作数预测rop)
+    - [相邻块预测(ABP)](#相邻块预测abp)
+  - [函数嵌入](#函数嵌入)
+  - [熵适配器](#熵适配器)
+    - [分治](#分治)
+    - [熵匹配](#熵匹配)
+      - [分析](#分析)
+      - [匹配器](#匹配器)
+    - [渐进搜索策略](#渐进搜索策略)
+  - [实验](#实验)
+
 ## Automated Vulnerability Detection in Source Code Using Deep Representation Learning
 
 [代码链接](./../AI漏洞挖掘/codeRepresenting/Automated_Vulnerability_Detection_in_Source_Code_Using_Deep_Representation_Learning.pdf)  

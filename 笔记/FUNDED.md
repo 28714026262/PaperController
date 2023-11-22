@@ -8,6 +8,14 @@
 -->
 # Combining Graph-Based Learning With Automated Data Collection for Code Vulnerability Detection
 
+- [Combining Graph-Based Learning With Automated Data Collection for Code Vulnerability Detection](#combining-graph-based-learning-with-automated-data-collection-for-code-vulnerability-detection)
+  - [漏洞自动收集系统](#漏洞自动收集系统)
+  - [漏洞检测系统](#漏洞检测系统)
+  - [RESULT](#result)
+  - [模型的准确率方案](#模型的准确率方案)
+    - [I　共型预测](#i共型预测)
+    - [II MMP（Model Performance Prediction）](#ii-mmpmodel-performance-prediction)
+
 [论文链接](../AI漏洞挖掘/Graph/Combining_Graph-Based_Learning_With_Automated_Data_Collection_for_Code_Vulnerability_Detection.pdf)
 
 - 标准GNN在具有非类型化边的单个图形表示上运行，因此无法区分控制和数据流信息。

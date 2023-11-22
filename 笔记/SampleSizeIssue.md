@@ -1,12 +1,19 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2022-11-30 20:22:20
- * @LastEditTime: 2022-11-30 21:12:14
+ * @LastEditTime: 2023-11-22 15:22:51
  * @LastEditors: Suez_kip
  * @Description: SampleSizeIssueSolution
 -->
 
 # 解决小样本问题的模型方案
+
+- [解决小样本问题的模型方案](#解决小样本问题的模型方案)
+  - [Software Vulnerability Discovery via Learning Multi-Domain Knowledge Bases](#software-vulnerability-discovery-via-learning-multi-domain-knowledge-bases)
+    - [I 学习分别提取特征](#i-学习分别提取特征)
+    - [II 特征组合](#ii-特征组合)
+    - [III 基于组合的RF训练](#iii-基于组合的rf训练)
+    - [结论](#结论)
 
 ## Software Vulnerability Discovery via Learning Multi-Domain Knowledge Bases
 

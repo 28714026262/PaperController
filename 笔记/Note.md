@@ -8,6 +8,26 @@
 
 # 漏洞检测
 
+- [漏洞检测](#漏洞检测)
+  - [静态技术](#静态技术)
+  - [AI](#ai)
+    - [基本介绍](#基本介绍)
+    - [传统ML](#传统ml)
+    - [新兴ML](#新兴ml)
+      - [常见架构类型](#常见架构类型)
+      - [研究现状](#研究现状)
+        - [基于图的特征表示](#基于图的特征表示)
+        - [序列特征表示](#序列特征表示)
+        - [基于文本的特征表示](#基于文本的特征表示)
+        - [混合型](#混合型)
+      - [展望](#展望)
+  - [动态测试](#动态测试)
+  - [混合方法](#混合方法)
+  - [元学习](#元学习)
+  - [附录](#附录)
+  - [目标论文](#目标论文)
+- [黑盒逻辑漏洞检测](#黑盒逻辑漏洞检测)
+
 ***PAPER SOURCE：Software Vulnerability Detection Using Deep Neural Networks: A Survey***  
 [论文链接](../AI漏洞挖掘/Software_Vulnerability_Detection_Using_Deep_Neural_Networks_A_Survey.pdf)
 

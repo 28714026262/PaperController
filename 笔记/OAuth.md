@@ -7,6 +7,30 @@
 -->
 # Cerberus: Query-driven Scalable Vulnerability Detection in OAuth Service Provider Implementations
 
+- [Cerberus: Query-driven Scalable Vulnerability Detection in OAuth Service Provider Implementations](#cerberus-query-driven-scalable-vulnerability-detection-in-oauth-service-provider-implementations)
+  - [常见的OAuth的实施方案](#常见的oauth的实施方案)
+  - [威胁模型](#威胁模型)
+  - [Cerberus基础原理](#cerberus基础原理)
+    - [代码表示](#代码表示)
+    - [SDG的事实与推理规则](#sdg的事实与推理规则)
+      - [基础表示](#基础表示)
+      - [可扩展的目标谓词](#可扩展的目标谓词)
+      - [OAuth谓词](#oauth谓词)
+    - [查询语言](#查询语言)
+  - [Cerberus的设计与实现](#cerberus的设计与实现)
+    - [查询驱动探索](#查询驱动探索)
+    - [动态特征的混合分析](#动态特征的混合分析)
+    - [cerberus Tool](#cerberus-tool)
+      - [从源代码到数据日志程序](#从源代码到数据日志程序)
+      - [解析Node.js模块](#解析nodejs模块)
+  - [实验](#实验)
+    - [数据集：](#数据集)
+    - [基线程序](#基线程序)
+    - [用户输入](#用户输入)
+    - [实验结果](#实验结果)
+      - [有效性](#有效性)
+      - [效率](#效率)
+
 ## 常见的OAuth的实施方案
 
 - 授权代码授予（常见）：web应用程序和本机应用程序都可以使用授权码授予来获取访问令牌。流程如图所示。

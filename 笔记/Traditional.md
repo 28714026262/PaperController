@@ -7,6 +7,19 @@
 -->
 # 结合传统漏挖技术的AI
 
+- [结合传统漏挖技术的AI](#结合传统漏挖技术的ai)
+  - [A deep learning based static taint analysis approach for IoT software vulnerability location](#a-deep-learning-based-static-taint-analysis-approach-for-iot-software-vulnerability-location)
+    - [静态分析工作总结](#静态分析工作总结)
+    - [I diff文件获取](#i-diff文件获取)
+    - [II 污点分析](#ii-污点分析)
+    - [III 污点传播路径嵌入](#iii-污点传播路径嵌入)
+    - [IV 基于深度学习的物联网软件漏洞定位系统](#iv-基于深度学习的物联网软件漏洞定位系统)
+    - [V 结果](#v-结果)
+  - [A novel deep learning-based feature selection model for improving the static analysis of vulnerability detection](#a-novel-deep-learning-based-feature-selection-model-for-improving-the-static-analysis-of-vulnerability-detection)
+    - [流程](#流程)
+    - [结论](#结论)
+    - [人工免疫系统（AIS）](#人工免疫系统ais)
+
 ## A deep learning based static taint analysis approach for IoT software vulnerability location
 
 Main Idea：污点分析+Bi-LSTM  

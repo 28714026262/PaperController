@@ -3,6 +3,20 @@
 -->
 # Paragraph-level Neural Question Generation with Maxout Pointer and Gated Self-attention Networks
 
+- [Paragraph-level Neural Question Generation with Maxout Pointer and Gated Self-attention Networks](#paragraph-level-neural-question-generation-with-maxout-pointer-and-gated-self-attention-networks)
+  - [问题建模](#问题建模)
+    - [答案tag](#答案tag)
+    - [门的自注意力](#门的自注意力)
+  - [解码与注意力和Maxout指针](#解码与注意力和maxout指针)
+    - [注意力](#注意力)
+    - [复制机制、指针网络](#复制机制指针网络)
+    - [Maxout 指针](#maxout-指针)
+  - [实验](#实验)
+    - [数据集](#数据集)
+    - [测试标准](#测试标准)
+    - [结论](#结论)
+  - [问题](#问题)
+
 如果使用整个段落(包含多个句子)作为输入，则表现较差。本文提出了一种带有门控自注意编码器的maxout指针机制，对于句子级输入，模型优于以前的句子级或段落级输入方法，且可以有效地利用段落作为输入，将最先进的结果从13.9推到16.3 (BLEU 4)。
 
 在NLP中，QG主要通过两种方法来解决:

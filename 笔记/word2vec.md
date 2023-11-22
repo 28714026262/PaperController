@@ -7,6 +7,23 @@
 -->
 # word2vec
 
+- [word2vec](#word2vec)
+  - [文本表示](#文本表示)
+    - [CBOW（连续词袋模型）context-\>words next](#cbow连续词袋模型context-words-next)
+  - [word2vec提出的加速训练方法](#word2vec提出的加速训练方法)
+    - [Hierarchical softmax 层次softmax](#hierarchical-softmax-层次softmax)
+    - [Negative Sampling 基于负采样的CBOW、skipgram](#negative-sampling-基于负采样的cbowskipgram)
+      - [负采样](#负采样)
+- [Doc2Vec](#doc2vec)
+  - [分布记忆的段落向量（Distributed Memory Model of Paragraph Vectors , PV-DM）-\>CBOW模型；](#分布记忆的段落向量distributed-memory-model-of-paragraph-vectors--pv-dm-cbow模型)
+  - [分布词袋版本的段落向量（Distributed Bag of Words version of Paragraph Vector，PV-DBOW）-\>Skip-gram模型。](#分布词袋版本的段落向量distributed-bag-of-words-version-of-paragraph-vectorpv-dbow-skip-gram模型)
+- [sent2vec](#sent2vec)
+- [GloVe](#glove)
+- [FastText](#fasttext)
+- [code2vec](#code2vec)
+  - [STEP I 代码片段对应的AST，提取不同的路径](#step-i-代码片段对应的ast提取不同的路径)
+  - [STEP II Training](#step-ii-training)
+
 ## 文本表示
 
 1. Skip-gram模型：从大量非结构化文本数据中学习单词的高质量矢量表示；  

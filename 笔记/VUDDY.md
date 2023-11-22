@@ -7,6 +7,15 @@
 -->
 # VUDDY
 
+- [VUDDY](#vuddy)
+  - [相关工作](#相关工作)
+    - [Token级别粒度](#token级别粒度)
+    - [行级别粒度](#行级别粒度)
+    - [函数级别粒度](#函数级别粒度)
+    - [文件级粒度](#文件级粒度)
+    - [混合粒度](#混合粒度)
+  - [VUDDY技术总结](#vuddy技术总结)
+
 [论文链接](../AI漏洞挖掘/fingerPrint/VUDDY_A_Scalable_Approach_for_Vulnerable_Code_Clone_Discovery.pdf)
 
 函数级粒度和长度过滤技术（减少了签名比较的次数/搜索空间），实现了其极高的可扩展性。

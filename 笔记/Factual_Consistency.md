@@ -12,6 +12,39 @@
 -->
 # Factual Consistency 事实一致性
 
+- [Factual Consistency 事实一致性](#factual-consistency-事实一致性)
+  - [自然语言推理 NLI](#自然语言推理-nli)
+    - [Accuracy](#accuracy)
+    - [Lexical Knowledge](#lexical-knowledge)
+    - [Annotation Artifacts](#annotation-artifacts)
+    - [事实检测](#事实检测)
+  - [事实一致性检查](#事实一致性检查)
+    - [下文中的理论都是相关文本摘要模型下的事实一致性](#下文中的理论都是相关文本摘要模型下的事实一致性)
+    - [下文中的理论都是相关QA问题的事实一致性](#下文中的理论都是相关qa问题的事实一致性)
+    - [数据集](#数据集)
+  - [常见的幻觉研究](#常见的幻觉研究)
+    - [衡量幻觉程度的指标](#衡量幻觉程度的指标)
+    - [幻觉的研究过程](#幻觉的研究过程)
+  - [常见的一致性数据集](#常见的一致性数据集)
+    - [FRANK](#frank)
+    - [SummEval](#summeval)
+    - [MNBM](#mnbm)
+    - [QAGS](#qags)
+    - [BEGIN](#begin)
+    - [Q2](#q2)
+    - [DialFact](#dialfact)
+    - [FEVER](#fever)
+    - [VitaminC](#vitaminc)
+    - [PAWS](#paws)
+  - [评测基线指标](#评测基线指标)
+  - [指标](#指标)
+    - [自然语言推理指标](#自然语言推理指标)
+    - [基于QG-QA的指标](#基于qg-qa的指标)
+  - [研究方向](#研究方向)
+  - [QG](#qg)
+    - [QG分类](#qg分类)
+    - [QG相关工作](#qg相关工作)
+
 事实一致性的问题与自然语言推理（NLI）和事实检查紧密相关。  
 当前的NLI数据集专注于对短而单个的句子对之间的逻辑进行分类，但要验证事实的一致性可能需要结合源文档。
 

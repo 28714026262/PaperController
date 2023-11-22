@@ -1,10 +1,50 @@
 <!--
  * @Author: Suez_kip 287140262@qq.com
  * @Date: 2023-09-04 10:06:16
- * @LastEditTime: 2023-10-13 19:59:56
+ * @LastEditTime: 2023-11-21 19:23:52
  * @LastEditors: Suez_kip
  * @Description: 
 -->
+
+# 目录
+
+- [目录](#目录)
+- [Break Access Control](#break-access-control)
+- [web架构](#web架构)
+- [访问控制设计](#访问控制设计)
+  - [系统设计与实现](#系统设计与实现)
+    - [框架支持](#框架支持)
+    - [数据库支持](#数据库支持)
+    - [语言支持](#语言支持)
+    - [开发环境支持](#开发环境支持)
+  - [软件分析和测试](#软件分析和测试)
+    - [异常值检测](#异常值检测)
+      - [MACE](#mace)
+      - [SPACE](#space)
+      - [RoleCast](#rolecast)
+        - [安全敏感事件](#安全敏感事件)
+        - [划分组并最小化组并集](#划分组并最小化组并集)
+        - [关键变量子集分析](#关键变量子集分析)
+        - [发现缺失的检查并报告](#发现缺失的检查并报告)
+        - [结果](#结果)
+      - [AUTOMATIC DETECTION OF ACCESS CONTROL VULNERABILITIES VIA API SPECIFICATION PROCESSING](#automatic-detection-of-access-control-vulnerabilities-via-api-specification-processing)
+        - [RESTler](#restler)
+      - [Static Detection of Access Control Vulnerabilities in Web Applications](#static-detection-of-access-control-vulnerabilities-in-web-applications)
+      - [动态方法](#动态方法)
+    - [自动化检测](#自动化检测)
+    - [形式化方法](#形式化方法)
+  - [运行时检测](#运行时检测)
+  - [Alloy](#alloy)
+  - [功能测试](#功能测试)
+  - [IDOR\&BOLA Dataset](#idorbola-dataset)
+    - [CVE](#cve)
+      - [CVE-2006-5909](#cve-2006-5909)
+    - [Range](#range)
+      - [puzzlemall](#puzzlemall)
+      - [WackoPicko](#wackopicko)
+      - [OPENIT](#openit)
+
+
 # Break Access Control
 
 难点：
@@ -359,7 +399,7 @@ Rui Wang, Yuchen Zhou, Shuo Chen, Shaz Qadeer, David Evans, and Yuri Gurevich. 2
 
 这里需要包括身份认证，可以参照Nemesis，Michael Dalton, Christos Kozyrakis, and Nickolai Zeldovich. 2009. Nemesis:Preventing Authentication & [and] Access Control Vulnerabilities in Web Applications. (2009).
 
-# Alloy
+## Alloy
 
 [alloy github website](https://github.com/AlloyTools/org.alloytools.alloy)
 

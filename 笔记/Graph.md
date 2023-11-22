@@ -7,6 +7,34 @@
 -->
 # 漏洞挖掘中的图的使用
 
+- [漏洞挖掘中的图的使用](#漏洞挖掘中的图的使用)
+  - [AST](#ast)
+    - [FIRR功率减少率](#firr功率减少率)
+  - [控制流与数据流](#控制流与数据流)
+    - [CFG、CDG](#cfgcdg)
+    - [DFG、DDG](#dfgddg)
+    - [PDG，SDG](#pdgsdg)
+    - [NCS](#ncs)
+  - [图嵌入](#图嵌入)
+  - [激活函数](#激活函数)
+  - [聚类](#聚类)
+    - [K-means聚类算法介绍](#k-means聚类算法介绍)
+    - [DBSCAN聚类算法](#dbscan聚类算法)
+  - [图神经网络](#图神经网络)
+    - [***Scalable Graph-based Bug Search for Firmware Images***](#scalable-graph-based-bug-search-for-firmware-images)
+      - [文章提出的ACFG](#文章提出的acfg)
+      - [码本生成](#码本生成)
+      - [特征编码](#特征编码)
+      - [在线搜索](#在线搜索)
+  - [图模型](#图模型)
+    - [GGNN](#ggnn)
+    - [GCN](#gcn)
+    - [GAT](#gat)
+    - [Highway GCN](#highway-gcn)
+    - [DEEPGCNs](#deepgcns)
+    - [JUMP KNOWLEDGE NETWORK](#jump-knowledge-network)
+  - [TF-IDF](#tf-idf)
+
 ## AST
 
 ![图 1](../images/0003d529b121d7f72cee15acaf7a8de8b967f2aa23443c8c298b51ee9cd8ba31.png)  

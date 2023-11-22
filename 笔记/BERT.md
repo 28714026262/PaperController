@@ -7,6 +7,29 @@
 -->
 # BERT（Transformer Eecoder）
 
+- [BERT（Transformer Eecoder）](#berttransformer-eecoder)
+  - [Masked Language Model](#masked-language-model)
+  - [Transformer](#transformer)
+    - [multi-head attention](#multi-head-attention)
+    - [self-attention](#self-attention)
+    - [position encoding](#position-encoding)
+  - [sentence-level representation](#sentence-level-representation)
+    - [句子连续性的负采样](#句子连续性的负采样)
+    - [句子表示与嵌入](#句子表示与嵌入)
+  - [任务目标](#任务目标)
+  - [进一步的研究](#进一步的研究)
+- [RoBERTa](#roberta)
+  - [mask操作区别](#mask操作区别)
+  - [去除NSP（Next Sentence Prediction发）和输入标准化](#去除nspnext-sentence-prediction发和输入标准化)
+  - [编码形式](#编码形式)
+- [GPT（Transformer Decoder）](#gpttransformer-decoder)
+  - [GPT3](#gpt3)
+  - [GPT分析与总结](#gpt分析与总结)
+- [ELMo（Transformer Eecoder）](#elmotransformer-eecoder)
+- [ERNIE](#ernie)
+- [chatgpt](#chatgpt)
+  - [训练流程](#训练流程)
+
 ## Masked Language Model
 
 随机mask语料中15%的token，然后将masked token 位置输出的最终隐层向量送入softmax，来预测masked token。

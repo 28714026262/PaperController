@@ -7,6 +7,16 @@
 -->
 # Gemini
 
+- [Gemini](#gemini)
+  - [ACFG图嵌入](#acfg图嵌入)
+  - [孪生神经网络相似度检测](#孪生神经网络相似度检测)
+  - [附录](#附录)
+    - [孪生神经网络](#孪生神经网络)
+      - [常见的距离计算方式](#常见的距离计算方式)
+    - [struct2Vec](#struct2vec)
+      - [论文1：Discriminative Embeddings of Latent Variable Models for Structured Data](#论文1discriminative-embeddings-of-latent-variable-models-for-structured-data)
+      - [论文2：struc2vec: Learning Node Representations from Structural identity](#论文2struc2vec-learning-node-representations-from-structural-identity)
+
 [论文连接](../AI漏洞挖掘/Graph/Neural%20Network-based%20Graph%20Embedding%20for%20Cross-Platform.pdf)
 
 简介：

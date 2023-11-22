@@ -7,6 +7,16 @@
 -->
 # Understanding and Mitigating Remote Code Execution Vulnerabilities in Cross-platform Ecosystem
 
+- [Understanding and Mitigating Remote Code Execution Vulnerabilities in Cross-platform Ecosystem](#understanding-and-mitigating-remote-code-execution-vulnerabilities-in-cross-platform-ecosystem)
+  - [对远程代码的分析](#对远程代码的分析)
+    - [远程代码执行的必要条件](#远程代码执行的必要条件)
+    - [新攻击面的分析](#新攻击面的分析)
+    - [攻击行为分析](#攻击行为分析)
+  - [XGUARD](#xguard)
+    - [一阶段](#一阶段)
+    - [二阶段](#二阶段)
+  - [实验与结果](#实验与结果)
+
 [源码地址](https://github.com/xiaofen9/XGuard)
 
 但是目前可能由于仍未发表，源码仍未放出，后续再做调研；

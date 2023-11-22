@@ -1,5 +1,15 @@
 # 针对CLFS的攻击
 
+- [针对CLFS的攻击](#针对clfs的攻击)
+  - [CLFS(common log file system)](#clfscommon-log-file-system)
+    - [BLF文件](#blf文件)
+  - [CLFS攻击面](#clfs攻击面)
+    - [clfs.sys 中日志**文件解析**相关漏洞](#clfssys-中日志文件解析相关漏洞)
+      - [CVE-2022-21916](#cve-2022-21916)
+      - [Vulnerability for TianfuCup](#vulnerability-for-tianfucup)
+    - [clfs.sys 中 **IoCode 处理**相关漏洞](#clfssys-中-iocode-处理相关漏洞)
+  - [CLFS漏洞利用](#clfs漏洞利用)
+
 ## CLFS(common log file system)
 
 根据微软官方文档可以知道，通用日志文件系统 (clfs) 是 Windows Vista 引入的一种新的日志记录机制，它负责提供一个高性能、通用的日志文件子系统，供专用客户端应用程序使用，多个客户端可以共享以优化日志访问。  
