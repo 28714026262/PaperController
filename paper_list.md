@@ -166,6 +166,8 @@
   - **File** : DDoS_in_the_IoT_Mirai_and_Other_Botnets.pdf
 - ***./其他分类\FUZZ***
   - **File** : Stateful Greybox Fuzzing.pdf
+- ***./其他分类\Graph***
+  - **File** : A_Survey_of_Community_Detection_Approaches_From_Statistical_Modeling_to_Deep_Learning.pdf
 - ***./其他分类\OrinalCode***
   - **File** : Different_Kind_of_Smells_Security_Smells_in_Infrastructure_as_Code_Scripts.pdf
 - ***./其他分类\SAT***
@@ -231,6 +233,7 @@
   - **File** : bba11-16.pdf
   - **File** : DetLogic-A black-box approach for detecting logic vulnerabilities in web applications(1)-1-11 ZH.pdf
   - **File** : DetLogic-A black-box approach for detecting logic vulnerabilities in web applications(1).pdf
+  - **File** : Detlogic.pdf
   - **File** : iOS应用内支付安全分析_罗成.pdf
   - **File** : ndss14Black-box ZH.pdf
   - **File** : ndss14Black-box.pdf
